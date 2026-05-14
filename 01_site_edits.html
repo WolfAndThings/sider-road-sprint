@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>01 · Site Edits · Sider Road Sprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_shared.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a href="index.html" class="masthead-logo">Side<span>r</span> Road · Foundation Sprint</a>
+    <div class="masthead-meta">01 of 05 · Site Edits</div>
+  </div>
+</header>
+
+<div class="progress-strip">
+  <div class="container">
+    <div><a href="index.html">← Index</a></div>
+    <div>Deliverable 01 · Site Edits</div>
+    <div><a href="02_bureau_submissions.html">Next · Speaker Bureaus →</a></div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Deliverable 01 · Site Edits · <span class="status drafted">25 edits across 4 categories</span></div>
+    <h1>Twenty-five fixes that turn siderroad.com into a <em>working surface</em>.</h1>
+    <p class="hero-lede">Four categories. Five page fixes (broken URLs and missing copy). Eight new content adds (press, clients, speaking page, R by D waitlist, About, newsletter, FAQ, Jade). Twelve structural fixes (SEO, schema, OG cards, Calendly segmentation, 404 page, page speed, footer, analytics, accessibility, sitemap, redirects, mobile audit). One coherent sprint.</p>
+    <div class="hero-meta">
+      <div>Owner <strong>Dev team</strong></div>
+      <div>Estimated effort <strong>18 to 26 hours total</strong></div>
+      <div>Target live <strong>10-14 business days from sign-off</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container-narrow">
+    <div class="prose">
+
+      <div class="card">
+        <div class="card-label">Status flag · site access</div>
+        <p>These are specs, not deploys. We do not currently have <em>siderroad.com</em> login. Two paths from here, both work:</p>
+        <ul style="margin-top: 12px;">
+          <li>Hand the spec doc to your existing developer</li>
+          <li>Share WordPress login and we push directly</li>
+        </ul>
+        <p style="margin-top: 12px;">Either path keeps the timeline. The decision is yours, and only needs to be made once.</p>
+      </div>
+
+      <div class="card deep">
+        <div class="card-label">Quick links · see every page live before reading on</div>
+        <ul style="margin-top: 6px; columns: 2; column-gap: 32px;">
+          <li><a href="https://siderroad.com/family-leadership-and-legacy/" target="_blank" rel="noopener">Family Leadership &amp; Legacy</a> · 404 (Edit 01)</li>
+          <li><a href="https://siderroad.com/the-book" target="_blank" rel="noopener">/the-book</a> · 404 (Edit 02)</li>
+          <li><a href="https://siderroad.com/downloads/" target="_blank" rel="noopener">/downloads/</a> · hidden from nav (Edit 03)</li>
+          <li><a href="https://siderroad.com/masterclasses/" target="_blank" rel="noopener">Masterclasses</a> · no public pricing (Edit 04)</li>
+          <li><a href="https://siderroad.com/men-in-family-business/" target="_blank" rel="noopener">Men in Family Business</a> · no sold-out signal (Edit 05)</li>
+          <li><a href="https://siderroad.com" target="_blank" rel="noopener">Homepage</a> · 5 separate surface issues (Edits 06, 07, 08, 12, 13)</li>
+          <li><a href="https://siderroad.com/jocelyn/" target="_blank" rel="noopener">About · /jocelyn/</a> · operator pedigree missing (Edit 09)</li>
+          <li><em>Missing pages</em> · /speaking/ (Edit 10), /reputation-by-design/ (Edit 11), /faq/ (Edit 13)</li>
+        </ul>
+      </div>
+
+      <h2 style="border-top: 2px solid var(--sienna); padding-top: 48px;">Category 01 · Page fixes (broken URLs and missing copy)</h2>
+      <p>Five edits to close the gaps that make existing pages either dead, hidden, or commercially mute. None require new design. All require existing assets to be put in their proper place.</p>
+
+      <h2>Edit 01 · Restore <em><a href="https://siderroad.com/family-leadership-and-legacy/" target="_blank" rel="noopener">/family-leadership-and-legacy/</a></em></h2>
+      <p>One of the four mastermind tracks currently throws a 404. Anyone clicking through from the nav or a referral hits a dead page. <a href="https://siderroad.com/family-leadership-and-legacy/" target="_blank" rel="noopener">See current broken state →</a></p>
+      <p>Rebuild from the sibling track template so the look and structure stay consistent across all four tracks.</p>
+      <h4>Page must contain</h4>
+      <ul>
+        <li>Track title</li>
+        <li>Who it's for (3 to 4 lines)</li>
+        <li>What's covered (bullet list)</li>
+        <li>Schedule</li>
+        <li>Price · $875 to $975 bi-weekly</li>
+        <li>CTA to Calendly</li>
+      </ul>
+      <h4>Acceptance</h4>
+      <p>Returns HTTP 200, renders correctly, CTA works, mobile responsive.</p>
+
+      <h2>Edit 02 · Restore <em><a href="https://siderroad.com/the-book" target="_blank" rel="noopener">/the-book</a></em></h2>
+      <p>Book page is dead. Visitors clicking from the nav or homepage hit nothing. <a href="https://siderroad.com/the-book" target="_blank" rel="noopener">See current broken state →</a> Replace with a single page showing both books side by side.</p>
+      <h4>Layout</h4>
+      <ul>
+        <li>Section 1 · <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster, 2004), with Marcelle Langan DiFalco. Cover image, Amazon and Goodreads links, 80-word description.</li>
+        <li>Section 2 · <em>Reputation by Design</em>, forthcoming. Placeholder cover or "Coming 2026" graphic. 80-word description. Email capture · "Be first to hear when it drops."</li>
+        <li>Single column mobile, two columns desktop.</li>
+      </ul>
+      <h4>Copy · Big Sister's Guide</h4>
+      <blockquote class="pullquote">A field manual for women starting out in the workforce. The unwritten rules of office politics, mentorship, and earning credibility before tenure does it for you. Co-authored with Marcelle Langan DiFalco. Simon &amp; Schuster.</blockquote>
+      <h4>Copy · Reputation by Design</h4>
+      <blockquote class="pullquote">The follow-up. How women in leadership consciously build the reputation that opens doors before they walk through them. Coming 2026.</blockquote>
+
+      <h2>Edit 03 · Add <em>Downloads</em> to the main nav</h2>
+      <p>The 9-document Family Business Playbook series lives at <em><a href="https://siderroad.com/downloads/" target="_blank" rel="noopener">/downloads/</a></em> but is not linked from the main nav. <a href="https://siderroad.com/downloads/" target="_blank" rel="noopener">See the page (currently hidden from nav) →</a> The single highest-value lead magnet on the site is hidden. One nav item fixes it.</p>
+      <h4>Placement</h4>
+      <ul>
+        <li>Add "Downloads" as the 5th or 6th item in the main top-level nav</li>
+        <li>Place after "Masterminds" and before "Contact"</li>
+        <li>Include in mobile hamburger menu in the same position</li>
+        <li>Link target · <em>/downloads/</em></li>
+      </ul>
+      <h4>Optional polish</h4>
+      <p>Small badge or visual indicator "9 free guides" next to the "Downloads" label. Only if the theme supports it cleanly.</p>
+
+      <h2>Edit 04 · Anchor the Charisma masterclass price</h2>
+      <p>Charisma is $547 per session, six sessions, $3,282 total. Real public pricing. Currently nowhere on the site. <a href="https://siderroad.com/masterclasses/" target="_blank" rel="noopener">See current Masterclasses page →</a> Adding the price anchors prospects to the ceiling and makes the masterclass library visible.</p>
+      <h4>Placement</h4>
+      <ul>
+        <li>Price block under the Charisma description, above the CTA</li>
+        <li>Format · <strong>$547 per session · 6-session series · $3,282 total</strong></li>
+        <li>Style consistent with the rest of the page</li>
+        <li>If Charisma has its own dedicated page, add the price block there too</li>
+      </ul>
+      <p>No other prices need to be added in this edit. The rest of the masterclass library gets handled in Phase 2.</p>
+
+      <h2>Edit 05 · "Cohort C sold out" banner</h2>
+      <p>Cohort C of the Men in Family Business mastermind is sold out (Fridays 11am EST, 2026). <a href="https://siderroad.com/men-in-family-business/" target="_blank" rel="noopener">See current Men in Family Business page →</a> This is the strongest social proof a mastermind page can show. Surface it. Drive Cohort D urgency.</p>
+      <h4>Placement</h4>
+      <ul>
+        <li>Visible banner or badge on the Men in Family Business track page</li>
+        <li>Copy · <strong>Cohort C · SOLD OUT. Cohort D enrolling now.</strong></li>
+        <li>Colored bar above or below the cohort list. High visibility, not buried.</li>
+        <li>If the homepage has a "Latest" or "What's New" strip, mirror it there with a link.</li>
+      </ul>
+
+      <h2 style="border-top: 2px solid var(--sienna); padding-top: 64px; margin-top: 80px;">Category 02 · Homepage credibility surface (Edits 06-08)</h2>
+      <p>Three additions to the homepage that surface what already exists. Jade and the family-business angle, the press logos that prove the brand pedigree, the client logos that anchor the room rate.</p>
+
+      <h2 style="border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 64px;">Edit 06 · Homepage Jade / family-business paragraph</h2>
+      <p>Sider Road is itself a family business. Jocelyn runs the practice alongside her daughter Jade Herz. This is one of the most authentic credibility lines available and is not yet on the homepage. <a href="https://siderroad.com" target="_blank" rel="noopener">See current homepage →</a></p>
+      <h4>Placement</h4>
+      <p>Under the hero, before the masterminds section. Or as a stand-alone "About Sider Road" block above the footer.</p>
+      <h4>Exact copy</h4>
+      <blockquote class="pullquote">Sider Road is itself a family business. Jocelyn runs the practice alongside her daughter Jade Herz, making her one of the few advisors who lives the model she teaches every day.</blockquote>
+      <p>If a photo of Jocelyn and Jade exists, place it alongside this paragraph. If not, leave a placeholder. Week 2 captures the photo.</p>
+
+      <h2 style="border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 64px;">Edit 07 · Press logos strip on homepage</h2>
+      <p>Jocelyn has been quoted in CNBC, Fox News, Wall Street Journal, Fast Company, and HuffPost. None of those logos appear on the site today. <a href="https://siderroad.com" target="_blank" rel="noopener">See current homepage →</a> A press strip above or below the hero adds an immediate credibility lift for any first-time visitor.</p>
+      <h4>Placement</h4>
+      <ul>
+        <li>Thin horizontal strip, light grey background, grayscale logos at ~40-60px tall</li>
+        <li>Caption above strip · <strong>As featured in</strong></li>
+        <li>Logo order · CNBC · Fox News · Wall Street Journal · Fast Company · HuffPost</li>
+        <li>Each logo links to the specific Jocelyn article or segment</li>
+        <li>Mobile · scroll-horizontal or 2-row grid</li>
+      </ul>
+      <h4>Acceptance</h4>
+      <p>5 press logos visible on homepage above the fold or directly under hero. Each clickable to the source article.</p>
+
+      <h2 style="border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 64px;">Edit 08 · Real client logos block</h2>
+      <p>Verified client list pulls from the existing /jocelyn/ page · Viacom, Kraft, General Foods, HBO, Material Bank, EY, Wall Street Journal, NYU, Syracuse, Drexel, Villanova, Columbia. Twelve recognized names. These don't appear on the homepage today. <a href="https://siderroad.com/jocelyn/" target="_blank" rel="noopener">See current /jocelyn/ page →</a></p>
+      <h4>Placement</h4>
+      <ul>
+        <li>Dedicated "Trusted by" block on the homepage, separate from the press strip</li>
+        <li>4-column logo grid desktop, 2-column mobile</li>
+        <li>Grayscale, uniform height, evenly spaced</li>
+        <li>Caption above · <strong>Trusted by</strong></li>
+      </ul>
+      <h4>Acceptance</h4>
+      <p>Minimum 8 client logos visible on homepage. Grayscale, consistent treatment, no broken images.</p>
+
+      <h2 style="border-top: 2px solid var(--sienna); padding-top: 64px; margin-top: 80px;">Category 03 · New pages and major page upgrades (Edits 09-13)</h2>
+      <p>Five edits that add new pages or substantially rewrite existing ones. Operator history surfaced. Dedicated speaking page. Waitlist for the forthcoming book. Newsletter lifted from the footer. FAQ block.</p>
+
+      <h2 style="border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 64px;">Edit 09 · Upgrade <em><a href="https://siderroad.com/jocelyn/" target="_blank" rel="noopener">/jocelyn/</a></em> · operator pedigree surfaced</h2>
+      <p>The current About page lists advisory work but undersells the operator history. CEO at Colin Cowie Lifestyle and Ortho Marketing, Digital Global Editorial Director at Hachette Filipacchi, branded TV producer at the parent of Rolling Stone, event manager at Philip Morris, co-founder of BriteBean. <a href="https://siderroad.com/jocelyn/" target="_blank" rel="noopener">See current /jocelyn/ →</a> This pedigree is most of the credibility surface for premium speaking fees.</p>
+      <h4>Add</h4>
+      <ul>
+        <li>"Operator" or "Career" section above or below current advisory bio</li>
+        <li>6 role bullets, each with company + role + one-line context</li>
+        <li>Queens College CUNY adjunct listed alongside academic credentials</li>
+        <li>One paragraph closer · "She brings operator scar tissue, not theory."</li>
+      </ul>
+      <h4>Acceptance</h4>
+      <p>Full operator history visible on /jocelyn/. Reads as a leadership career, not a list of jobs.</p>
+
+      <h2 style="border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 64px;">Edit 10 · New page · <em>/speaking/</em></h2>
+      <p>No dedicated speaking page exists today. Speaker reel and fee transparency are missing entirely. This is the page that converts inbound from speaker bureaus, event organizers, and warm referrals. Currently they land on the homepage and have to dig.</p>
+      <h4>Page sections</h4>
+      <ol>
+        <li>Hero · "Book Jocelyn for your event" + one-line positioning</li>
+        <li>Signature talks · 5 talks, each with title, 60-word abstract, ideal audience</li>
+        <li>Speaker reel · embedded video (placeholder until Week 2 reel ships)</li>
+        <li>Fee transparency · "Keynote starting at $X, half-day workshop $X, full-day $X" (use current tier or "Inquire" depending on her preference)</li>
+        <li>Past speaking engagements · 6 to 10 verified events with logos</li>
+        <li>Press strip · same logos as homepage</li>
+        <li>Booking CTA · dedicated speaking Calendly, NOT the general advisory one</li>
+      </ol>
+      <h4>Acceptance</h4>
+      <p>/speaking/ page live, linked from main nav, dedicated Calendly path. Mobile responsive.</p>
+
+      <h2 style="border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 64px;">Edit 11 · New page · <em>/reputation-by-design/</em> waitlist</h2>
+      <p>The forthcoming book deserves its own waitlist page separate from /the-book. Different intent · book buyers want to know "when can I read it." This page captures email + builds anticipation surface for pitches, podcasts, and press timed to launch.</p>
+      <h4>Page sections</h4>
+      <ol>
+        <li>Hero · Cover or placeholder + one-line book promise</li>
+        <li>What the book is about · 200 words</li>
+        <li>Who it's for · 3 reader profiles</li>
+        <li>Email capture · "Be first to read it" with auto-confirm</li>
+        <li>Optional · 3 bonus rewards for waitlist (PDF chapter sample, audio intro, masterclass invite)</li>
+      </ol>
+      <h4>Acceptance</h4>
+      <p>/reputation-by-design/ live, captures emails into newsletter system, ready to drive traffic to from press pitches.</p>
+
+      <h2 style="border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 64px;">Edit 12 · Sider Road Letter · out of the footer</h2>
+      <p>The newsletter is currently buried in the footer. <a href="https://siderroad.com" target="_blank" rel="noopener">See current footer placement →</a> This is the second-most valuable lead capture on the site after the Playbook downloads. It deserves prominent placement.</p>
+      <h4>Placement</h4>
+      <ul>
+        <li>Dedicated newsletter signup block on homepage, below the fold but above footer</li>
+        <li>Headline · "The Sider Road Letter"</li>
+        <li>Subheadline · 1 sentence describing what readers get and how often (e.g. "One sharp note every two weeks on family business, charisma, and reputation. No filler.")</li>
+        <li>Single email field + Subscribe button</li>
+        <li>Optional · social proof line "X readers · executives, advisors, family operators"</li>
+      </ul>
+      <h4>Acceptance</h4>
+      <p>Newsletter capture visible on homepage. Signup wired to existing newsletter system. Past-issue archive linked.</p>
+
+      <h2 style="border-top: 1px solid var(--rule); padding-top: 48px; margin-top: 64px;">Edit 13 · FAQ block · homepage or <em>/faq/</em></h2>
+      <p>Common objections currently go unanswered on the site, so they show up as Calendly questions Jocelyn has to answer one by one. Surfacing the top 6-8 FAQs cuts that loop and increases booking quality.</p>
+      <h4>Suggested FAQ list</h4>
+      <ol>
+        <li>What's the difference between the four mastermind tracks?</li>
+        <li>How is a Sider Road mastermind different from group coaching?</li>
+        <li>What does the Family Business Playbook actually include?</li>
+        <li>Do you work with non-family businesses? (Answer · yes, leadership transitions apply broadly)</li>
+        <li>What does interim CEO/COO engagement look like?</li>
+        <li>What are your speaking fees?</li>
+        <li>Do you take on advisory clients outside the masterminds?</li>
+        <li>What's the time commitment for each mastermind?</li>
+      </ol>
+      <h4>Placement</h4>
+      <p>Either accordion-style block on the homepage (preferred for SEO + immediate scannability) or a dedicated /faq/ page linked from the main nav. Both options work.</p>
+      <h4>Acceptance</h4>
+      <p>Minimum 6 FAQs answered in Jocelyn's voice. Accordion or single-page layout. Linked from main nav.</p>
+
+      <h2 style="border-top: 2px solid var(--sienna); padding-top: 64px; margin-top: 80px;">Category 04 · Structural, SEO, and housekeeping</h2>
+      <p>Most of the previous fixes are content. The next twelve are infrastructure. Without these, the content lands but no one finds the site, share previews look broken, conversion paths leak, and Lighthouse scores tank. None are dramatic. All are required.</p>
+
+      <h2>Edit 14 · SEO · meta titles and descriptions on every page</h2>
+      <p>Most pages on siderroad.com likely use default page titles (e.g. "Sider Road" repeated) and have empty or generic meta descriptions. This kills both search ranking and click-through from search results.</p>
+      <h4>Fix</h4>
+      <ul>
+        <li>Unique meta title per page · format · <strong>[Page topic] · Sider Road</strong> · max 60 characters</li>
+        <li>Unique meta description per page · 140-155 characters, written like a search result snippet</li>
+        <li>Homepage example title · <em>Family Business Advisory and Speaker · Sider Road</em></li>
+        <li>Homepage example description · <em>Jocelyn Greenky Underwood guides family-owned businesses through the leadership transitions that decide whether they survive a generation. Advisory, masterminds, speaking.</em></li>
+        <li>Apply across all ~15 site pages</li>
+      </ul>
+
+      <h2>Edit 15 · SEO · Schema.org structured data</h2>
+      <p>Lets Google show rich result enhancements (sitelinks, knowledge panel, speaker schema). Currently almost certainly missing. Major SEO uplift for branded searches like "Jocelyn Greenky."</p>
+      <h4>Add</h4>
+      <ul>
+        <li><strong>Person schema</strong> on /jocelyn/ · name, image, jobTitle, sameAs (LinkedIn, X, IG, HuffPost), alumniOf, knowsAbout</li>
+        <li><strong>Organization schema</strong> on homepage and footer · Sider Road LLC, address (Greenwich CT), founder, employee, sameAs links</li>
+        <li><strong>Event schema</strong> on /speaking/ for any upcoming public talk</li>
+        <li><strong>Book schema</strong> on /the-book for Big Sister's Guide + Reputation by Design</li>
+        <li><strong>BreadcrumbList schema</strong> sitewide</li>
+        <li>Test with Google Rich Results Test before launch</li>
+      </ul>
+
+      <h2>Edit 16 · SEO · Open Graph and Twitter Card meta</h2>
+      <p>When anyone shares a Sider Road link on LinkedIn, X, Slack, or email preview tools, what do they see? Probably nothing or a broken default. Fix once, every share preview is on-brand from that point on.</p>
+      <h4>Add</h4>
+      <ul>
+        <li><code>og:title</code>, <code>og:description</code>, <code>og:image</code> (1200×630), <code>og:url</code>, <code>og:type</code> on every page</li>
+        <li><code>twitter:card</code> set to <em>summary_large_image</em>, plus <code>twitter:title</code> and <code>twitter:description</code></li>
+        <li>Default share image · branded card (drop Jocelyn headshot + Sider Road logo + tagline) · save as <em>/img/share-default.jpg</em></li>
+        <li>Page-specific override on /epk, /speaking, /the-book, /reputation-by-design</li>
+        <li>Test with metatags.io and LinkedIn Post Inspector before launch</li>
+      </ul>
+
+      <h2>Edit 17 · UX · Calendly CTA segmentation</h2>
+      <p>Currently 8+ CTAs across the site all point to a single Calendly URL. No way to know whether a booking came from the speaking page, a mastermind page, or the contact form. This kills conversion attribution and forces Jocelyn to ask "how did you find me" on every call.</p>
+      <h4>Fix</h4>
+      <ul>
+        <li>Create 4 separate Calendly event types · <strong>Speaking inquiry</strong> · <strong>Mastermind consult</strong> · <strong>Advisory consult</strong> · <strong>Press / media</strong></li>
+        <li>Each page's CTA points to the right one</li>
+        <li>Each Calendly event includes a custom question (e.g. speaking version asks event date + audience size)</li>
+        <li>UTM parameters appended for clean analytics attribution</li>
+      </ul>
+
+      <h2>Edit 18 · UX · Custom 404 page</h2>
+      <p>Default 404 pages dump visitors back to a generic error. With the broken pages we are restoring (Edits 01 + 02) plus inevitable external broken links, the 404 page is a real surface. Make it useful.</p>
+      <h4>Build</h4>
+      <ul>
+        <li>Branded layout, matches site</li>
+        <li>Headline · "This page took a different road."</li>
+        <li>Top 5 destinations linked · Homepage · Masterminds · Downloads · Speaking · Contact</li>
+        <li>Newsletter signup at bottom (recover the visitor)</li>
+        <li>Test by hitting <a href="https://siderroad.com/this-page-does-not-exist" target="_blank" rel="noopener">current 404 state →</a></li>
+      </ul>
+
+      <h2>Edit 19 · Technical · 301 redirects for restored URLs</h2>
+      <p>When the broken pages from Edits 01 and 02 get restored, any historical inbound links (LinkedIn posts, podcast show notes, email signatures) need to land in the right place. Set up 301 redirects from any old URLs to the new canonical ones.</p>
+      <h4>Map</h4>
+      <ul>
+        <li>If /family-leadership-and-legacy historically lived at a different slug, 301 to the new one</li>
+        <li>If /the-book had legacy variants (e.g. /book, /books, /writings), 301 all to the canonical</li>
+        <li>/downloads should accept both /downloads and /downloads/</li>
+        <li>If /jocelyngreenky.com still has any indexed pages, 301 them to siderroad.com equivalents (avoid duplicate-content penalty)</li>
+      </ul>
+
+      <h2>Edit 20 · Technical · page speed audit and image optimization</h2>
+      <p>Lighthouse score baseline check first. Then optimize. Slow sites die in search rankings and lose mobile visitors who bounce after 3 seconds.</p>
+      <h4>Fix</h4>
+      <ul>
+        <li>Run Lighthouse audit on homepage + /jocelyn/ + /downloads/ · record baseline</li>
+        <li>Compress all hero images to WebP, max 300KB</li>
+        <li>Add native <code>loading="lazy"</code> to below-the-fold images</li>
+        <li>Defer non-critical JS</li>
+        <li>Audit font loading · use <code>font-display: swap</code></li>
+        <li>Target · Lighthouse Performance ≥ 85 on mobile</li>
+      </ul>
+
+      <h2>Edit 21 · Content · /writing/ page · resurface HuffPost archive</h2>
+      <p>Jocelyn has 10 HuffPost articles from 2016-2017. They are credibility on tap. Currently invisible on the site. A simple /writing/ page lists each with title, original publication date, and a one-line excerpt, each linked to the live HuffPost piece.</p>
+      <h4>Build</h4>
+      <ul>
+        <li>List 10 articles, newest first</li>
+        <li>Each entry · title, publication date, 1-line excerpt, outbound link to HuffPost</li>
+        <li>Section header above list · "Selected writing"</li>
+        <li>Section below for forthcoming column work (FBM, others) once secured</li>
+        <li>Link /writing/ from main nav and footer</li>
+      </ul>
+
+      <h2>Edit 22 · UX · Mastermind comparison grid</h2>
+      <p>Four mastermind tracks, no easy way to compare them. Prospect has to click between four separate pages to figure out which one fits. Comparison grid solves it in one screen.</p>
+      <h4>Build</h4>
+      <ul>
+        <li>4-column grid on the main mastermind landing page</li>
+        <li>Rows · Who it's for · Format · Schedule · Price · Time commitment · Outcome promise</li>
+        <li>Mobile · stacked cards instead of grid</li>
+        <li>Each column ends with the dedicated Calendly CTA for that track</li>
+      </ul>
+
+      <h2>Edit 23 · Content · 3 anonymized case studies / "Family stories" page</h2>
+      <p>Currently the site has client logos and quote-style testimonials but zero narrative case studies. Three anonymized "Family stories" (1500-2500 words each) build the deepest credibility surface possible · the prospect sees themselves in the story.</p>
+      <h4>Build</h4>
+      <ul>
+        <li>Page · /family-stories/ or /case-studies/</li>
+        <li>3 stories · one succession transition, one reputation rebuild, one CEO/founder transition</li>
+        <li>Each story · context, the moment, what we did, the outcome, what the family learned</li>
+        <li>Anonymize names and identifying details · disclose industry only</li>
+        <li>Each ends with a Calendly CTA tied to the relevant mastermind</li>
+        <li>This is a Week 2-3 build · spec only this sprint</li>
+      </ul>
+
+      <h2>Edit 24 · UX · Accessibility audit</h2>
+      <p>Alt tags missing on images, color contrast issues, keyboard navigation gaps. Most sites fail WCAG AA. Both moral and legal reason to fix (ADA enforcement is rising in service-business industries).</p>
+      <h4>Fix</h4>
+      <ul>
+        <li>Alt text on every image · descriptive, not "image1.jpg"</li>
+        <li>Run axe DevTools audit · fix everything tagged Critical or Serious</li>
+        <li>Color contrast minimum 4.5:1 on body text</li>
+        <li>All links keyboard-accessible (tabindex, focus states visible)</li>
+        <li>ARIA labels on Calendly CTAs, social icons, hamburger menu</li>
+        <li>Document remaining gaps in an accessibility statement page · /accessibility/</li>
+      </ul>
+
+      <h2>Edit 25 · Technical · analytics, footer, sitemap, mobile audit</h2>
+      <p>Four small housekeeping items that close the loop on infrastructure.</p>
+      <h4>Analytics</h4>
+      <ul>
+        <li>GA4 installed and firing on every page (verify with Tag Assistant)</li>
+        <li>LinkedIn Insight Tag installed for retargeting</li>
+        <li>Optional · Meta Pixel for Facebook retargeting</li>
+        <li>Hotjar or Microsoft Clarity for heatmaps · pick one</li>
+      </ul>
+      <h4>Footer cleanup</h4>
+      <ul>
+        <li>Reorganized footer · Company / Programs / Resources / Connect columns</li>
+        <li>Newsletter signup removed from footer (lives on homepage now per Edit 12)</li>
+        <li>Privacy policy and terms links added (update both with current year)</li>
+        <li>Social icons updated · LinkedIn, X, Instagram, YouTube if applicable</li>
+        <li>Copyright year auto-updates via JS</li>
+      </ul>
+      <h4>Sitemap and robots</h4>
+      <ul>
+        <li>sitemap.xml regenerated to include all new pages (/speaking, /epk, /reputation-by-design, /writing, /family-stories, /faq)</li>
+        <li>Submit fresh sitemap to Google Search Console</li>
+        <li>robots.txt audit · ensure no critical pages accidentally blocked</li>
+      </ul>
+      <h4>Mobile audit</h4>
+      <ul>
+        <li>Manual walk on iPhone + Android device · every page</li>
+        <li>Test hamburger menu, all CTAs, every form, all download links</li>
+        <li>Screenshot issues, hand list back to dev for one cleanup pass</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="checklist">
+  <div class="container-narrow">
+    <div class="checklist-eyebrow">Checklist · work through in order</div>
+    <h2>Site Edits · <em>working checklist</em>.</h2>
+    <p class="checklist-lede">Whoever owns this page can run it top to bottom. Check items as they ship. Your progress is saved automatically to this browser.</p>
+
+    <div class="check-progress" id="check-progress-site_edits">0 of 0 complete</div>
+
+    <ul class="checks" id="checklist-site_edits">
+
+      <li data-id="approve-copy">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Jocelyn approves all copy across 25 edits</span>
+          <span class="check-detail">Headlines, body copy, FAQ answers, /speaking/ talk abstracts, R by D book copy, About operator pedigree, FAQ answers. Voice pass before dev push.</span>
+        </div>
+      </li>
+
+      <li data-id="book-path">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Confirm canonical book page path</span>
+          <span class="check-detail"><em>/the-book</em> or <em>/book</em>. Pick one and stick.</span>
+        </div>
+      </li>
+
+      <li data-id="cohort-d-dates">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Confirm Cohort D dates</span>
+          <span class="check-detail">Men in Family Business mastermind, for the sold-out banner ("Cohort D enrolling now").</span>
+        </div>
+      </li>
+
+      <li data-id="charisma-price">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Confirm Charisma pricing</span>
+          <span class="check-detail">$547 per session, 6 sessions, $3,282 total. Still current?</span>
+        </div>
+      </li>
+
+      <li data-id="site-access">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Site access decision</span>
+          <span class="check-detail">Existing dev pushes the specs OR Jocelyn shares WordPress login and we push directly.</span>
+        </div>
+      </li>
+
+      <li data-id="dev-handoff">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Hand off specs to dev</span>
+          <span class="check-detail">Send this page or the markdown spec doc, plus the approved copy strings, plus existing login credentials.</span>
+        </div>
+      </li>
+
+      <li data-id="jade-photo">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Photo of Jocelyn + Jade</span>
+          <span class="check-detail">For the homepage block. Existing photo, or approve a Week 2 photo session.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-01">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 01 live · /family-leadership-and-legacy/</span>
+          <span class="check-detail">Track page restored, mirrors sibling tracks, returns 200, CTA works.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-02">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 02 live · /the-book</span>
+          <span class="check-detail">Both books visible, email capture wired, returns 200.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-03">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 03 live · Downloads in main nav</span>
+          <span class="check-detail">Visible on every page, mobile menu included, link target works.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-04">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 04 live · Charisma price anchored</span>
+          <span class="check-detail">Price block visible on masterclasses page and on the Charisma dedicated page if it exists.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-05">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 05 live · Cohort C sold-out banner</span>
+          <span class="check-detail">Unmissable banner on the Men in Family Business track page, mirrored on homepage strip if applicable.</span>
+        </div>
+      </li>
+
+      <li data-id="jade-paragraph">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Jade paragraph live on homepage</span>
+          <span class="check-detail">Above the masterminds section. Photo placeholder set if photo pending.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-06">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 06 live · Jade homepage paragraph</span>
+          <span class="check-detail">Family-business-itself credibility line above masterminds section, photo placeholder set.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-07">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 07 live · Press logos strip</span>
+          <span class="check-detail">CNBC, Fox News, WSJ, Fast Company, HuffPost. Each linked to source article.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-08">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 08 live · Client logos block</span>
+          <span class="check-detail">Minimum 8 client logos visible on homepage. Grayscale, consistent treatment.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-09">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 09 live · /jocelyn/ operator pedigree</span>
+          <span class="check-detail">Career section with Colin Cowie, Ortho Marketing, Hachette, Wenner, BriteBean, Philip Morris.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-10">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 10 live · /speaking/ page</span>
+          <span class="check-detail">5 signature talks, fee transparency, reel placeholder, dedicated speaking Calendly path.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-11">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 11 live · /reputation-by-design/ waitlist</span>
+          <span class="check-detail">Email capture wired to newsletter system. Press-pitch ready destination.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-12">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 12 live · Sider Road Letter lifted from footer</span>
+          <span class="check-detail">Prominent homepage block, single email field, subscribe button.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-13">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 13 live · FAQ block</span>
+          <span class="check-detail">6+ FAQs answered in Jocelyn's voice. Accordion on homepage or dedicated /faq/.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-14">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 14 · SEO · unique meta titles + descriptions per page</span>
+          <span class="check-detail">All ~15 pages, written like search-result snippets. Max 60 char titles, 140-155 char descriptions.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-15">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 15 · SEO · Schema.org structured data</span>
+          <span class="check-detail">Person, Organization, Event, Book, Breadcrumb schemas. Test with Google Rich Results Test.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-16">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 16 · SEO · Open Graph + Twitter Card meta</span>
+          <span class="check-detail">Branded default share image (1200×630). Test with metatags.io + LinkedIn Post Inspector.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-17">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 17 · UX · Calendly CTA segmentation</span>
+          <span class="check-detail">4 separate Calendly event types · speaking · mastermind · advisory · press. UTM tagged. Attribution unlocked.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-18">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 18 · UX · Custom 404 page</span>
+          <span class="check-detail">Branded, top 5 destinations linked, newsletter signup at bottom. Recovers the visitor.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-19">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 19 · Technical · 301 redirects for restored URLs</span>
+          <span class="check-detail">Map old slugs to new. Catch jocelyngreenky.com legacy URLs. Avoid duplicate-content penalty.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-20">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 20 · Technical · page speed audit + image optimization</span>
+          <span class="check-detail">Lighthouse baseline + fixes. WebP, lazy load, font-display swap. Target Performance ≥ 85 on mobile.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-21">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 21 · Content · /writing/ page · HuffPost archive resurfaced</span>
+          <span class="check-detail">10 articles listed with title, date, excerpt, outbound link. Linked from main nav + footer.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-22">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 22 · UX · Mastermind comparison grid</span>
+          <span class="check-detail">4-column grid (or stacked on mobile). Who-for, format, schedule, price, time, outcome.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-23">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 23 · Content · /family-stories/ page (3 anonymized case studies)</span>
+          <span class="check-detail">3 stories drafted Week 2-3. Spec + page shell this sprint.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-24">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 24 · UX · Accessibility audit (WCAG AA)</span>
+          <span class="check-detail">Alt text on every image, axe DevTools clean, contrast ≥ 4.5:1, keyboard nav working, ARIA labels.</span>
+        </div>
+      </li>
+
+      <li data-id="edit-25">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Edit 25 · Technical · analytics + footer + sitemap + mobile audit</span>
+          <span class="check-detail">GA4, LinkedIn Insight, footer reorg, sitemap.xml regen, Search Console resubmit, manual mobile walk.</span>
+        </div>
+      </li>
+
+      <li data-id="qa-walk">
+        <input type="checkbox" />
+        <div>
+          <span class="check-title">Full QA walk-through in incognito</span>
+          <span class="check-detail">Every CTA, every page, mobile + desktop, screenshot before/after on all 25 edits.</span>
+        </div>
+      </li>
+
+    </ul>
+
+    <button class="check-clear" id="check-clear-site_edits">Reset checklist</button>
+  </div>
+</section>
+
+<nav class="pagenav">
+  <div class="container">
+    <div class="nav-prev">
+      <span class="nav-label">Previous</span>
+      <a href="index.html" class="nav-title">Index</a>
+    </div>
+    <div class="nav-index">
+      <span class="nav-label">All Deliverables</span>
+      <a href="index.html">Back to Index</a>
+    </div>
+    <div class="nav-next">
+      <span class="nav-label">Next</span>
+      <a href="02_bureau_submissions.html" class="nav-title">Speaker Bureaus</a>
+    </div>
+  </div>
+</nav>
+
+<footer class="foot">
+  <div class="container">
+    <div>Sider Road · Foundation Sprint · 01 of 05</div>
+    <div>Prepared by Alex Lamb · May 11, 2026</div>
+  </div>
+</footer>
+
+<script src="_shared.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function () { initChecklist('site_edits'); });</script>
+
+</body>
+</html>

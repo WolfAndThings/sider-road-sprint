@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sider Road · Foundation Sprint · Week 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_shared.css" />
+<style>
+  /* Index-only styles */
+  .deliverable-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 56px;
+  }
+  .deliverable-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--paper-shade);
+    border: 1px solid var(--rule);
+    padding: 36px 32px;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  .deliverable-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--sienna);
+    background: var(--paper-deep);
+  }
+  .card-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 56px;
+    color: var(--sienna);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .card-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 10px;
+  }
+  .deliverable-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .deliverable-card p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .card-cta {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sienna);
+  }
+  .mission-block {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .mission-block .container { display: grid; grid-template-columns: 240px 1fr; gap: 64px; }
+  .mission-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sienna);
+    border-top: 2px solid var(--sienna);
+    padding-top: 12px;
+  }
+  .mission-block h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+    max-width: 24ch;
+  }
+  .mission-block p {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+    max-width: 60ch;
+  }
+  @media (max-width: 800px) {
+    .mission-block .container { grid-template-columns: 1fr; gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a href="index.html" class="masthead-logo">Side<span>r</span> Road · Foundation Sprint</a>
+    <div class="masthead-meta">Week 01 · May 2026 · Confidential</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Sprint Deliverables · Index</div>
+    <h1>Five things,<br />done <em>well</em>,<br />in one week.</h1>
+    <p class="hero-lede">A clean read of what was built, what's open, and where it goes from here. Drafted by Alex for Jocelyn Greenky Underwood, May 11, 2026. No filler. No agency theatre.</p>
+    <div class="hero-meta">
+      <div>Sprint <strong>Foundation · $750</strong></div>
+      <div>Duration <strong>One week</strong></div>
+      <div>Working session <strong>Tue · May 19</strong></div>
+      <div>Working session <strong>Tue · May 19</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="mission-block">
+  <div class="container">
+    <div>
+      <div class="mission-eyebrow">Our mission</div>
+    </div>
+    <div>
+      <h2>Turn forty years of practitioner depth into a working surface.</h2>
+      <p>Sider Road has more assets than nearly anyone else in the family business advisory space. The work this sprint does is simple. Stop hiding them.</p>
+      <p>We surface the family-run angle on the homepage. We pull the nine-doc Playbook out of the basement. We submit a real award nomination. We start a real speaking pipeline. We capture the actual voice so every email that follows sounds like Jocelyn and not like an agency wrote it.</p>
+      <p>One week. Five deliverables. Each one is on its own page below, with a checklist that whoever owns it can work through directly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    <div class="prose" style="text-align: center; margin-bottom: 8px;">
+      <div class="hero-eyebrow" style="margin-bottom: 12px;">The Five</div>
+      <h2 style="margin: 0 auto; max-width: 24ch; text-align: center;">Each one is a single page with its own working checklist.</h2>
+    </div>
+
+    <div class="deliverable-grid">
+
+      <a class="deliverable-card" href="01_site_edits.html">
+        <div class="card-num">01</div>
+        <div class="card-eyebrow">Deliverable · Site Edits</div>
+        <h3>Twenty-five fixes across four categories.</h3>
+        <p>Five page fixes. Eight content adds. Twelve structural / SEO / housekeeping (meta, schema, OG, Calendly segmentation, 404, redirects, page speed, /writing/, comparison grid, case studies, accessibility, analytics + footer + sitemap + mobile).</p>
+        <div class="card-cta">Open the brief →</div>
+      </a>
+
+      <a class="deliverable-card" href="02_bureau_submissions.html">
+        <div class="card-num">02</div>
+        <div class="card-eyebrow">Deliverable · Bureaus + EPK</div>
+        <h3>Six bureaus, one real EPK, the long play.</h3>
+        <p>Marketplace and premium bureaus running in parallel. Plus a proper one-sheet PDF and full EPK page on the site so organizers self-serve everything they need to book Jocelyn.</p>
+        <div class="card-cta">Open the brief →</div>
+      </a>
+
+      <a class="deliverable-card" href="03_event_database.html">
+        <div class="card-num">03</div>
+        <div class="card-eyebrow">Deliverable · Events + Podcasts</div>
+        <h3>The first fifty rooms worth being in.</h3>
+        <p>Six event tiers, twenty adjacent podcasts, four ready-to-send email templates, the pitch tracker spec that runs the whole engine.</p>
+        <div class="card-cta">Open the brief →</div>
+      </a>
+
+      <a class="deliverable-card" href="04_award_nomination.html">
+        <div class="card-num">04</div>
+        <div class="card-eyebrow">Deliverable · Awards + Press</div>
+        <h3>Five awards, four press pitches, one credibility stack.</h3>
+        <p>Family Business Magazine, FFI Barbara Hollander, Stevie Awards, FBM CEOs to Watch, Worth Power 100. Plus HuffPost reactivation, FBM column pitch, LinkedIn Top Voices, Forbes Coaches Council.</p>
+        <div class="card-cta">Open the brief →</div>
+      </a>
+
+      <a class="deliverable-card" href="05_voice_loom.html">
+        <div class="card-num">05</div>
+        <div class="card-eyebrow">Deliverable · Voice Extraction Loom</div>
+        <h3>Twenty-five minutes that calibrate every email after this.</h3>
+        <p>Ten prompts. Single take. No prep. The unrehearsed voice is the one we write everything in from here on.</p>
+        <div class="card-cta">Open the brief →</div>
+      </a>
+
+      <a class="deliverable-card" href="06_open_items.html" style="background: var(--ink); color: var(--paper); border-color: var(--ink);">
+        <div class="card-num" style="color: var(--gold-soft);">06</div>
+        <div class="card-eyebrow" style="color: var(--gold-soft);">Open Items · From Jocelyn</div>
+        <h3 style="color: var(--paper);">Fifteen small things that unlock the next ten.</h3>
+        <p style="color: #c7bba6;">A single consolidated checklist of everything we need from you. Most items are short. Nothing here blocks progress on more than one deliverable at a time.</p>
+        <div class="card-cta" style="color: var(--gold-soft);">Open the checklist →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div>Sider Road · Foundation Sprint · Week 01</div>
+    <div>Prepared by Alex Lamb · May 11, 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>
