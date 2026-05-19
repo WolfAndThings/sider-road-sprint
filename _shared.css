@@ -1,6 +1,19 @@
 /* Sider Road Foundation Sprint — shared editorial stylesheet
    Loaded by every page in this folder. Self-contained CSS so any page is sendable on its own. */
 
+/* TBD · items pending Jocelyn's decision · red highlight */
+.tbd {
+  background: #fff0f0;
+  color: #c8102e;
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-weight: 600;
+  border-bottom: 1px dashed #c8102e;
+}
+.tbd::before { content: "⟐ "; opacity: 0.6; font-size: 0.85em; }
+.tbd.block { display: block; margin: 12px 0; padding: 14px 18px; border-left: 3px solid #c8102e; border-bottom: none; border-radius: 0; font-weight: 500; line-height: 1.5; }
+.tbd.block::before { content: "JOCELYN'S CALL · "; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #c8102e; display: block; margin-bottom: 6px; font-weight: 600; }
+
 :root {
   --ink: #1b1815;
   --ink-soft: #3d3530;
