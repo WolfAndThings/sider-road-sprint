@@ -3,38 +3,105 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>05 · Voice Extraction Loom · Sider Road Sprint</title>
+<title>05 · Voice Extraction · 35 Questions · Sider Road Sprint</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="_shared.css" />
+<style>
+  .q-category {
+    background: var(--paper-shade);
+    border: 1px solid var(--rule);
+    padding: 28px 36px;
+    margin: 36px 0;
+  }
+  .q-category h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0 0 6px;
+  }
+  .q-category .cat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sienna);
+    margin-bottom: 12px;
+  }
+  .q-category .cat-purpose {
+    color: var(--ink-mute);
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .q-list { list-style: none; margin: 0; padding: 0; counter-reset: question; }
+  .q-list li {
+    counter-increment: question;
+    display: grid;
+    grid-template-columns: 50px 1fr 100px;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: baseline;
+  }
+  .q-list li:last-child { border-bottom: none; }
+  .q-list li::before {
+    content: counter(question, decimal-leading-zero);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--sienna);
+    font-weight: 500;
+  }
+  .q-text { font-family: 'Fraunces', serif; font-size: 17px; line-height: 1.4; }
+  .q-format {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    text-align: right;
+    align-self: start;
+    padding: 3px 8px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .q-format.video { color: var(--sienna); border-color: var(--sienna); }
+  .q-format.audio { color: var(--forest); border-color: var(--forest); }
+  @media (max-width: 700px) {
+    .q-list li { grid-template-columns: 40px 1fr; }
+    .q-format { grid-column: 2; text-align: left; margin-top: 4px; }
+  }
+</style>
 </head>
 <body>
 
 <header class="masthead">
   <div class="container masthead-inner">
     <a href="index.html" class="masthead-logo">Side<span>r</span> Road · Foundation Sprint</a>
-    <div class="masthead-meta">05 of 05 · Voice Loom</div>
+    <div class="masthead-meta">05 · Voice Extraction · 35 Questions</div>
   </div>
 </header>
 
 <div class="progress-strip">
   <div class="container">
     <div><a href="04_award_nomination.html">← Award Nomination</a></div>
-    <div>Deliverable 05 · Voice Extraction Loom</div>
+    <div>Deliverable 05 · Voice Extraction · 35 Questions</div>
     <div><a href="06_open_items.html">Next · Open Items →</a></div>
   </div>
 </div>
 
 <section class="hero">
   <div class="container">
-    <div class="hero-eyebrow">Deliverable 05 · Voice Extraction Loom · <span class="status needs">Pending · your end</span></div>
-    <h1>Twenty-five minutes that <em>calibrate every email</em> after this.</h1>
-    <p class="hero-lede">Every outreach email, every social post, every EPK paragraph after Week 1 needs to sound like Jocelyn. Not a polished version. The actual one. Word choices, sentence rhythm, where she lingers, where she gets sharp. The Loom is how we get there.</p>
+    <div class="hero-eyebrow">Deliverable 05 · Voice Extraction · <span class="status needs">35 questions · async</span></div>
+    <h1>Thirty-five questions <em>built to capture</em> the real voice.</h1>
+    <p class="hero-lede">Replaces the original 60-minute live call with an async recording Jocelyn does at her own pace. Eight categories, 35 questions, designed to capture her voice, her background, her ethos, the moments that prove the work, and the lines that make event organizers want to book her on the spot.</p>
     <div class="hero-meta">
-      <div>Owner <strong>Jocelyn (record) · Alex (process)</strong></div>
-      <div>Length <strong>15 to 25 minutes total</strong></div>
-      <div>Format <strong>Single take Loom, webcam on</strong></div>
+      <div>Total <strong>35 questions across 8 categories</strong></div>
+      <div>Time <strong>Roughly 45 to 90 minutes total · split across sessions if needed</strong></div>
+      <div>Format <strong>Audio for most, video for the speaker-credibility ones</strong></div>
     </div>
   </div>
 </section>
@@ -43,215 +110,188 @@
   <div class="container-narrow">
     <div class="prose">
 
-      <h2>Why this step matters</h2>
-      <p>Every deliverable downstream depends on this. Outreach emails, social posts, EPK rewrite, podcast pitches, pitch templates. They all need to sound like Jocelyn. Not "groovy older chick" as an abstract direction. The actual voice.</p>
-      <p>Without this, the work reads like a generic consultant agency wrote it. With it, every piece of copy after this point passes the "would Jocelyn say this out loud" test. That's the only test that matters.</p>
-
-      <h2>The setup</h2>
+      <h2>How to record</h2>
       <ul>
-        <li>Quiet room, decent natural light</li>
-        <li>Webcam on (audio + video, we need cadence and body)</li>
-        <li>15 to 25 minutes, single take is fine, no editing</li>
-        <li>No prep, no notes. The point is to catch you unrehearsed.</li>
+        <li><strong>Format:</strong> Loom, QuickTime, voice memo, or anything that captures clean audio. Video adds value for ~10 of the 35 (marked below) where on-camera presence matters.</li>
+        <li><strong>Setup:</strong> Quiet room, good light if video, normal voice, no notes.</li>
+        <li><strong>Pace:</strong> Don't try to do all 35 in one sitting. Three sessions of 12 to 15 minutes each works better than one 90-minute slog. Voice quality drops as you tire.</li>
+        <li><strong>Skip:</strong> If a question doesn't land, skip it. The fact that you'd skip it is also a signal.</li>
+        <li><strong>Send:</strong> Drop links or files in a Google Drive folder. We transcribe within 24 hours and pull verbatim phrases into the Voice Bank.</li>
       </ul>
 
-      <h2>The ten prompts</h2>
-      <p>Ask Jocelyn to answer these in order, in her own words. Don't read the prompts out loud verbatim. Paraphrase or riff. The more natural, the better. If she gets stuck, skip and come back. Whatever she'd skip in real life is also a signal.</p>
+      <p>Format labels below: <strong>AUDIO</strong> = voice only is fine. <strong>VIDEO</strong> = on-camera adds credibility (use these for speaker reel + EPK + social).</p>
 
-      <ol class="prompt-list">
-        <li>
-          <div class="prompt-q">Tell me how you ended up doing family business work. Not the resume version. The version you'd tell a friend at dinner.</div>
-          <div class="prompt-time">90 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> the moment you got hooked, the first family that taught you something.</div>
-        </li>
-        <li>
-          <div class="prompt-q">Describe the kind of person who books a call with you. Not demographic. What's going on in their head when they reach out.</div>
-          <div class="prompt-time">60 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> the internal language your ICP uses. The fear or the frustration.</div>
-        </li>
-        <li>
-          <div class="prompt-q">What's the one thing you see family business owners get wrong over and over again?</div>
-          <div class="prompt-time">60 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> your unique POV. The contrarian take. The thing you'd argue about.</div>
-        </li>
-        <li>
-          <div class="prompt-q">Tell me one story, anonymized if needed, of a family business you worked with where something hard happened and you saw it through. What was the inflection point?</div>
-          <div class="prompt-time">90 to 120 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> how you narrate. Detail vs abstraction. Where you get emotional.</div>
-        </li>
-        <li>
-          <div class="prompt-q">What does it mean to you that Sider Road is itself a family business, that you work with Jade? What does that actually feel like day to day?</div>
-          <div class="prompt-time">60 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> the authentic angle. The story we lean on in the EPK.</div>
-        </li>
-        <li>
-          <div class="prompt-q">You teach charisma. In one minute, what's the actual idea? Not the marketing description. The real one.</div>
-          <div class="prompt-time">60 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> how you explain your own IP without slides. Becomes pitch shorthand.</div>
-        </li>
-        <li>
-          <div class="prompt-q">Without selling the book, what's the core idea of Reputation by Design?</div>
-          <div class="prompt-time">60 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> the next book's positioning in your own voice. Needed for press pitches.</div>
-        </li>
-        <li>
-          <div class="prompt-q">What do you read or hear in the family business or leadership space that makes you roll your eyes?</div>
-          <div class="prompt-time">60 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> what NOT to write. Cuts our rewrite cycles in half.</div>
-        </li>
-        <li>
-          <div class="prompt-q">Two years from now, what does success look like for Sider Road? Not bullet points. What's the picture in your head?</div>
-          <div class="prompt-time">60 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> north star for strategy. Where you're aiming.</div>
-        </li>
-        <li>
-          <div class="prompt-q">Read this twice in your normal voice · "Family business succession is rarely a money problem. It's a reputation problem dressed up as a money problem." Then say it again, but how you would actually say it.</div>
-          <div class="prompt-time">45 seconds</div>
-          <div class="prompt-listen"><strong>Listening for ·</strong> your edit. We learn your sentence shape by hearing how you rewrite ours.</div>
-        </li>
-      </ol>
+      <!-- CATEGORY 1 -->
+      <div class="q-category">
+        <div class="cat-label">Category 01 · 5 questions</div>
+        <h3>Origin + background</h3>
+        <p class="cat-purpose">How you got here. Not the resume version · the version you'd tell a friend at dinner.</p>
+        <ol class="q-list">
+          <li><span class="q-text">Tell me how you ended up doing family business work. What was the first family that taught you something you couldn't unlearn?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">Walk me through your career arc · Philip Morris, Wenner Media, Hachette, Colin Cowie Lifestyle, Ortho Marketing, Sider Road. What pulled you from one to the next?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">When did you first realize you had a real point of view on leadership and family businesses, not just experience?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">What did your parents do, and how did that shape what you ended up doing?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">If you weren't doing this, what would you be doing instead?</span><span class="q-format audio">AUDIO</span></li>
+        </ol>
+      </div>
 
-      <h2>What we do with it</h2>
+      <!-- CATEGORY 2 -->
+      <div class="q-category">
+        <div class="cat-label">Category 02 · 3 questions</div>
+        <h3>Voice + cadence</h3>
+        <p class="cat-purpose">Capturing how you actually sound when no one is watching · the rhythm we replicate in every email and post.</p>
+        <ol class="q-list">
+          <li><span class="q-text">Read this sentence out loud, twice, in your normal voice: "Family business succession is rarely a money problem. It's a reputation problem dressed up as a money problem." Then say it again, but how you would actually say it if you were telling a client.</span><span class="q-format video">VIDEO</span></li>
+          <li><span class="q-text">What's a phrase or word you say constantly that other people notice?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">When you're explaining something for the tenth time and it still doesn't land, what's your fallback move?</span><span class="q-format audio">AUDIO</span></li>
+        </ol>
+      </div>
+
+      <!-- CATEGORY 3 -->
+      <div class="q-category">
+        <div class="cat-label">Category 03 · 4 questions</div>
+        <h3>ICP and audience</h3>
+        <p class="cat-purpose">Who you actually serve, what's going on in their head, what they tell themselves.</p>
+        <ol class="q-list">
+          <li><span class="q-text">Describe the person who books a call with you. Not their demographic · what's going on in their head the week before they reach out?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">What's the question every family business owner is asking themselves but won't say out loud?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">When you're sitting across from a 65-year-old founder and a 35-year-old successor, what are they actually fighting about?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">Who isn't your client and why? Who do you actively turn down?</span><span class="q-format audio">AUDIO</span></li>
+        </ol>
+      </div>
+
+      <!-- CATEGORY 4 -->
+      <div class="q-category">
+        <div class="cat-label">Category 04 · 5 questions</div>
+        <h3>Expertise and unique POV</h3>
+        <p class="cat-purpose">The thing you actually know that almost no one else does. The contrarian take that makes someone stop and reconsider.</p>
+        <ol class="q-list">
+          <li><span class="q-text">What's the single most common mistake you see family business owners make over and over again?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">In one minute, what's the actual idea behind Charisma is a Skill? Not the marketing description, the real one.</span><span class="q-format video">VIDEO</span></li>
+          <li><span class="q-text">Without selling the book, what's the core idea of Reputation by Design?</span><span class="q-format video">VIDEO</span></li>
+          <li><span class="q-text">What's the most overrated piece of leadership advice currently in circulation?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">If you had to bet on which family businesses survive the next generation, what's your tell?</span><span class="q-format audio">AUDIO</span></li>
+        </ol>
+      </div>
+
+      <!-- CATEGORY 5 -->
+      <div class="q-category">
+        <div class="cat-label">Category 05 · 5 questions</div>
+        <h3>Stories that prove it</h3>
+        <p class="cat-purpose">Specific moments. Specific people. Real scar tissue. These become the anecdotes that get used in keynotes, podcasts, and the press.</p>
+        <ol class="q-list">
+          <li><span class="q-text">Tell me one story, anonymized if needed, of a family business you worked with where something hard happened and you saw it through. What was the inflection point?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">Tell me about a client moment that surprised you · where you walked in expecting one thing and what you found was completely different.</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">When was the last time you watched someone get charisma exactly right? Walk me through what they did.</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">Tell me about a reputation event you watched up close · either a save or a derail · and what you learned from it.</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">What's a moment from your CEO days at Colin Cowie or Ortho Marketing that you keep going back to mentally?</span><span class="q-format audio">AUDIO</span></li>
+        </ol>
+      </div>
+
+      <!-- CATEGORY 6 -->
+      <div class="q-category">
+        <div class="cat-label">Category 06 · 5 questions</div>
+        <h3>Ethos + beliefs</h3>
+        <p class="cat-purpose">What you stand for, what you reject, the lines you won't cross. The values stack that makes everything else cohere.</p>
+        <ol class="q-list">
+          <li><span class="q-text">What do you read or hear in the family business or leadership space that makes you roll your eyes?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">What's a line you won't cross with a client? Where does the work stop?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">What do you believe about leadership that most of your peers would disagree with?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">If charisma is a skill, what's the thing it can't fix?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">Two years from now, what does success look like for Sider Road? Not bullet points · the picture in your head.</span><span class="q-format audio">AUDIO</span></li>
+        </ol>
+      </div>
+
+      <!-- CATEGORY 7 -->
+      <div class="q-category">
+        <div class="cat-label">Category 07 · 4 questions</div>
+        <h3>Why hire you as a speaker</h3>
+        <p class="cat-purpose">The pitches that make event organizers stand up. Sound bites for the EPK, sizzle reel, and bureau profiles.</p>
+        <ol class="q-list">
+          <li><span class="q-text">In 60 seconds, why should an event organizer book you over any other family business speaker on the bureau roster?</span><span class="q-format video">VIDEO</span></li>
+          <li><span class="q-text">What's the one thing audiences come up to you about after a talk? What do they remember?</span><span class="q-format video">VIDEO</span></li>
+          <li><span class="q-text">What's the best talk you've ever given? Where, what was the topic, what made it land?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">If you had 30 seconds on stage and could only leave the audience with one idea, what's the idea?</span><span class="q-format video">VIDEO</span></li>
+        </ol>
+      </div>
+
+      <!-- CATEGORY 8 -->
+      <div class="q-category">
+        <div class="cat-label">Category 08 · 4 questions</div>
+        <h3>Sider Road as a family business itself</h3>
+        <p class="cat-purpose">The unique credibility angle that no other advisor in the space has. Lock the authentic narrative.</p>
+        <ol class="q-list">
+          <li><span class="q-text">What does it mean to you that Sider Road is itself a family business · that you work with Jade? What does that actually feel like day-to-day?</span><span class="q-format video">VIDEO</span></li>
+          <li><span class="q-text">What does Jade bring to Sider Road that you couldn't bring alone?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">When you walk into a family business client meeting and they realize you run Sider Road with your daughter, what shifts?</span><span class="q-format audio">AUDIO</span></li>
+          <li><span class="q-text">In 20 years, what do you want Sider Road to be?</span><span class="q-format video">VIDEO</span></li>
+        </ol>
+      </div>
+
+      <h2 style="border-top: 2px solid var(--sienna); padding-top: 48px;">What we do with the 35 answers</h2>
       <ol>
-        <li>Transcribe via Whisper inside 24 hours</li>
-        <li>Pull 30 to 50 verbatim phrases into a "Voice Bank" document</li>
-        <li>Annotate humor signals, words used repeatedly, sentence length, where she goes hard, where she softens</li>
-        <li>Build a one-page "Jocelyn Voice Rules" sheet · what to do, what to avoid, sample sentences in her cadence</li>
-        <li>Every email, post, EPK section after this gets written using the Voice Bank and Rules sheet</li>
-        <li>Re-test by running one outreach email and one social post past her · if it sounds like her, we keep going</li>
+        <li><strong>Transcribe</strong> within 24 hours of receipt (Whisper, runs locally)</li>
+        <li><strong>Voice Bank</strong> · pull 50 to 75 verbatim phrases into a single document, tagged by category</li>
+        <li><strong>Voice Rules sheet</strong> · 1-pager covering humor signals, sentence shape, repeated phrases, what to avoid, sample sentences in her cadence</li>
+        <li><strong>EPK rewrite</strong> · bio + signature talk descriptions + interview questions get a voice pass against the Voice Bank</li>
+        <li><strong>Sizzle reel script</strong> · pull on-camera lines from category 2, 4, 7, 8 questions for the speaker reel narrative spine</li>
+        <li><strong>Social caption library</strong> · 30 to 50 caption starters drawn directly from her answers, ready for the content engine</li>
+        <li><strong>Pitch personalization</strong> · subject lines and opening lines lifted from her actual voice into every email template</li>
       </ol>
 
-      <h2>Optional · Tuesday May 19 working session</h2>
-      <p>If the Loom leaves gaps, the 30-min Tuesday session becomes the calibration call. Focus on:</p>
-      <ul>
-        <li>Specific opening lines for outreach emails (we read drafts, you rewrite on the fly)</li>
-        <li>Reviewing and approving the Voice Rules sheet</li>
-        <li>Final go-ahead on the EPK rewrite direction</li>
-      </ul>
-      <p>The Loom is the foundation. Tuesday is the calibration. Both compound.</p>
+      <h2>Optional · Jade's 3-prompt mini-session</h2>
+      <p>While Jocelyn records her 35, Jade records 3 prompts in Paris. Vertical iPhone, natural light, single take per prompt, 30 to 60 seconds each:</p>
+      <ol>
+        <li>What it's like working with your mom at Sider Road.</li>
+        <li>Why someone should consider working with your mom.</li>
+        <li>One thing you've learned at Sider Road that you didn't expect.</li>
+      </ol>
+      <p>Raw clips go in the same Google Drive folder. We catalog them for the content engine work post-sprint.</p>
 
     </div>
   </div>
 </section>
 
-<!-- CHECKLIST -->
 <section class="checklist">
   <div class="container-narrow">
-    <div class="checklist-eyebrow">Checklist · work through in order</div>
-    <h2>Voice Loom · <em>working checklist</em>.</h2>
-    <p class="checklist-lede">Most items on this list are on Jocelyn's side until the Loom lands. After that, it shifts to our side fast.</p>
+    <div class="checklist-eyebrow">Checklist · for Jocelyn (and Jade)</div>
+    <h2>Voice extraction · <em>recording checklist</em>.</h2>
+    <p class="checklist-lede">Three short sessions beats one long one. Most can be audio-only. Video on the 9 marked items above.</p>
 
     <div class="check-progress" id="check-progress-voice">0 of 0 complete</div>
 
     <ul class="checks" id="checklist-voice">
-
-      <li data-id="setup">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Set up the recording environment</span>
-          <span class="check-detail">Quiet room, decent light, webcam on, Loom desktop app or browser ready.</span>
-        </div>
-      </li>
-
-      <li data-id="record">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Record the Loom (single take, 15-25 min)</span>
-          <span class="check-detail">Don't pre-write answers. Don't read prompts verbatim. Just talk.</span>
-        </div>
-      </li>
-
-      <li data-id="send-link">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Send the Loom share link</span>
-          <span class="check-detail">Email or DM. We pick it up the moment it lands.</span>
-        </div>
-      </li>
-
-      <li data-id="transcribe">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Transcribe within 24 hours</span>
-          <span class="check-detail">Whisper run locally. Full transcript saved in project folder.</span>
-        </div>
-      </li>
-
-      <li data-id="voice-bank">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Pull 30-50 verbatim phrases into Voice Bank</span>
-          <span class="check-detail">Direct quotes that capture Jocelyn's cadence, humor, contrarian POV, sentence shape.</span>
-        </div>
-      </li>
-
-      <li data-id="voice-rules">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Build the one-page Voice Rules sheet</span>
-          <span class="check-detail">What to do, what to avoid. Sample sentences in her cadence. Used to check every email and post after this.</span>
-        </div>
-      </li>
-
-      <li data-id="sanity-check-email">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Draft one outreach email in her voice</span>
-          <span class="check-detail">Send to Jocelyn for sanity check. Does it sound like her? Edit, repeat until yes.</span>
-        </div>
-      </li>
-
-      <li data-id="sanity-check-post">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Draft one social post in her voice</span>
-          <span class="check-detail">Same sanity check. LinkedIn or X tone. Approve before any post engine fires.</span>
-        </div>
-      </li>
-
-      <li data-id="approve-rules">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Jocelyn signs off on Voice Rules sheet</span>
-          <span class="check-detail">Once approved, this becomes the standard every downstream piece of copy gets checked against.</span>
-        </div>
-      </li>
-
-      <li data-id="tuesday-session">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Tuesday May 19 working session held</span>
-          <span class="check-detail">Calibration call. Walk through what's live, lock Voice Rules, confirm Phase 2 scope.</span>
-        </div>
-      </li>
-
+      <li data-id="setup"><input type="checkbox" /><div><span class="check-title">Set up recording environment</span><span class="check-detail">Quiet room, decent light if video, Loom or voice memo ready, Google Drive folder created.</span></div></li>
+      <li data-id="cat-01"><input type="checkbox" /><div><span class="check-title">Category 01 · Origin + background (5 questions)</span><span class="check-detail">~10 minutes. Audio only.</span></div></li>
+      <li data-id="cat-02"><input type="checkbox" /><div><span class="check-title">Category 02 · Voice + cadence (3 questions)</span><span class="check-detail">~5 minutes. One video, two audio.</span></div></li>
+      <li data-id="cat-03"><input type="checkbox" /><div><span class="check-title">Category 03 · ICP + audience (4 questions)</span><span class="check-detail">~8 minutes. Audio only.</span></div></li>
+      <li data-id="cat-04"><input type="checkbox" /><div><span class="check-title">Category 04 · Expertise + POV (5 questions)</span><span class="check-detail">~12 minutes. Two video, three audio.</span></div></li>
+      <li data-id="cat-05"><input type="checkbox" /><div><span class="check-title">Category 05 · Stories that prove it (5 questions)</span><span class="check-detail">~15 minutes. Audio only · these are the longer, narrative ones.</span></div></li>
+      <li data-id="cat-06"><input type="checkbox" /><div><span class="check-title">Category 06 · Ethos + beliefs (5 questions)</span><span class="check-detail">~10 minutes. Audio only.</span></div></li>
+      <li data-id="cat-07"><input type="checkbox" /><div><span class="check-title">Category 07 · Why hire you (4 questions)</span><span class="check-detail">~8 minutes. Three video, one audio. Treat these as sizzle-reel-grade takes.</span></div></li>
+      <li data-id="cat-08"><input type="checkbox" /><div><span class="check-title">Category 08 · Sider Road as family business (4 questions)</span><span class="check-detail">~8 minutes. Two video, two audio.</span></div></li>
+      <li data-id="jade-prompts"><input type="checkbox" /><div><span class="check-title">Jade's 3 prompts recorded in Paris (optional)</span><span class="check-detail">Vertical iPhone, single take per prompt, 30-60 sec.</span></div></li>
+      <li data-id="upload"><input type="checkbox" /><div><span class="check-title">Upload all clips to shared Google Drive folder</span><span class="check-detail">Send link when complete.</span></div></li>
+      <li data-id="transcribe"><input type="checkbox" /><div><span class="check-title">Transcribe within 24 hrs of upload (Alex)</span><span class="check-detail">Whisper local run · full transcript saved.</span></div></li>
+      <li data-id="voice-bank"><input type="checkbox" /><div><span class="check-title">Pull Voice Bank (50-75 verbatim phrases) (Alex)</span><span class="check-detail">Tagged by category. Ready for EPK + pitch personalization.</span></div></li>
+      <li data-id="voice-rules"><input type="checkbox" /><div><span class="check-title">Build 1-page Voice Rules sheet (Alex)</span><span class="check-detail">What to do, what to avoid, sample sentences. Used to filter all downstream copy.</span></div></li>
     </ul>
-
     <button class="check-clear" id="check-clear-voice">Reset checklist</button>
   </div>
 </section>
 
 <nav class="pagenav">
   <div class="container">
-    <div class="nav-prev">
-      <span class="nav-label">Previous</span>
-      <a href="04_award_nomination.html" class="nav-title">Award Nomination</a>
-    </div>
-    <div class="nav-index">
-      <span class="nav-label">All Deliverables</span>
-      <a href="index.html">Back to Index</a>
-    </div>
-    <div class="nav-next">
-      <span class="nav-label">Next</span>
-      <a href="06_open_items.html" class="nav-title">Open Items</a>
-    </div>
+    <div class="nav-prev"><span class="nav-label">Previous</span><a href="04_award_nomination.html" class="nav-title">Award Nomination</a></div>
+    <div class="nav-index"><span class="nav-label">All Deliverables</span><a href="index.html">Back to Index</a></div>
+    <div class="nav-next"><span class="nav-label">Next</span><a href="06_open_items.html" class="nav-title">Open Items</a></div>
   </div>
 </nav>
 
 <footer class="foot">
   <div class="container">
-    <div>Sider Road · Foundation Sprint · 05 of 05</div>
-    <div>Prepared by Alex Lamb · May 11, 2026</div>
+    <div>Sider Road · Foundation Sprint · 05 of 08</div>
+    <div>Prepared by Alex Lamb</div>
   </div>
 </footer>
 

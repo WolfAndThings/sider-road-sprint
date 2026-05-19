@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>08 · Pitch Contacts · Sider Road Sprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_shared.css" />
+<style>
+  .pitch-card {
+    background: var(--paper-shade);
+    border: 1px solid var(--rule);
+    padding: 32px 36px;
+    margin: 36px 0;
+  }
+  .pitch-head {
+    display: grid;
+    grid-template-columns: 60px 1fr 140px;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: baseline;
+  }
+  .pitch-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 36px;
+    color: var(--sienna);
+    line-height: 1;
+  }
+  .pitch-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .pitch-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    text-align: center;
+    align-self: start;
+  }
+  .pitch-status.open { color: var(--sienna); }
+  .pitch-status.evergreen { color: var(--forest); }
+  .pitch-status.next-year { color: var(--gold); }
+  .pitch-status.past { color: var(--ink-mute); opacity: 0.7; }
+  .pitch-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    background: var(--paper);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .pitch-meta div strong {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sienna);
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .pitch-meta a { color: var(--sienna-deep); text-decoration: underline; }
+  .pitch-email {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 28px;
+    border-radius: 4px;
+    margin-top: 16px;
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  .pitch-email strong { color: var(--paper); }
+  .pitch-email em { color: var(--gold-soft); }
+  .pitch-email .subject {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold-soft);
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #2d2724;
+  }
+  .pitch-note {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: var(--paper-deep);
+    border-left: 3px solid var(--sienna);
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .pitch-note strong { color: var(--sienna); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+  .status-key {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  .status-key span {
+    padding: 4px 10px;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 800px) {
+    .pitch-head { grid-template-columns: 40px 1fr; }
+    .pitch-status { grid-column: 2; text-align: left; }
+    .pitch-meta { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a href="index.html" class="masthead-logo">Side<span>r</span> Road · Foundation Sprint</a>
+    <div class="masthead-meta">08 · Pitch Contacts</div>
+  </div>
+</header>
+
+<div class="progress-strip">
+  <div class="container">
+    <div><a href="07_epk.html">← EPK</a></div>
+    <div>Deliverable 08 · 15 Personalized Pitches</div>
+    <div><a href="09_voice_35.html">Next · Voice Extraction →</a></div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Deliverable 08 · 15 named event organizers · <span class="status drafted">personalized pitches drafted</span></div>
+    <h1>The first <em>15 rooms</em>, with the actual email ready to send.</h1>
+    <p class="hero-lede">Each event below: real organizer, real audience, real status today (May 2026), recommended Jocelyn talk, and a personalized pitch email written in her voice and ready for her assistant to send. Cleared for Sprint 1 close.</p>
+    <div class="hero-meta">
+      <div>Total <strong>15 events</strong></div>
+      <div>Status mix <strong>5 open now · 6 evergreen · 4 next cycle</strong></div>
+      <div>Send by <strong>Friday May 22</strong></div>
+    </div>
+    <div class="status-key">
+      <span style="color: var(--sienna);">OPEN · submit now</span>
+      <span style="color: var(--forest);">EVERGREEN · rolling submissions</span>
+      <span style="color: var(--gold);">NEXT CYCLE · plan for 2027 deadlines</span>
+      <span style="color: var(--ink-mute);">PAST · 2026 event, note for next year</span>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container-narrow">
+    <div class="prose">
+
+      <h2>How her assistant uses this</h2>
+      <ul>
+        <li>Open each event below in order. Confirm the organizer contact is current (LinkedIn search the role).</li>
+        <li>Paste the personalized email into Gmail. Subject line already drafted.</li>
+        <li>Attach the one-sheet PDF (when ready) + link to siderroad.com/epk in signature.</li>
+        <li>Log send date + reply in the pitch tracker spreadsheet (see deliverable 03).</li>
+        <li>10-day follow-up if no reply. 21-day final nudge. 45-day mark dormant, retry Q3.</li>
+      </ul>
+
+      <h2 style="border-top: 2px solid var(--sienna); padding-top: 48px;">The 15 pitches</h2>
+
+      <!-- PITCH 01 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">01</div>
+          <h3>FFI Global Conference 2026</h3>
+          <span class="pitch-status open">Submit now</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date · Venue</strong>October 28 to 30, 2026 · Marriott Marquis Times Square, NYC</div>
+          <div><strong>Audience</strong>FFI member practitioners, advisors, family business academics · 800+</div>
+          <div><strong>Organizer</strong>The Family Firm Institute · 40th anniversary year</div>
+          <div><strong>Contact path</strong><a href="https://www.ffi.org/conference/" target="_blank" rel="noopener">ffi.org/conference</a> · proposal submission portal · also email events@ffi.org</div>
+          <div><strong>Recommended talk</strong>Family Leadership &amp; Legacy (or Generational Fluency for academic crossover)</div>
+          <div><strong>Why she fits</strong>FFI member status + Queens College CUNY adjunct + 200+ family business transitions + IRB-sanctioned research grant on psychological safety</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Proposal for FFI Global Conference 2026 · Family Leadership &amp; Legacy</div>
+          <p>Hi FFI Programs team,</p>
+          <p style="margin-top: 12px;">I'd like to propose a session for the 40th Anniversary Global Conference in October. With four decades inside the room where family business transitions happen and an academic appointment at Queens College CUNY, I think the work could land well with this year's audience.</p>
+          <p style="margin-top: 12px;">Proposed session: <em>Family Leadership &amp; Legacy</em>. A practitioner's framework for governing succession decisions, drawn from 200+ family business transitions and packaged into a 9-document Playbook attendees can take home. Built to be useful for both practitioners and advisors who guide them.</p>
+          <p style="margin-top: 12px;">A few credibility notes: Sider Road, my advisory practice, is itself a family business · I run it alongside my daughter Jade. Forthcoming book <em>Reputation by Design</em>. IRB-sanctioned research grant on psychological safety in family enterprises. Past press in CNBC, Fox News, WSJ, Fast Company, HuffPost.</p>
+          <p style="margin-top: 12px;">Full EPK at <strong>siderroad.com/epk</strong>. Happy to send the one-sheet on request or hop on a 15-minute call.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA<br />Founder, Sider Road</p>
+        </div>
+        <div class="pitch-note"><strong>Assistant note</strong>FFI publishes "Submit a Proposal" form on conference page. Submission window closes ~July 2026 historically. Submit immediately. If no reply by day 10, follow up via Scott Snider's events team contact who Jocelyn knows from EPI.</div>
+      </div>
+
+      <!-- PITCH 02 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">02</div>
+          <h3>NACD Directors Summit 2026</h3>
+          <span class="pitch-status open">Submit now</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date · Venue</strong>October 11 to 14, 2026 · Gaylord National Harbor, DC area</div>
+          <div><strong>Audience</strong>Corporate + private board directors · 2,000+</div>
+          <div><strong>Organizer</strong>National Association of Corporate Directors (NACD)</div>
+          <div><strong>Contact path</strong><a href="https://www.nacdonline.org/nacd-events/national-events/nacd-directors-summit-2026/" target="_blank" rel="noopener">Summit page</a> · phone 571-367-3700 · email speakers@nacdonline.org (verify)</div>
+          <div><strong>Recommended talk</strong>Reputation by Design (board-level reputation governance angle)</div>
+          <div><strong>Why she fits</strong>Forthcoming book on reputation + board governance overlap with family business succession + operator credibility</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Session idea for Directors Summit 2026 · Reputation governance for boards</div>
+          <p>Hi NACD Programs team,</p>
+          <p style="margin-top: 12px;">Sheila Bair on the mainstage is a strong anchor. Wanted to propose a breakout session that complements that mainstage governance frame from a different angle: reputation as a board-level oversight issue, not a marketing one.</p>
+          <p style="margin-top: 12px;">Proposed session: <em>Reputation by Design · the governance dimension</em>. Drawing on my forthcoming book of the same name and 40 years advising boards through reputation events at family-owned and privately held companies, I'd walk directors through the five reputation traps that derail organizations and the governance structures that catch them early.</p>
+          <p style="margin-top: 12px;">Credentials in brief: 40 years guiding family-owned organizations through succession + reputation transitions. CEO of Colin Cowie Lifestyle and Ortho Marketing. Adjunct Professor at Queens College CUNY. Author, <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). Press: CNBC, Fox News, WSJ, Fast Company.</p>
+          <p style="margin-top: 12px;">Full EPK: <strong>siderroad.com/epk</strong>. Happy to send the one-sheet or get on a 15-minute call.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA<br />Founder, Sider Road · Adjunct Professor, Queens College CUNY</p>
+        </div>
+        <div class="pitch-note"><strong>Assistant note</strong>NACD events team typically posts breakout sessions ~6 months out. Even if mainstage is set, breakout slots and chapter events open. Also pitch NACD Tri-State Chapter (NYC + CT) chairs separately on LinkedIn for chapter-level talks.</div>
+      </div>
+
+      <!-- PITCH 03 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">03</div>
+          <h3>Exit Planning Institute · Webinar Series</h3>
+          <span class="pitch-status evergreen">RE-PITCH · rolling</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Evergreen webinar series · monthly slots</div>
+          <div><strong>Audience</strong>Exit planning advisors, wealth managers, CEPA-certified · 5,000+ network</div>
+          <div><strong>Organizer</strong>EPI · Scott Snider (CEO) + events team</div>
+          <div><strong>Contact path</strong>info@exit-planning-institute.org · LinkedIn DM Scott Snider directly (Jocelyn already has a relationship)</div>
+          <div><strong>Recommended talk</strong>Charisma is a Skill (she did this in 2025, audiences asked for more)</div>
+          <div><strong>Why she fits</strong>She already delivered a charisma talk for EPI in May 2025. Reactivation is the warmest pitch on this entire list.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Following up on 2025 Charisma webinar · open to 2026?</div>
+          <p>Hi Scott (and EPI events team),</p>
+          <p style="margin-top: 12px;">Loved being part of the May 2025 webinar series · the Charisma session was a good one and I've been deepening the framework since.</p>
+          <p style="margin-top: 12px;">Wanted to circle back as you build out the 2026 lineup. I have two talks I think would land well with the CEPA audience:</p>
+          <p style="margin-top: 8px;">1. <em>Charisma is a Skill · the advisor's edition.</em> A reframe of last year's talk specifically for advisors who need to walk into a first meeting with a family-business owner and earn trust before tenure does it. Six learnable behaviors, 60 minutes.</p>
+          <p style="margin-top: 8px;">2. <em>Reputation by Design · for advisors.</em> Drawn from my forthcoming book of the same name. Why advisors lose deals to less-qualified competitors who simply built better reputations.</p>
+          <p style="margin-top: 12px;">Happy to do either as a standalone webinar or part of a CEPA-track series.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn</p>
+        </div>
+        <div class="pitch-note"><strong>Assistant note</strong>This is the warmest pitch on the list. If Scott replies and offers a slot, ask him for an intro to FBM editor as side bonus (FBM regularly co-promotes EPI talks).</div>
+      </div>
+
+      <!-- PITCH 04 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">04</div>
+          <h3>Massachusetts Conference for Women</h3>
+          <span class="pitch-status open">Submit now</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date · Venue</strong>December 2026 · Boston Convention Center</div>
+          <div><strong>Audience</strong>12,000+ women business + professional attendees · largest single-day women's leadership event in US</div>
+          <div><strong>Organizer</strong>Conferences for Women network · Boston team</div>
+          <div><strong>Contact path</strong>info@maconferenceforwomen.org · panel submissions open spring</div>
+          <div><strong>Recommended talk</strong>Office Politics for Honest People (workshop) OR Authority Women mastermind track preview</div>
+          <div><strong>Why she fits</strong>Authority Women mastermind track is a direct ICP match. Her operator + advisor combo gives her a real story women in mid-career want to hear.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Workshop proposal for MA Conference for Women 2026 · Office Politics for Honest People</div>
+          <p>Hi MA Conference for Women programs team,</p>
+          <p style="margin-top: 12px;">Wanted to propose a workshop session for the December gathering. The audience profile (mid-career professional women, executive track) aligns well with one of the strongest pieces of work I've shipped this decade.</p>
+          <p style="margin-top: 12px;">Proposed workshop: <em>Office Politics for Honest People · 90 minutes</em>. A framework for being taken seriously inside political organizations without playing dirty. Drawn from four decades of executive coaching across Hachette Filipacchi, Wenner Media, and dozens of family-run companies. Attendees leave with the five political archetypes they will meet and the one move that disarms each.</p>
+          <p style="margin-top: 12px;">A few credibility notes: 40 years guiding leaders through reputation and political transitions. Co-author, <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). Forthcoming book <em>Reputation by Design</em>. Sider Road · my advisory practice · is itself a family business, run with my daughter Jade. Adjunct Professor, Queens College CUNY.</p>
+          <p style="margin-top: 12px;">Full EPK: <strong>siderroad.com/epk</strong>. Happy to send the one-sheet or hop on a call.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+        <div class="pitch-note"><strong>Assistant note</strong>Conferences for Women network has 4 state events (MA, TX, PA, CA). Same email body works for all 4 with city swap. Submit MA first (December, earliest deadline), then rotate.</div>
+      </div>
+
+      <!-- PITCH 05 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">05</div>
+          <h3>Texas Conference for Women</h3>
+          <span class="pitch-status open">Submit now</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date · Venue</strong>November 2026 · Austin Convention Center</div>
+          <div><strong>Audience</strong>7,500+ professional women · executive + entrepreneur mix</div>
+          <div><strong>Organizer</strong>Conferences for Women network · Texas team</div>
+          <div><strong>Contact path</strong>info@txconferenceforwomen.org</div>
+          <div><strong>Recommended talk</strong>Reputation by Design (book launch year angle)</div>
+          <div><strong>Why she fits</strong>Texas audience leans entrepreneurial + family-business heavy. Forthcoming book + family business operator story doubles credibility.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Workshop proposal for TX Conference for Women 2026 · Reputation by Design</div>
+          <p>Hi TX Conference for Women programs team,</p>
+          <p style="margin-top: 12px;">Wanted to propose a workshop for the November gathering. Texas audiences skew entrepreneur and family-business owner, which lines up well with the work I do.</p>
+          <p style="margin-top: 12px;">Proposed workshop: <em>Reputation by Design · 90 minutes</em>. Reputation is the silent currency of leadership. This workshop maps the deliberate decisions that build a reputation that compounds for decades, drawn from my forthcoming book of the same name and 40 years inside the rooms where reputations are made and broken. Attendees leave with a reputation audit framework they apply to themselves on the way home.</p>
+          <p style="margin-top: 12px;">A few credibility notes: 40 years guiding women and family-business leaders. Co-author, <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). Press in CNBC, Fox News, WSJ, Fast Company. Sider Road is itself a family business, run with my daughter Jade. Adjunct Professor, Queens College CUNY.</p>
+          <p style="margin-top: 12px;">Full EPK: <strong>siderroad.com/epk</strong>. Happy to send the one-sheet or hop on a call.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+      </div>
+
+      <!-- PITCH 06 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">06</div>
+          <h3>Vistage CEO Speaker Network</h3>
+          <span class="pitch-status evergreen">Application</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Evergreen · Vistage Executive Summits run all year multi-city + chapter rotations weekly</div>
+          <div><strong>Audience</strong>Vetted CEO peer groups · 15-20 members each · paid memberships</div>
+          <div><strong>Organizer</strong>Vistage Worldwide · speaker bureau application</div>
+          <div><strong>Contact path</strong><a href="https://www.vistage.com/research-center/speaker-bureau" target="_blank" rel="noopener">vistage.com/research-center/speaker-bureau</a> · speakers@vistage.com</div>
+          <div><strong>Recommended talk</strong>Family Leadership &amp; Legacy + Charisma is a Skill (both featured)</div>
+          <div><strong>Why she fits</strong>Her CEO history (Colin Cowie Lifestyle, Ortho Marketing) qualifies her as Vistage speaker. Family business advisory rare in their roster.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Speaker application · Jocelyn Greenky Underwood · CEO + family business advisor</div>
+          <p>Hi Vistage Speaker Team,</p>
+          <p style="margin-top: 12px;">Applying to the Vistage Speaker Network. Brief context on why I think I fit:</p>
+          <p style="margin-top: 12px;"><strong>Operator credibility:</strong> 25 years as CEO across Colin Cowie Lifestyle and Ortho Marketing. Past Digital Global Editorial Director at Hachette Filipacchi. Co-founder, BriteBean Technology.</p>
+          <p style="margin-top: 8px;"><strong>Family business advisory:</strong> 200+ family business transitions guided over 40 years. Founder of Sider Road, which is itself a family business (run with my daughter Jade). Family business succession is an underserved topic in Vistage rosters.</p>
+          <p style="margin-top: 8px;"><strong>Signature talks I'd bring:</strong></p>
+          <p style="margin-left: 18px;">1. <em>Family Leadership &amp; Legacy</em> · the playbook for succession decisions every Vistage CEO will face within 10 years.</p>
+          <p style="margin-left: 18px;">2. <em>Charisma is a Skill</em> · the science of professional presence for senior leaders.</p>
+          <p style="margin-left: 18px;">3. <em>Reputation by Design</em> · drawn from my forthcoming book.</p>
+          <p style="margin-top: 12px;"><strong>Press:</strong> CNBC, Fox News, WSJ, Fast Company, HuffPost. Co-author, <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). Adjunct Professor, Queens College CUNY.</p>
+          <p style="margin-top: 12px;"><strong>EPK:</strong> siderroad.com/epk. Happy to send full one-sheet, reel (in progress), and three client references on request.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+        <div class="pitch-note"><strong>Assistant note</strong>Vistage application gate is real. Once accepted, evergreen ROI · 20 to 50 sessions per year. This is the highest-leverage long-term play on the list.</div>
+      </div>
+
+      <!-- PITCH 07 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">07</div>
+          <h3>YPO Greenwich + NYC Metro + CT chapters</h3>
+          <span class="pitch-status evergreen">Warm intro required</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Chapter events rotate monthly · invite-only speakers</div>
+          <div><strong>Audience</strong>YPO members · CEOs of $13M+ companies</div>
+          <div><strong>Organizer</strong>Each chapter's Learning Officer + Education Committee</div>
+          <div><strong>Contact path</strong>YPO chapter events are member-gated. Warm intro from any YPO member is the only viable path.</div>
+          <div><strong>Recommended talk</strong>Family Leadership &amp; Legacy + Charisma is a Skill</div>
+          <div><strong>Why she fits</strong>Geographic match (Greenwich-based). Family business + CEO operator combo · two rare topics for YPO.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · YPO chapter speaker · introduction request</div>
+          <p>Hi [YPO member contact],</p>
+          <p style="margin-top: 12px;">Hope you're well. Quick ask: I'm building out my speaking pipeline this year and the YPO chapter circuit is a natural fit for the work I do. Wondering if you'd be open to introducing me to your chapter's Learning Officer or Education Committee chair.</p>
+          <p style="margin-top: 12px;">Quick on me: 40 years advising family businesses through leadership transitions. Founder of Sider Road. Past CEO at Colin Cowie Lifestyle and Ortho Marketing. Co-author of <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). Forthcoming book <em>Reputation by Design</em>. Adjunct Professor at Queens College CUNY.</p>
+          <p style="margin-top: 12px;">Two talks I think would land well with a YPO room:</p>
+          <p style="margin-left: 18px;">1. <em>Family Leadership &amp; Legacy</em> · the framework most YPO members will face in their own succession within 10 years.</p>
+          <p style="margin-left: 18px;">2. <em>Charisma is a Skill</em> · the six learnable behaviors that build executive presence.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. Happy to forward to anyone you think might be open to a session.</p>
+          <p style="margin-top: 12px;">Thanks,<br />Jocelyn</p>
+        </div>
+        <div class="pitch-note"><strong>Assistant note</strong>Identify 3 to 5 YPO members in Jocelyn's network before sending. LinkedIn search "YPO + Greenwich" or "YPO + NYC + CEO". Past clients on her /jocelyn/ page (Viacom, Kraft, EY) may have YPO connections.</div>
+      </div>
+
+      <!-- PITCH 08 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">08</div>
+          <h3>EO NYC + Connecticut chapters</h3>
+          <span class="pitch-status evergreen">Warm intro</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Chapter events rotate monthly</div>
+          <div><strong>Audience</strong>EO members · entrepreneurs of $1M+ revenue companies</div>
+          <div><strong>Organizer</strong>EO Learning Chair per chapter</div>
+          <div><strong>Contact path</strong>Direct LinkedIn DM to chapter Learning Chair · also approachable via any EO member intro</div>
+          <div><strong>Recommended talk</strong>Charisma is a Skill (EO members want practical) or Office Politics for Honest People</div>
+          <div><strong>Why she fits</strong>EO audience is operator-first. Her CEO pedigree gives instant credibility. Lower barrier than YPO.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · EO chapter speaker · Charisma is a Skill</div>
+          <p>Hi [Learning Chair name],</p>
+          <p style="margin-top: 12px;">Saw you run the Learning calendar for EO [chapter]. Wanted to introduce myself in case there's a fit for your 2026 speaker lineup.</p>
+          <p style="margin-top: 12px;">I'm Jocelyn Greenky Underwood, founder of Sider Road, an advisory practice for family-owned and privately held companies. Past CEO at Colin Cowie Lifestyle and Ortho Marketing. Adjunct Professor at Queens College CUNY. Author and forthcoming author.</p>
+          <p style="margin-top: 12px;">Proposed session: <em>Charisma is a Skill · 60 minutes</em>. A framework for executive presence that any EO member can use in their next investor meeting, client pitch, or hiring conversation. Six learnable behaviors, walked through with real examples from 40 years inside leadership rooms.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. If you'd like to chat for 15 minutes about fit, happy to.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn</p>
+        </div>
+      </div>
+
+      <!-- PITCH 09 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">09</div>
+          <h3>Chief Network Speaker Series</h3>
+          <span class="pitch-status evergreen">Membership-gated</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Year-round events in NYC + SF + LA · monthly</div>
+          <div><strong>Audience</strong>Senior women executives ($150K+ comp) · Chief members</div>
+          <div><strong>Organizer</strong>Chief programming team</div>
+          <div><strong>Contact path</strong>programming@chief.com · also approachable via any Chief member</div>
+          <div><strong>Recommended talk</strong>Authority Women track preview OR Reputation by Design</div>
+          <div><strong>Why she fits</strong>Authority Women mastermind track aligns exactly with Chief ICP. Forthcoming book launches give a real news hook.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Speaker proposal for Chief Network · Authority Women + Reputation by Design</div>
+          <p>Hi Chief Programming Team,</p>
+          <p style="margin-top: 12px;">Wanted to propose two sessions for the 2026 calendar. The audience overlap with my work is unusually tight.</p>
+          <p style="margin-top: 12px;"><strong>Session 1 · Authority Women in Family Business.</strong> Most leadership content for women treats family business as a niche. I treat it as the default. 40 years inside family-owned organizations has taught me that the dynamics that make women in family business hard to take seriously are the same dynamics women face everywhere · they're just more concentrated. A framework for shifting from "founder's daughter" to "principal."</p>
+          <p style="margin-top: 12px;"><strong>Session 2 · Reputation by Design.</strong> Drawn from my forthcoming book of the same name. Why senior women lose more deals to less-qualified competitors than they should, and the deliberate decisions that build a reputation that compounds for decades.</p>
+          <p style="margin-top: 12px;"><strong>Credentials:</strong> 40 years guiding leaders through reputation transitions. Co-author of <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). Forthcoming <em>Reputation by Design</em>. Past CEO at Colin Cowie Lifestyle. Adjunct at Queens College CUNY.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. Available virtual or in-person NYC.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+      </div>
+
+      <!-- PITCH 10 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">10</div>
+          <h3>Small Giants Summit 2026</h3>
+          <span class="pitch-status next-year">Apply for 2027 cycle</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Annual summit · 2026 dates passed by May · target 2027</div>
+          <div><strong>Audience</strong>Perpetually private + values-led CEOs · ~500 attendees</div>
+          <div><strong>Organizer</strong>Small Giants Community</div>
+          <div><strong>Contact path</strong>info@smallgiants.org · also warm intro from current speaker (Richard Bryan precedent)</div>
+          <div><strong>Recommended talk</strong>Family Leadership &amp; Legacy</div>
+          <div><strong>Why she fits</strong>Small Giants audience overlaps heavily with family business + values-led private companies. Her stack exceeds Bryan's by 5×.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Speaker proposal for Small Giants Summit 2027 · Family Leadership &amp; Legacy</div>
+          <p>Hi Small Giants Programs team,</p>
+          <p style="margin-top: 12px;">I'm a Bo Burlingham-orbit admirer of what you've built. Wanted to propose a session for the 2027 summit while planning windows are still open.</p>
+          <p style="margin-top: 12px;">Proposed session: <em>Family Leadership &amp; Legacy · the playbook for perpetually private companies</em>. Small Giants audiences are values-led + private + multi-generational by design. The succession decisions that determine whether a perpetually private company survives the founder are the work I've spent 40 years inside. I'd walk attendees through a 9-document Playbook framework I've shipped to more than 200 family businesses.</p>
+          <p style="margin-top: 12px;">Credentials: Founder of Sider Road (itself a family business, run with my daughter Jade). Past CEO at Colin Cowie Lifestyle and Ortho Marketing. Co-author, <em>The Big Sister's Guide to the World of Work</em>. Forthcoming <em>Reputation by Design</em>. Adjunct Professor, Queens College CUNY. Press: CNBC, Fox News, WSJ.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. Happy to talk for 15 minutes about fit.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+      </div>
+
+      <!-- PITCH 11 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">11</div>
+          <h3>FBM Transitions Conference Fall 2026</h3>
+          <span class="pitch-status open">Pitch now</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Fall 2026 (typically Oct/Nov) · venue TBD</div>
+          <div><strong>Audience</strong>Multi-generational family business owners + advisors · 400-600</div>
+          <div><strong>Organizer</strong>Family Business Magazine events team</div>
+          <div><strong>Contact path</strong>editor@familybusinessmagazine.com · also event team via <a href="https://familybusinessmagazine.com/events/" target="_blank" rel="noopener">familybusinessmagazine.com/events</a></div>
+          <div><strong>Recommended talk</strong>Family Leadership &amp; Legacy + parallel award nomination submitted</div>
+          <div><strong>Why she fits</strong>FBM Transformational Women nomination submitted same week + practitioner column pitch. Three touches in one editorial cycle.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Speaker proposal for FBM Transitions Fall 2026 · Family Leadership &amp; Legacy</div>
+          <p>Hi FBM events team,</p>
+          <p style="margin-top: 12px;">Hoping to propose a session for the Fall Transitions Conference. The work I do · family business succession decisions · is exactly what your audience comes for.</p>
+          <p style="margin-top: 12px;">Proposed session: <em>Family Leadership &amp; Legacy</em>. The decisions that determine whether a family business survives the founder. A working framework drawn from 200+ family business transitions, packaged into a 9-document Playbook attendees take home. 60-minute keynote or 90-minute workshop format.</p>
+          <p style="margin-top: 12px;">A few things that may interest the editorial team in parallel:</p>
+          <p style="margin-left: 18px;">· Sider Road, my advisory practice, is itself a family business (I run it with my daughter Jade). Rare in the field.</p>
+          <p style="margin-left: 18px;">· Forthcoming book <em>Reputation by Design</em> · happy to share a chapter.</p>
+          <p style="margin-left: 18px;">· I've also pitched FBM editorial separately on a quarterly practitioner column.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. Available in-person or virtual.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA · Founder, Sider Road</p>
+        </div>
+      </div>
+
+      <!-- PITCH 12 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">12</div>
+          <h3>Tugboat Institute Summit · Sun Valley 2027</h3>
+          <span class="pitch-status next-year">Warm intro · plan for 2027</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Annual summer summit · Sun Valley, ID</div>
+          <div><strong>Audience</strong>"Evergreen" CEOs of perpetually private companies · 250-400</div>
+          <div><strong>Organizer</strong>Tugboat Institute</div>
+          <div><strong>Contact path</strong>info@tugboatinstitute.com · also via Bo Burlingham network or any member intro</div>
+          <div><strong>Recommended talk</strong>Family Leadership &amp; Legacy + Generational Fluency</div>
+          <div><strong>Why she fits</strong>Tugboat audience = exactly her ICP. Operator + advisor + Sider Road family-business angle.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Speaker proposal for Tugboat Summit 2027 · evergreen + family business</div>
+          <p>Hi Tugboat Programs team,</p>
+          <p style="margin-top: 12px;">Long-time admirer of the evergreen company thesis. Wanted to propose a session for the 2027 summit while planning windows are still open.</p>
+          <p style="margin-top: 12px;">Proposed session: <em>Family Leadership &amp; Legacy · for evergreen companies</em>. Evergreen companies are family businesses by another name. Most will eventually face the same succession decisions that derail family-owned companies · they just call them "ownership transitions." I'd walk attendees through the framework I've shipped to 200+ family businesses, packaged for the evergreen audience.</p>
+          <p style="margin-top: 12px;">Credentials: Founder of Sider Road, an advisory practice that is itself a family business (run with my daughter Jade). Past CEO at Colin Cowie Lifestyle and Ortho Marketing. Adjunct Professor, Queens College CUNY. Forthcoming book <em>Reputation by Design</em>.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. Happy to talk fit.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+      </div>
+
+      <!-- PITCH 13 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">13</div>
+          <h3>UConn School of Business · Family Business Program</h3>
+          <span class="pitch-status evergreen">Local · low barrier</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Multiple events per year · Hartford CT</div>
+          <div><strong>Audience</strong>Connecticut family business owners + advisors · 100-200 per event</div>
+          <div><strong>Organizer</strong>UConn School of Business Family Business Program</div>
+          <div><strong>Contact path</strong>Program Director · search LinkedIn for "UConn family business program director" · also business.uconn.edu contact form</div>
+          <div><strong>Recommended talk</strong>Family Leadership &amp; Legacy (academic + practitioner combo plays well)</div>
+          <div><strong>Why she fits</strong>Geographic proximity (Greenwich) + Queens College CUNY adjunct status = academic peer credibility. Easy yes.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · UConn Family Business Program · speaker availability + collaboration interest</div>
+          <p>Hi [Program Director name],</p>
+          <p style="margin-top: 12px;">Reaching out as a Greenwich-based family business advisor + Queens College CUNY adjunct in business administration. Wanted to introduce myself and explore whether there's a fit for UConn's Family Business Program events.</p>
+          <p style="margin-top: 12px;">A few things that may be relevant:</p>
+          <p style="margin-left: 18px;">· 40 years advising family-owned organizations · 200+ documented transitions.</p>
+          <p style="margin-left: 18px;">· Founder of Sider Road · the advisory practice is itself a family business (run with my daughter Jade).</p>
+          <p style="margin-left: 18px;">· IRB-sanctioned research grant on psychological safety in family enterprises.</p>
+          <p style="margin-left: 18px;">· Forthcoming book <em>Reputation by Design</em>.</p>
+          <p style="margin-top: 12px;">Two formats I could bring to the program:</p>
+          <p style="margin-left: 18px;">1. Public lecture · <em>Family Leadership &amp; Legacy</em>.</p>
+          <p style="margin-left: 18px;">2. Practitioner panel · whatever topic complements your current research focus.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. Happy to talk for 15 minutes.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+        <div class="pitch-note"><strong>Assistant note</strong>UConn family business program is small but Hartford proximity makes this a low-effort "first paid local gig" credibility-builder. Should be one of the first sent.</div>
+      </div>
+
+      <!-- PITCH 14 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">14</div>
+          <h3>Worth Magazine Power 100 Events</h3>
+          <span class="pitch-status evergreen">Relationship play</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Year-round events in NYC + LA</div>
+          <div><strong>Audience</strong>UHNW + family wealth + wealth managers · 200-400 per event</div>
+          <div><strong>Organizer</strong>Worth Media Group</div>
+          <div><strong>Contact path</strong>events@worth.com + Chief Content Officer (search LinkedIn current name)</div>
+          <div><strong>Recommended talk</strong>Reputation by Design + Playbook GTM angle for wealth managers</div>
+          <div><strong>Why she fits</strong>Worth audience overlaps with Family Business Playbook white-label ICP. Speaking = pipeline play more than fee.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · Worth Power 100 nominee + speaker · Reputation by Design</div>
+          <p>Hi Worth events team,</p>
+          <p style="margin-top: 12px;">Reaching out on two fronts that may be useful editorial + programming touchpoints.</p>
+          <p style="margin-top: 12px;"><strong>Speaker proposal:</strong> <em>Reputation by Design</em>, drawn from my forthcoming book of the same name. Why senior leaders and family business principals lose more opportunities to less-qualified competitors than they should · and the deliberate decisions that build a reputation that compounds for decades. Tailored well to Worth Power 100 audiences (UHNW + family wealth principals + wealth managers).</p>
+          <p style="margin-top: 12px;"><strong>Editorial angle:</strong> Sider Road, my advisory practice, is itself a family business · run with my daughter Jade. Mother-daughter family business advisory is unusual enough to be a real Worth story.</p>
+          <p style="margin-top: 12px;"><strong>Credentials in brief:</strong> 40 years advising family businesses. Past CEO at Colin Cowie Lifestyle, Ortho Marketing. Past Digital Global Editorial Director at Hachette Filipacchi. Adjunct Professor at Queens College CUNY.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. Available for editorial conversation or speaker booking.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+      </div>
+
+      <!-- PITCH 15 -->
+      <div class="pitch-card">
+        <div class="pitch-head">
+          <div class="pitch-num">15</div>
+          <h3>Family Office Exchange (FOX) Forums</h3>
+          <span class="pitch-status evergreen">Pipeline play</span>
+        </div>
+        <div class="pitch-meta">
+          <div><strong>Date</strong>Year-round forums for single + multi-family office members</div>
+          <div><strong>Audience</strong>Family office principals + wealth advisors · 100-300 per forum</div>
+          <div><strong>Organizer</strong>Family Office Exchange</div>
+          <div><strong>Contact path</strong><a href="https://www.familyoffice.com" target="_blank" rel="noopener">familyoffice.com</a> · also via member intro</div>
+          <div><strong>Recommended talk</strong>Family Leadership &amp; Legacy + Playbook governance framework</div>
+          <div><strong>Why she fits</strong>FOX members are the exact white-label ICP for the Family Business Playbook product. Speaking opens partnership conversations.</div>
+        </div>
+        <div class="pitch-email">
+          <div class="subject">Subject · FOX Forum speaker proposal · Family Leadership &amp; Legacy</div>
+          <p>Hi FOX Programs team,</p>
+          <p style="margin-top: 12px;">Wanted to propose a speaker session for the 2026 forum calendar. The work I do · family business governance, succession, and reputation · is directly applicable to FOX member needs.</p>
+          <p style="margin-top: 12px;">Proposed session: <em>Family Leadership &amp; Legacy · the practitioner's framework</em>. A working playbook for the leadership transitions that family-office-served principals will face within a decade. 60-minute session, 9-document Playbook framework attendees take home.</p>
+          <p style="margin-top: 12px;">Beyond the speaking, I'd welcome a conversation about whether the Family Business Playbook · a 9-document governance and succession operating system I've shipped to 200+ family businesses · might be useful as a white-label resource for FOX members. Wealth advisors and family offices increasingly need a structured deliverable on family business decisions, and the Playbook was designed exactly for that handoff.</p>
+          <p style="margin-top: 12px;">Credentials: 40 years guiding family businesses. Founder of Sider Road. Past CEO at Colin Cowie Lifestyle. Adjunct, Queens College CUNY. Co-author of <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). Forthcoming <em>Reputation by Design</em>.</p>
+          <p style="margin-top: 12px;">EPK: <strong>siderroad.com/epk</strong>. Happy to talk for 15 minutes about either path.</p>
+          <p style="margin-top: 12px;">Best,<br />Jocelyn Greenky Underwood, MBA</p>
+        </div>
+        <div class="pitch-note"><strong>Assistant note</strong>FOX is the most strategic relationship on the list. Speaking + Playbook white-label = potential 6-figure partnership. Send carefully, expect long sales cycle.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="checklist">
+  <div class="container-narrow">
+    <div class="checklist-eyebrow">Checklist · for Jocelyn's assistant</div>
+    <h2>15 Pitches · <em>send checklist</em>.</h2>
+    <p class="checklist-lede">Send 5 per day Monday Tuesday Wednesday = all 15 out by Wednesday this week. Mark each one as it goes.</p>
+
+    <div class="check-progress" id="check-progress-pitches">0 of 15 complete</div>
+
+    <ul class="checks" id="checklist-pitches">
+      <li data-id="pitch-01"><input type="checkbox" /><div><span class="check-title">01 · FFI Global Conference 2026</span><span class="check-detail">Submit via ffi.org/conference + email events@ffi.org</span></div></li>
+      <li data-id="pitch-02"><input type="checkbox" /><div><span class="check-title">02 · NACD Directors Summit 2026</span><span class="check-detail">Submit via nacdonline.org + email speakers@nacdonline.org</span></div></li>
+      <li data-id="pitch-03"><input type="checkbox" /><div><span class="check-title">03 · EPI Webinar Series re-pitch</span><span class="check-detail">Email Scott Snider + EPI events team · warmest pitch</span></div></li>
+      <li data-id="pitch-04"><input type="checkbox" /><div><span class="check-title">04 · MA Conference for Women</span><span class="check-detail">Email info@maconferenceforwomen.org</span></div></li>
+      <li data-id="pitch-05"><input type="checkbox" /><div><span class="check-title">05 · TX Conference for Women</span><span class="check-detail">Email info@txconferenceforwomen.org</span></div></li>
+      <li data-id="pitch-06"><input type="checkbox" /><div><span class="check-title">06 · Vistage Speaker Network</span><span class="check-detail">Apply via vistage.com/research-center/speaker-bureau</span></div></li>
+      <li data-id="pitch-07"><input type="checkbox" /><div><span class="check-title">07 · YPO chapters (Greenwich/NYC/CT)</span><span class="check-detail">Identify 3-5 YPO contacts in Jocelyn's network for warm intro</span></div></li>
+      <li data-id="pitch-08"><input type="checkbox" /><div><span class="check-title">08 · EO NYC + CT chapters</span><span class="check-detail">LinkedIn DM Learning Chair per chapter</span></div></li>
+      <li data-id="pitch-09"><input type="checkbox" /><div><span class="check-title">09 · Chief Network Speaker Series</span><span class="check-detail">Email programming@chief.com</span></div></li>
+      <li data-id="pitch-10"><input type="checkbox" /><div><span class="check-title">10 · Small Giants Summit 2027</span><span class="check-detail">Email info@smallgiants.org · plan ahead for 2027 cycle</span></div></li>
+      <li data-id="pitch-11"><input type="checkbox" /><div><span class="check-title">11 · FBM Transitions Conference Fall 2026</span><span class="check-detail">Email editor@familybusinessmagazine.com + parallel award + column pitch</span></div></li>
+      <li data-id="pitch-12"><input type="checkbox" /><div><span class="check-title">12 · Tugboat Institute Summit 2027</span><span class="check-detail">Email info@tugboatinstitute.com</span></div></li>
+      <li data-id="pitch-13"><input type="checkbox" /><div><span class="check-title">13 · UConn Family Business Program</span><span class="check-detail">Find program director on LinkedIn + email · local low-barrier</span></div></li>
+      <li data-id="pitch-14"><input type="checkbox" /><div><span class="check-title">14 · Worth Power 100</span><span class="check-detail">Email events@worth.com + identify Chief Content Officer</span></div></li>
+      <li data-id="pitch-15"><input type="checkbox" /><div><span class="check-title">15 · FOX Forums (Family Office Exchange)</span><span class="check-detail">Email via familyoffice.com · strategic Playbook partnership angle</span></div></li>
+    </ul>
+    <button class="check-clear" id="check-clear-pitches">Reset checklist</button>
+  </div>
+</section>
+
+<nav class="pagenav">
+  <div class="container">
+    <div class="nav-prev"><span class="nav-label">Previous</span><a href="07_epk.html" class="nav-title">EPK</a></div>
+    <div class="nav-index"><span class="nav-label">All Deliverables</span><a href="index.html">Back to Index</a></div>
+    <div class="nav-next"><span class="nav-label">Next</span><a href="09_voice_35.html" class="nav-title">Voice Extraction</a></div>
+  </div>
+</nav>
+
+<footer class="foot">
+  <div class="container">
+    <div>Sider Road · Foundation Sprint · 08 of 09</div>
+    <div>Prepared by Alex Lamb</div>
+  </div>
+</footer>
+
+<script src="_shared.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function () { initChecklist('pitches'); });</script>
+
+</body>
+</html>
