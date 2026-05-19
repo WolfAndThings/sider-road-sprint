@@ -165,12 +165,59 @@
   }
   .open-callout a.cta:hover { background: var(--paper); }
 
+  /* All-deliverables quick reference grid */
+  .all-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .all-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--paper-shade);
+    border: 1px solid var(--rule);
+    padding: 24px 26px;
+    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  }
+  .all-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--sienna);
+    background: var(--paper-deep);
+  }
+  .all-card .card-n {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 36px;
+    color: var(--sienna);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .all-card strong {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .all-card span {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
   @media (max-width: 800px) {
     .mission-block .container { grid-template-columns: 1fr; gap: 24px; }
     .step-inner { grid-template-columns: 1fr; gap: 24px; }
     .step-num { font-size: 64px; }
     .action { grid-template-columns: 1fr; gap: 4px; }
     .action-status { text-align: left; }
+    .all-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -258,7 +305,7 @@
         <a class="action" href="07_epk.html">
           <div class="action-text">
             <strong>Speaker EPK · live page + print-ready PDF</strong>
-            <span>Her brand (white + navy + red, Spectral + Playfair Display). Full bio in three lengths, 7 signature talks, 4 testimonials, press + clients + reach, fee transparency, 10 sample interview questions, downloads.</span>
+            <span>Her brand (white + navy + red, Spectral + Playfair Display). Full bio in three lengths, 7 signature talks, 4 testimonials, press + clients + reach, fee transparency, 10 sample interview questions, downloads. <em>All copy, structure, and design decisions transfer directly into the existing Canva EPK file · designer just lifts the new sections into the existing layout.</em></span>
           </div>
           <div class="action-status live">Live · awaiting photo</div>
         </a>
@@ -347,10 +394,64 @@
   </div>
 </section>
 
+<!-- ALL DELIVERABLES · QUICK REFERENCE -->
+<section class="step" style="padding-top: 80px;">
+  <div class="step-inner" style="grid-template-columns: 1fr; max-width: 1100px;">
+    <div>
+      <div class="step-tag" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 12px;">All deliverables · Quick reference</div>
+      <h3 style="font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.1; letter-spacing: -0.015em; margin-bottom: 12px;">Eight pieces. Designed to work together.</h3>
+      <p class="step-lede" style="font-family: 'Fraunces', serif; font-weight: 300; font-size: 18px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 32px; max-width: 60ch;">Each deliverable below stands alone, but together they form a complete speaker-pipeline stack. The website fixes give organizers a place to land. The EPK gives them what to read. The bureaus and pitches put her in front of bookers. The awards build credibility surface in parallel. The voice extraction calibrates every word that goes out. The checklist holds it all together.</p>
+
+      <div class="all-grid">
+        <a class="all-card" href="01_site_edits.html">
+          <div class="card-n">01</div>
+          <strong>Site Edits</strong>
+          <span>25 edits across 4 categories · page fixes, homepage credibility surface, new pages (/speaking, /reputation-by-design, /writing, /faq), SEO + schema + housekeeping.</span>
+        </a>
+        <a class="all-card" href="02_bureau_submissions.html">
+          <div class="card-n">02</div>
+          <strong>Bureau Submissions</strong>
+          <span>6 speaker bureaus · eSpeakers, BigSpeak, Premiere, Executive, All American, Washington Speakers. Profile fields + 250-word bio + outreach emails all drafted.</span>
+        </a>
+        <a class="all-card" href="03_event_database.html">
+          <div class="card-n">03</div>
+          <strong>Events + Podcasts</strong>
+          <span>30 events across 6 tiers + 20 adjacent podcasts + 4 reusable email templates + pitch tracker spec with 10-day/21-day/45-day cadence rules.</span>
+        </a>
+        <a class="all-card" href="04_award_nomination.html">
+          <div class="card-n">04</div>
+          <strong>Awards + Press</strong>
+          <span>5 award nominations drafted (FBM Transformational Women, FFI Hollander, Stevie × 2, FBM CEOs to Watch, Worth Power 100) + 4 press reactivation plays (HuffPost, FBM column, LinkedIn Top Voices, Forbes Coaches Council).</span>
+        </a>
+        <a class="all-card" href="05_voice_loom.html">
+          <div class="card-n">05</div>
+          <strong>Voice Extraction · 35 Questions</strong>
+          <span>8 categories · origin, voice, ICP, expertise, stories, ethos, why-hire, family-business. Audio for most, video for 9 key prompts. Feeds bio, EPK, pitch personalization, social copy.</span>
+        </a>
+        <a class="all-card" href="06_open_items.html">
+          <div class="card-n">06</div>
+          <strong>Open Items From Jocelyn</strong>
+          <span>15-item consolidated checklist. Most are short. Single source of truth for what we need from her to close Sprint 1.</span>
+        </a>
+        <a class="all-card" href="07_epk.html">
+          <div class="card-n">07</div>
+          <strong>Speaker EPK</strong>
+          <span>Her brand · white + navy + red, print-ready. Bio in 3 lengths, 7 signature talks, 4 testimonials, fee transparency, sample interview questions, downloads. All copy transfers directly into her existing Canva EPK.</span>
+        </a>
+        <a class="all-card" href="08_pitch_contacts.html">
+          <div class="card-n">08</div>
+          <strong>15 Personalized Pitches</strong>
+          <span>Real organizers, real 2026 dates, personalized email per event, recommended signature talk per audience. Assistant-ready · send 5 per day Monday through Wednesday.</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- OPEN ITEMS CALLOUT -->
 <section class="open-callout">
   <div class="container">
-    <h3>Before tomorrow's call · <em>fifteen small things</em></h3>
+    <h3>Before the call · <em>fifteen small things</em></h3>
     <p>A single consolidated list of what we need from Jocelyn to fully close Sprint 1. Most items are short. Open this in a separate tab and check off as you go. Your progress saves automatically in the browser.</p>
     <a class="cta" href="06_open_items.html">Open the checklist →</a>
   </div>
