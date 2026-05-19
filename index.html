@@ -3,75 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sider Road · Foundation Sprint · Week 1</title>
+<title>Sider Road · Foundation Sprint · Playbook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="_shared.css" />
 <style>
-  /* Index-only styles */
-  .deliverable-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-    margin-top: 56px;
-  }
-  .deliverable-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: var(--paper-shade);
-    border: 1px solid var(--rule);
-    padding: 36px 32px;
-    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-  }
-  .deliverable-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--sienna);
-    background: var(--paper-deep);
-  }
-  .card-num {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 56px;
-    color: var(--sienna);
-    line-height: 1;
-    margin-bottom: 16px;
-  }
-  .card-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-mute);
-    margin-bottom: 10px;
-  }
-  .deliverable-card h3 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-    margin-bottom: 12px;
-    color: var(--ink);
-  }
-  .deliverable-card p {
-    font-size: 15px;
-    color: var(--ink-soft);
-    line-height: 1.55;
-  }
-  .card-cta {
-    display: inline-block;
-    margin-top: 20px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--sienna);
-  }
   .mission-block {
-    padding: 80px 0;
+    padding: 60px 0;
     border-bottom: 1px solid var(--rule);
   }
   .mission-block .container { display: grid; grid-template-columns: 240px 1fr; gap: 64px; }
@@ -87,23 +26,151 @@
   .mission-block h2 {
     font-family: 'Fraunces', serif;
     font-weight: 500;
-    font-size: clamp(32px, 4vw, 48px);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    margin-bottom: 24px;
-    max-width: 24ch;
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    max-width: 26ch;
   }
   .mission-block p {
     font-family: 'Fraunces', serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.55;
     color: var(--ink-soft);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     max-width: 60ch;
   }
+
+  /* Step blocks */
+  .step {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .step:last-of-type { border-bottom: none; }
+  .step-inner {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 56px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .step-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 96px;
+    color: var(--sienna);
+    line-height: 0.9;
+  }
+  .step-head .step-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 12px;
+  }
+  .step-head h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+  }
+  .step-head .step-lede {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    max-width: 60ch;
+  }
+
+  /* Sub-actions */
+  .actions {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .action {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    gap: 32px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: padding-left 0.15s ease;
+  }
+  .action:hover { padding-left: 8px; background: var(--paper-shade); }
+  .action-text strong {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .action-text span {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .action-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .action-status.drafted { color: var(--sienna); }
+  .action-status.pending { color: var(--gold); }
+  .action-status.live { color: var(--forest); }
+  .action-status.ready { color: var(--sienna-deep); }
+
+  /* Open items callout — sticky-feel block */
+  .open-callout {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 0;
+  }
+  .open-callout .container { max-width: 1100px; padding: 0 32px; }
+  .open-callout h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 38px);
+    color: var(--paper);
+    margin-bottom: 16px;
+    letter-spacing: -0.015em;
+  }
+  .open-callout h3 em { color: var(--gold-soft); font-style: italic; }
+  .open-callout p { color: var(--paper-shade); font-size: 17px; line-height: 1.55; max-width: 56ch; margin-bottom: 24px; }
+  .open-callout a.cta {
+    display: inline-block;
+    background: var(--gold-soft);
+    color: var(--ink);
+    padding: 14px 28px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .open-callout a.cta:hover { background: var(--paper); }
+
   @media (max-width: 800px) {
     .mission-block .container { grid-template-columns: 1fr; gap: 24px; }
+    .step-inner { grid-template-columns: 1fr; gap: 24px; }
+    .step-num { font-size: 64px; }
+    .action { grid-template-columns: 1fr; gap: 4px; }
+    .action-status { text-align: left; }
   }
 </style>
 </head>
@@ -112,20 +179,19 @@
 <header class="masthead">
   <div class="container masthead-inner">
     <a href="index.html" class="masthead-logo">Side<span>r</span> Road · Foundation Sprint</a>
-    <div class="masthead-meta">Week 01 · May 2026 · Confidential</div>
+    <div class="masthead-meta">Playbook · May 2026</div>
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <div class="hero-eyebrow">Sprint Deliverables · Index</div>
-    <h1>Five things,<br />done <em>well</em>,<br />in one week.</h1>
-    <p class="hero-lede">A clean read of what was built, what's open, and where it goes from here. Drafted by Alex for Jocelyn Greenky Underwood, May 11, 2026. No filler. No agency theatre.</p>
+    <div class="hero-eyebrow">Sprint Playbook · Step by Step</div>
+    <h1>Five steps,<br />top to bottom.<br /><em>Wrap by Friday.</em></h1>
+    <p class="hero-lede">Each step below contains the work for this sprint. Click into any line for the full brief, copy, and checklist. Built for Jocelyn and her assistant to execute. Drafted by Alex, May 2026.</p>
     <div class="hero-meta">
       <div>Sprint <strong>Foundation · $750</strong></div>
-      <div>Duration <strong>One week</strong></div>
-      <div>Working session <strong>Tue · May 19</strong></div>
-      <div>Working session <strong>Tue · May 19</strong></div>
+      <div>Working session <strong>Tue · May 19 · 10:30am-4pm ET</strong></div>
+      <div>Target close <strong>Friday · May 22</strong></div>
     </div>
   </div>
 </section>
@@ -137,94 +203,163 @@
     </div>
     <div>
       <h2>Turn forty years of practitioner depth into a working surface.</h2>
-      <p>Sider Road has more assets than nearly anyone else in the family business advisory space. The work this sprint does is simple. Stop hiding them.</p>
-      <p>We surface the family-run angle on the homepage. We pull the nine-doc Playbook out of the basement. We submit a real award nomination. We start a real speaking pipeline. We capture the actual voice so every email that follows sounds like Jocelyn and not like an agency wrote it.</p>
-      <p>One week. Five deliverables. Each one is on its own page below, with a checklist that whoever owns it can work through directly.</p>
+      <p>Sider Road has more assets than nearly anyone else in the family business advisory space. The work this sprint does is simple. Stop hiding them. Surface the credentials, fix the broken funnel, ship a real press kit, and get fifteen personalized pitches out the door this week.</p>
+      <p>Five steps below. Each step has 1-3 actions, each action links to a full brief and a working checklist. Run them top to bottom.</p>
     </div>
   </div>
 </section>
 
-<section class="content">
+<!-- STEP 1 -->
+<section class="step">
+  <div class="step-inner">
+    <div class="step-num">01</div>
+    <div class="step-head">
+      <div class="step-tag">Step 01 · Foundation · This week</div>
+      <h3>Fix the website. Record her voice. Send the assets.</h3>
+      <p class="step-lede">Everything downstream depends on these three pieces. Site is the front door. Voice extraction calibrates every email and post that follows. Assets unlock the press kit and award submission.</p>
+
+      <div class="actions">
+        <a class="action" href="01_site_edits.html">
+          <div class="action-text">
+            <strong>Fix siderroad.com · 25 edits in 4 categories</strong>
+            <span>Restore 2 broken pages, surface the 9-doc Playbook, add press + client logos, build /speaking + /reputation-by-design pages, fix SEO/schema/page speed.</span>
+          </div>
+          <div class="action-status drafted">Specs ready</div>
+        </a>
+        <a class="action" href="05_voice_loom.html">
+          <div class="action-text">
+            <strong>Record voice extraction · 35 questions, async</strong>
+            <span>Eight categories: origin, voice, ICP, expertise, stories, ethos, why-hire, family business. Audio for most, video for 9 key prompts. ~45-90 min split across sessions.</span>
+          </div>
+          <div class="action-status pending">Jocelyn records</div>
+        </a>
+        <a class="action" href="06_open_items.html">
+          <div class="action-text">
+            <strong>Send the assets · 15-item checklist</strong>
+            <span>Headshot 1200×1200 + Sider Road logo + 3 named client references + Fall HR gig name/date/audience + Tuesday slot + Canva permission.</span>
+          </div>
+          <div class="action-status pending">Jocelyn sends</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2 -->
+<section class="step">
+  <div class="step-inner">
+    <div class="step-num">02</div>
+    <div class="step-head">
+      <div class="step-tag">Step 02 · Press Kit · This week (once assets arrive)</div>
+      <h3>Build the press kit and bureau packets.</h3>
+      <p class="step-lede">Two formats, one source of content. The web page is for organizers and journalists who self-serve. The one-sheet PDF is the cold-pitch attachment. Both pull from the same approved bio + talks + testimonials.</p>
+
+      <div class="actions">
+        <a class="action" href="07_epk.html">
+          <div class="action-text">
+            <strong>Speaker EPK · live page + print-ready PDF</strong>
+            <span>Her brand (white + navy + red, Spectral + Playfair Display). Full bio in three lengths, 7 signature talks, 4 testimonials, press + clients + reach, fee transparency, 10 sample interview questions, downloads.</span>
+          </div>
+          <div class="action-status live">Live · awaiting photo</div>
+        </a>
+        <a class="action" href="02_bureau_submissions.html">
+          <div class="action-text">
+            <strong>Bureau submission packets · 6 bureaus</strong>
+            <span>eSpeakers + BigSpeak (premium curated) + Premiere + Executive + All American (marketplace) + Washington Speakers (long-shot Year 2). Profile fields, 250-word bio, outreach emails drafted.</span>
+          </div>
+          <div class="action-status drafted">Drafted · ready to send</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3 -->
+<section class="step">
+  <div class="step-inner">
+    <div class="step-num">03</div>
+    <div class="step-head">
+      <div class="step-tag">Step 03 · Awards · This week (once approvals land)</div>
+      <h3>Submit five award nominations as a stack.</h3>
+      <p class="step-lede">One award is a footnote. Five submitted in one window become a credibility stack the editorial teams at Family Business Magazine, FFI, Stevie, and Worth all meet at once. Plus four press reactivation plays sent in parallel.</p>
+
+      <div class="actions">
+        <a class="action" href="04_award_nomination.html">
+          <div class="action-text">
+            <strong>5 award nominations + 4 press plays</strong>
+            <span>FBM Transformational Women + FFI Barbara Hollander + Stevie × 2 categories + FBM CEOs to Watch + Worth Power 100. Plus HuffPost reactivation, FBM column pitch, LinkedIn Top Voices, Forbes Coaches Council.</span>
+          </div>
+          <div class="action-status drafted">200-word statements drafted</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4 -->
+<section class="step">
+  <div class="step-inner">
+    <div class="step-num">04</div>
+    <div class="step-head">
+      <div class="step-tag">Step 04 · Outreach · This week + next</div>
+      <h3>Send the pitches. Fifteen rooms, by name.</h3>
+      <p class="step-lede">Real organizers, real 2026 dates, personalized email per event, signature talk matched per audience. Designed for Jocelyn's assistant to send 5 per day Monday through Wednesday. Plus 30-event broader universe, 20 adjacent podcasts, and 4 reusable email templates for ongoing outreach.</p>
+
+      <div class="actions">
+        <a class="action" href="08_pitch_contacts.html">
+          <div class="action-text">
+            <strong>15 personalized event pitches · assistant-ready</strong>
+            <span>FFI Oct 2026 NYC · NACD Oct 2026 DC · EPI re-pitch · MA Conference for Women Dec · TX Conference for Women Nov · Vistage · YPO Greenwich/NYC/CT · EO NYC+CT · Chief Network · Small Giants 2027 · FBM Transitions Fall · Tugboat 2027 · UConn · Worth · FOX.</span>
+          </div>
+          <div class="action-status ready">Send schedule loaded</div>
+        </a>
+        <a class="action" href="03_event_database.html">
+          <div class="action-text">
+            <strong>30-event database + 20 podcasts + 4 email templates + pitch tracker</strong>
+            <span>Six tiers of events ranked by paid-yes likelihood. Reactivation, cold warm-flattery, bureau roster, podcast templates. Pitch tracker spec with 10-day + 21-day + 45-day cadence rules.</span>
+          </div>
+          <div class="action-status drafted">Universe mapped</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5 -->
+<section class="step">
+  <div class="step-inner">
+    <div class="step-num">05</div>
+    <div class="step-head">
+      <div class="step-tag">Step 05 · Track + Sync · Tuesday May 19</div>
+      <h3>Walk through everything together. Then build the plan for what's next.</h3>
+      <p class="step-lede">30-minute working session inside the 10:30am-4pm ET window. We walk the deliverables together, lock approvals, and agree on the unified Phase 2 plan (GHL evaluation, summer mastermind fill, paid masterclass, lawyer offsite play).</p>
+
+      <div class="actions">
+        <a class="action" href="06_open_items.html">
+          <div class="action-text">
+            <strong>Open items checklist · single source of truth</strong>
+            <span>15-item consolidated list of everything we need from Jocelyn to close Sprint 1. Most are short. None blocks more than one deliverable at a time.</span>
+          </div>
+          <div class="action-status pending">Jocelyn-owned</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN ITEMS CALLOUT -->
+<section class="open-callout">
   <div class="container">
-    <div class="prose" style="text-align: center; margin-bottom: 8px;">
-      <div class="hero-eyebrow" style="margin-bottom: 12px;">The Five</div>
-      <h2 style="margin: 0 auto; max-width: 24ch; text-align: center;">Each one is a single page with its own working checklist.</h2>
-    </div>
-
-    <div class="deliverable-grid">
-
-      <a class="deliverable-card" href="01_site_edits.html">
-        <div class="card-num">01</div>
-        <div class="card-eyebrow">Deliverable · Site Edits</div>
-        <h3>Twenty-five fixes across four categories.</h3>
-        <p>Five page fixes. Eight content adds. Twelve structural / SEO / housekeeping (meta, schema, OG, Calendly segmentation, 404, redirects, page speed, /writing/, comparison grid, case studies, accessibility, analytics + footer + sitemap + mobile).</p>
-        <div class="card-cta">Open the brief →</div>
-      </a>
-
-      <a class="deliverable-card" href="02_bureau_submissions.html">
-        <div class="card-num">02</div>
-        <div class="card-eyebrow">Deliverable · Bureaus + EPK</div>
-        <h3>Six bureaus, one real EPK, the long play.</h3>
-        <p>Marketplace and premium bureaus running in parallel. Plus a proper one-sheet PDF and full EPK page on the site so organizers self-serve everything they need to book Jocelyn.</p>
-        <div class="card-cta">Open the brief →</div>
-      </a>
-
-      <a class="deliverable-card" href="03_event_database.html">
-        <div class="card-num">03</div>
-        <div class="card-eyebrow">Deliverable · Events + Podcasts</div>
-        <h3>The first fifty rooms worth being in.</h3>
-        <p>Six event tiers, twenty adjacent podcasts, four ready-to-send email templates, the pitch tracker spec that runs the whole engine.</p>
-        <div class="card-cta">Open the brief →</div>
-      </a>
-
-      <a class="deliverable-card" href="04_award_nomination.html">
-        <div class="card-num">04</div>
-        <div class="card-eyebrow">Deliverable · Awards + Press</div>
-        <h3>Five awards, four press pitches, one credibility stack.</h3>
-        <p>Family Business Magazine, FFI Barbara Hollander, Stevie Awards, FBM CEOs to Watch, Worth Power 100. Plus HuffPost reactivation, FBM column pitch, LinkedIn Top Voices, Forbes Coaches Council.</p>
-        <div class="card-cta">Open the brief →</div>
-      </a>
-
-      <a class="deliverable-card" href="05_voice_loom.html">
-        <div class="card-num">05</div>
-        <div class="card-eyebrow">Deliverable · Voice Extraction · 35 Questions</div>
-        <h3>Thirty-five questions across eight categories.</h3>
-        <p>Replaces the original 60-min call with an async recording she does at her own pace. Built to capture voice, background, ethos, and the lines that book event organizers on the spot.</p>
-        <div class="card-cta">Open the brief →</div>
-      </a>
-
-      <a class="deliverable-card" href="07_epk.html">
-        <div class="card-num">07</div>
-        <div class="card-eyebrow">Deliverable · Speaker EPK</div>
-        <h3>The press kit, the bio, the talks, the fee, the booking path.</h3>
-        <p>Full Electronic Press Kit ready for bureaus, organizers, and journalists. Built for her ICP (family business, executive women, boards, advisors). PDF designs once headshot + logo arrive.</p>
-        <div class="card-cta">Open the brief →</div>
-      </a>
-
-      <a class="deliverable-card" href="08_pitch_contacts.html">
-        <div class="card-num">08</div>
-        <div class="card-eyebrow">Deliverable · 15 Personalized Pitches</div>
-        <h3>Fifteen named organizers with the email ready to send.</h3>
-        <p>FFI, NACD, EPI re-pitch, Conferences for Women, Vistage, YPO + EO chapters, Chief, Small Giants, Tugboat, Worth, FOX, UConn. Each with a personalized pitch ready for her assistant.</p>
-        <div class="card-cta">Open the brief →</div>
-      </a>
-
-      <a class="deliverable-card" href="06_open_items.html" style="background: var(--ink); color: var(--paper); border-color: var(--ink);">
-        <div class="card-num" style="color: var(--gold-soft);">06</div>
-        <div class="card-eyebrow" style="color: var(--gold-soft);">Open Items · From Jocelyn</div>
-        <h3 style="color: var(--paper);">Fifteen small things that unlock the next ten.</h3>
-        <p style="color: #c7bba6;">A single consolidated checklist of everything we need from you. Most items are short. Nothing here blocks progress on more than one deliverable at a time.</p>
-        <div class="card-cta" style="color: var(--gold-soft);">Open the checklist →</div>
-      </a>
-
-    </div>
+    <h3>Before tomorrow's call · <em>fifteen small things</em></h3>
+    <p>A single consolidated list of what we need from Jocelyn to fully close Sprint 1. Most items are short. Open this in a separate tab and check off as you go. Your progress saves automatically in the browser.</p>
+    <a class="cta" href="06_open_items.html">Open the checklist →</a>
   </div>
 </section>
 
 <footer class="foot">
   <div class="container">
-    <div>Sider Road · Foundation Sprint · Week 01</div>
-    <div>Prepared by Alex Lamb · May 11, 2026</div>
+    <div>Sider Road · Foundation Sprint · Playbook</div>
+    <div>Prepared by Alex Lamb · May 2026</div>
   </div>
 </footer>
 
