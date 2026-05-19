@@ -3,82 +3,479 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>07 · Speaker EPK · Sider Road Sprint</title>
+<title>Jocelyn Greenky · 2026-2027 Speaker Kit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="_shared.css" />
 <style>
-  .placeholder {
-    background: var(--paper-deep);
-    border: 1px dashed var(--sienna);
-    padding: 16px 24px;
-    border-radius: 4px;
-    margin: 12px 0;
-    color: var(--ink-mute);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+  /* EPK PAGE · Jocelyn brand · white + navy + red · print-friendly */
+  :root {
+    --jg-white: #ffffff;
+    --jg-cream: #fafaf7;
+    --jg-ink: #1a1a1a;
+    --jg-ink-soft: #4a4a4a;
+    --jg-grey: #888;
+    --jg-line: #e5e5e5;
+    --jg-navy: #0a1f44;
+    --jg-red: #c8102e;
+    --jg-red-soft: #e63946;
   }
-  .placeholder strong { color: var(--sienna); text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; display: block; margin-bottom: 6px; }
-  .epk-grid {
+
+  .epk-page {
+    background: var(--jg-white);
+    color: var(--jg-ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .epk-page .container-epk { max-width: 940px; margin: 0 auto; padding: 0 56px; }
+
+  /* Section labels · letter-spaced red caps */
+  .epk-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--jg-red);
+    margin-bottom: 24px;
+  }
+
+  /* Hero */
+  .epk-hero {
+    padding: 80px 0 60px;
+    text-align: center;
+    background: var(--jg-white);
+  }
+  .epk-hero .year {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    color: var(--jg-red);
+    margin-bottom: 12px;
+  }
+  .epk-hero .kit-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    color: var(--jg-ink-soft);
+    margin-bottom: 48px;
+  }
+  .epk-hero .headshot-placeholder {
+    width: 320px;
+    height: 400px;
+    margin: 0 auto 36px;
+    background: var(--jg-navy);
+    border: 1px solid var(--jg-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--jg-white);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .epk-hero h1 {
+    font-family: 'Crimson Pro', 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(56px, 7vw, 88px);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+    color: var(--jg-ink);
+  }
+  .epk-hero h1 .last { color: var(--jg-red); display: block; }
+  .epk-hero .role {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--jg-ink-soft);
+    margin: 20px 0 8px;
+  }
+  .epk-hero .creds {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--jg-grey);
+    margin-bottom: 36px;
+    letter-spacing: 0.04em;
+  }
+  .epk-hero .tagline {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.3;
+    color: var(--jg-ink);
+    margin: 0 auto 8px;
+    max-width: 700px;
+  }
+  .epk-hero .tagline .red { color: var(--jg-red); display: block; }
+  .epk-hero .subline {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--jg-ink-soft);
+    margin-top: 16px;
+  }
+
+  /* About */
+  .epk-about {
+    padding: 60px 0 40px;
+    background: var(--jg-white);
+    border-top: 1px solid var(--jg-line);
+  }
+  .epk-about-hook {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: clamp(28px, 3.4vw, 36px);
+    line-height: 1.25;
+    color: var(--jg-ink);
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .epk-about-hook .red { color: var(--jg-red); display: block; }
+  .epk-about p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--jg-ink);
+    margin-bottom: 18px;
+  }
+  .epk-about p.lead-out {
+    font-weight: 600;
+    font-size: 17px;
+    border-top: 1px solid var(--jg-line);
+    padding-top: 20px;
+    margin-top: 28px;
+  }
+
+  /* Credentials grid */
+  .epk-creds-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
-    margin: 40px 0;
+    padding: 50px 0;
+    border-top: 1px solid var(--jg-line);
   }
-  .epk-grid.three { grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
-  .epk-card {
-    background: var(--paper-shade);
-    border: 1px solid var(--rule);
-    padding: 28px 32px;
-  }
-  .epk-card.dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  .epk-card.dark strong { color: var(--paper); }
-  .epk-card.dark em { color: var(--gold-soft); }
-  .epk-card h4 {
-    font-family: 'Fraunces', serif;
-    font-size: 20px;
-    margin-bottom: 12px;
-    color: var(--ink);
-  }
-  .epk-card.dark h4 { color: var(--paper); }
-  .epk-card .label {
-    font-family: 'JetBrains Mono', monospace;
+  .epk-creds-grid h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     font-size: 11px;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--sienna);
+    color: var(--jg-red);
+    margin-bottom: 16px;
+  }
+  .epk-creds-grid p { font-size: 15px; line-height: 1.7; margin-bottom: 4px; color: var(--jg-ink); }
+  .epk-creds-grid p:first-of-type { font-weight: 600; }
+  .epk-creds-grid p strong { font-weight: 600; }
+
+  /* Why book */
+  .epk-why {
+    padding: 60px 0;
+    border-top: 1px solid var(--jg-line);
+  }
+  .epk-why h2 {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: clamp(28px, 3.4vw, 38px);
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--jg-ink);
+  }
+  .epk-why h2 .red { color: var(--jg-red); display: block; }
+  .epk-why p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--jg-ink);
+    margin-bottom: 16px;
+  }
+  .epk-why p.lead-out {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--jg-red);
+    margin: 24px 0;
+  }
+
+  /* Best audiences */
+  .epk-audiences {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 48px;
+    margin: 24px 0;
+  }
+  .epk-audiences li {
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--jg-ink);
+  }
+  .epk-audiences li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--jg-red);
+    font-weight: 700;
+  }
+
+  /* Testimonials */
+  .epk-testimonials { padding: 50px 0; border-top: 1px solid var(--jg-line); }
+  .epk-testimonial {
+    background: var(--jg-cream);
+    padding: 24px 32px;
+    margin: 16px 0;
+    border-top: 1px solid var(--jg-line);
+    border-bottom: 1px solid var(--jg-line);
+  }
+  .epk-testimonial blockquote {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--jg-ink);
+    margin-bottom: 12px;
+  }
+  .epk-testimonial cite {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--jg-red);
+    font-style: normal;
+    display: block;
+  }
+
+  /* Signature topics */
+  .epk-topics { padding: 60px 0; border-top: 1px solid var(--jg-line); }
+  .epk-topics h2 {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: clamp(28px, 3.4vw, 38px);
+    margin-bottom: 8px;
+    color: var(--jg-ink);
+  }
+  .epk-topics .topics-intro {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--jg-ink-soft);
+    margin-bottom: 36px;
+  }
+  .epk-topic {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--jg-line);
+    align-items: start;
+  }
+  .epk-topic:last-child { border-bottom: none; }
+  .epk-topic-num {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: 38px;
+    color: var(--jg-red);
+    line-height: 1;
+  }
+  .epk-topic-cat {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--jg-red);
     margin-bottom: 8px;
   }
-  .epk-card.dark .label { color: var(--gold-soft); }
-  .topic-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 16px 0;
+  .epk-topic-title {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--jg-ink);
+    margin-bottom: 8px;
   }
-  .topic-pills span {
-    background: var(--paper-deep);
-    border: 1px solid var(--rule);
-    padding: 6px 14px;
-    border-radius: 20px;
+  .epk-topic-out {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--jg-ink-soft);
+  }
+  .epk-topic-out strong { color: var(--jg-ink); font-weight: 600; }
+
+  /* The book */
+  .epk-book { padding: 60px 0; border-top: 1px solid var(--jg-line); }
+  .epk-book h2 {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: clamp(26px, 3vw, 34px);
+    margin-bottom: 8px;
+    color: var(--jg-ink);
+  }
+  .epk-book .meta {
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
-    font-weight: 500;
+    color: var(--jg-grey);
+    margin-bottom: 20px;
+    letter-spacing: 0.04em;
   }
-  .fee-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
+  .epk-book .meta strong { color: var(--jg-red); font-weight: 600; }
+  .epk-book p { font-size: 15.5px; line-height: 1.7; color: var(--jg-ink); margin-bottom: 16px; }
+  .epk-book .forthcoming-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--jg-red);
+    margin-top: 36px;
+    margin-bottom: 8px;
+  }
+  .epk-book .stat {
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--jg-grey);
+    margin-top: 12px;
+  }
+
+  /* Past stages */
+  .epk-stages { padding: 50px 0; border-top: 1px solid var(--jg-line); }
+  .epk-stages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 20px;
+  }
+  .epk-stages h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     font-size: 15px;
+    color: var(--jg-ink);
+    margin-bottom: 12px;
   }
-  .fee-table td {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--rule-soft);
+  .epk-stages h3.ongoing { color: var(--jg-red); }
+  .epk-stages p {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: var(--jg-ink-soft);
+    margin-bottom: 4px;
   }
-  .fee-table td:first-child { font-weight: 600; }
-  .fee-table td:last-child { text-align: right; font-family: 'JetBrains Mono', monospace; }
+
+  /* Booking */
+  .epk-booking {
+    padding: 60px 0;
+    border-top: 1px solid var(--jg-line);
+  }
+  .epk-booking h2 {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: clamp(26px, 3vw, 32px);
+    margin-bottom: 36px;
+    color: var(--jg-ink);
+  }
+  .epk-formats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 56px;
+    margin-bottom: 40px;
+  }
+  .epk-format h4 {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--jg-ink);
+    margin-bottom: 8px;
+  }
+  .epk-format p { font-size: 14px; line-height: 1.6; color: var(--jg-ink-soft); }
+
+  .epk-contact-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 12px 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--jg-line);
+  }
+  .epk-contact-grid dt {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--jg-grey);
+    padding-top: 12px;
+  }
+  .epk-contact-grid dd {
+    margin: 0;
+    padding-top: 12px;
+    font-size: 15px;
+    color: var(--jg-ink);
+  }
+  .epk-contact-grid dd a { color: var(--jg-red); text-decoration: none; }
+  .epk-contact-grid dd a:hover { text-decoration: underline; }
+
+  /* Footer */
+  .epk-foot {
+    padding: 40px 0 60px;
+    text-align: center;
+    border-top: 1px solid var(--jg-line);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--jg-grey);
+  }
+
+  /* Placeholder asset notes */
+  .epk-placeholder {
+    background: #fff5e6;
+    border-left: 3px solid var(--jg-red);
+    padding: 14px 20px;
+    margin: 20px 0;
+    font-size: 13px;
+    color: var(--jg-ink-soft);
+    font-family: 'Inter', sans-serif;
+  }
+  .epk-placeholder strong {
+    color: var(--jg-red);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  /* Responsive */
   @media (max-width: 800px) {
-    .epk-grid, .epk-grid.three { grid-template-columns: 1fr; gap: 24px; }
+    .epk-page .container-epk { padding: 0 28px; }
+    .epk-creds-grid, .epk-stages-grid, .epk-audiences, .epk-formats, .epk-contact-grid { grid-template-columns: 1fr; gap: 24px; }
+    .epk-topic { grid-template-columns: 40px 1fr; gap: 16px; }
+    .epk-hero .headshot-placeholder { width: 240px; height: 300px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; }
+    .masthead, .progress-strip, .pagenav, .checklist, footer.foot, .epk-placeholder { display: none !important; }
+    .epk-page { padding: 0; }
+    .epk-page .container-epk { max-width: 100%; padding: 0 0.6in; }
+    .epk-hero, .epk-about, .epk-creds-grid, .epk-why, .epk-testimonials, .epk-topics, .epk-book, .epk-stages, .epk-booking {
+      page-break-inside: auto;
+    }
+    .epk-topic, .epk-testimonial, .epk-format { page-break-inside: avoid; }
+    .epk-hero { page-break-after: always; }
+    h1, h2, h3, h4 { page-break-after: avoid; }
+    a { color: var(--jg-red); text-decoration: none; }
+    @page { margin: 0.6in; }
   }
 </style>
 </head>
@@ -87,316 +484,365 @@
 <header class="masthead">
   <div class="container masthead-inner">
     <a href="index.html" class="masthead-logo">Side<span>r</span> Road · Foundation Sprint</a>
-    <div class="masthead-meta">07 · Speaker EPK</div>
+    <div class="masthead-meta">07 · Speaker EPK · Jocelyn brand</div>
   </div>
 </header>
 
 <div class="progress-strip">
   <div class="container">
-    <div><a href="index.html">← Index</a></div>
-    <div>Deliverable 07 · Speaker EPK</div>
+    <div><a href="06_open_items.html">← Open Items</a></div>
+    <div>Deliverable 07 · Speaker EPK (print-ready, on her brand)</div>
     <div><a href="08_pitch_contacts.html">Next · Pitch Contacts →</a></div>
   </div>
 </div>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-eyebrow">Speaker EPK · live page version · <span class="status drafted">draft, awaiting assets</span></div>
-    <h1>Jocelyn Greenky Underwood, MBA.</h1>
-    <p class="hero-lede">40 years guiding family-owned organizations through the leadership transitions that determine whether a business survives a generation. Founder of Sider Road, author of <em>The Big Sister's Guide to the World of Work</em>, forthcoming <em>Reputation by Design</em>. Adjunct Professor, Queens College CUNY.</p>
-    <div class="hero-meta">
-      <div>Audience <strong>Family business owners, executive women, boards, advisors</strong></div>
-      <div>Formats <strong>Keynote · Half-day · Full-day · Mastermind facilitation · Virtual</strong></div>
-      <div>Base <strong>Greenwich, CT · Travels US + select international</strong></div>
+<div class="epk-page">
+
+  <!-- HERO -->
+  <section class="epk-hero">
+    <div class="container-epk">
+      <div class="year">2 0 2 6 — 2 0 2 7</div>
+      <div class="kit-label">S P E A K E R   K I T</div>
+      <div class="headshot-placeholder">Headshot placeholder<br />1200 × 1500<br />Drop existing<br />stage photo here</div>
+      <h1>JOCELYN<span class="last">GREENKY</span></h1>
+      <p class="role">Keynote Speaker · Business Transformation Expert · Author</p>
+      <p class="creds">MBA · Simon &amp; Schuster Author · 40+ Years in Practice · Adjunct Professor</p>
+      <p class="tagline">"The real problems in businesses aren't on the balance sheet.<span class="red">They're in the room."</span></p>
+      <p class="subline">Strategy isn't the problem. Execution isn't the problem. People are.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="content">
-  <div class="container-narrow">
-    <div class="prose">
+  <!-- ABOUT -->
+  <section class="epk-about">
+    <div class="container-epk">
+      <div class="epk-label" style="text-align: center;">A B O U T   J O C E L Y N</div>
+      <p class="epk-about-hook">She sees the elephant in the room.<span class="red">Then says what no one else will.</span></p>
+      <p>There is always an elephant in the room. Jocelyn Greenky sees it the moment she walks in. Then she does what almost no one in her position is willing to do: she names it out loud — with precision, wit, and the calm of someone who knows it always gets better from here.</p>
+      <p>Known as a professional business "fixer," Jocelyn is a keynote speaker, business strategist, author, Adjunct Professor, and Interim CEO with more than 40 years of experience working with Fortune 500 companies, family enterprises, mid-sized businesses, and startups. She earns the trust of founders and global CEOs alike — because she doesn't hand you a report and leave. She takes the wheel.</p>
+      <p>Jocelyn is also her own case study. Sider Road, the advisory practice she founded, is itself a family business — she runs it alongside her daughter Jade Herz. Few advisors in the field can say they live the model they teach. Jocelyn can.</p>
+      <p>What makes Jocelyn different on stage isn't simply what she says — it's what she allows to happen after she says it. The silence. The nervous laughter. The moment when a room full of accomplished people realizes they've all been thinking the same thing and no one said it until now.</p>
+      <p class="lead-out">Her sessions deliver one outcome: people walk out having said the thing they've been avoiding — and knowing exactly what to do next.</p>
+    </div>
+  </section>
 
-      <h2>The pitch in one paragraph</h2>
-      <p>Jocelyn has spent four decades inside the room where family business decisions happen. She has personally walked more than 200 family-owned organizations through governance, succession, charisma, reputation, and transition. She brings that experience to keynote stages, mastermind rooms, and corporate offsites with the rare combination of operator credibility (CEO at Colin Cowie Lifestyle and Ortho Marketing) and lived-in expertise (Sider Road is itself a family business, run with her daughter Jade Herz). Audiences leave with frameworks, not platitudes.</p>
-
-      <h2>What organizers say</h2>
-      <div class="placeholder">
-        <strong>Placeholder · Testimonials</strong>
-        Drop 3 to 5 named testimonials here once Jocelyn confirms which clients are cleared for public attribution. Each one: 2 to 3 sentences, name + title + organization. Pull from her existing /jocelyn/ page if quotes already exist there, otherwise schedule a 10-minute outreach to her top 3 clients.
+  <!-- CREDS GRID -->
+  <section>
+    <div class="container-epk">
+      <div class="epk-creds-grid">
+        <div>
+          <h4>Media &amp; Publishing</h4>
+          <p>Simon &amp; Schuster Author</p>
+          <p style="font-weight: normal;">CNBC · CNN · FOX News</p>
+          <p style="font-weight: normal;">Forbes · Fast Company · The New York Times</p>
+          <p style="font-weight: normal;">USA Today · The Washington Post</p>
+          <p style="font-weight: normal;">Wall Street Journal · HuffPost</p>
+        </div>
+        <div>
+          <h4>Stage Reach</h4>
+          <p>United Nations</p>
+          <p style="font-weight: normal;">Fortune 500 Companies</p>
+          <p style="font-weight: normal;">North America · South America · Mexico · Europe</p>
+          <p style="font-weight: normal;">EPI — Regular Keynote, 3+ Years</p>
+        </div>
+        <div>
+          <h4>Academic</h4>
+          <p>MBA, Organizational Leadership — with distinction</p>
+          <p style="font-weight: normal;">B.S., Syracuse University</p>
+          <p style="font-weight: normal;">Adjunct Professor, Queens College CUNY</p>
+          <p style="font-weight: normal; font-style: italic; color: var(--jg-red);">First grant awarded to both an adjunct professor and a woman in the master's business program for research in psychological safety.</p>
+        </div>
+        <div>
+          <h4>Executive Track Record</h4>
+          <p>Digital Global Editorial Director, Hachette Filipacchi</p>
+          <p style="font-weight: normal;">COO, Colin Cowie Lifestyle</p>
+          <p style="font-weight: normal;">CEO, BriteBean Technology</p>
+          <p style="font-weight: normal;">CEO, Ortho Marketing</p>
+          <p style="font-weight: normal;">Branded TV Producer, Wenner Media (Rolling Stone parent)</p>
+          <p style="font-weight: normal;">Consultant: Material Bank, WSJ, HBO, iNDEMAND</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <h2 style="border-top: 2px solid var(--sienna); padding-top: 48px;">Signature talks</h2>
-      <p>Five talks, each available as keynote (45 to 60 min), workshop (half-day or full-day), or fireside conversation. Tailored to audience.</p>
+  <!-- WHY BOOK -->
+  <section class="epk-why">
+    <div class="container-epk">
+      <div class="epk-label">W H Y   B O O K   J O C E L Y N   I N   2 0 2 6 — 2 0 2 7</div>
+      <h2>The conversations organizations are avoiding<span class="red">are exactly the ones she's built to lead.</span></h2>
+      <p>The post-pandemic workplace hasn't settled — it's accelerated. Generational succession is creating friction at every level. AI is disrupting who does what and who gets credit. Women are carrying organizations while fighting for a seat at the table. Reputation has never been more fragile, or more valuable. Family businesses are navigating transitions with no roadmap and too much emotion.</p>
+      <p class="lead-out">Jocelyn doesn't talk around these tensions. She walks straight into them.</p>
 
-      <div class="epk-grid">
-
-        <div class="epk-card">
-          <div class="label">Talk 01 · Most-booked</div>
-          <h4>Charisma is a Skill</h4>
-          <p>The science of professional presence. Charisma is not personality, it is a learnable repertoire of behaviors: how you enter a room, how you listen, how you take up space, how you make others feel central. Across six interlocking moves, Jocelyn shows audiences how to operate with the kind of magnetism that opens doors, closes deals, and earns trust before tenure does it for you.</p>
-          <p><strong>Best for:</strong> CEO peer groups, women's leadership conferences, sales kickoffs, board meetings.</p>
-          <p><strong>Takeaway:</strong> A 6-step Charisma audit attendees use the next day.</p>
-        </div>
-
-        <div class="epk-card">
-          <div class="label">Talk 02 · Forthcoming book hook</div>
-          <h4>Reputation by Design</h4>
-          <p>Reputation is the silent currency of leadership. It opens doors before you walk through them and protects you when you make mistakes. This talk maps the deliberate decisions that build a reputation that compounds for decades, drawing on Jocelyn's forthcoming book of the same name and 40 years inside the rooms where reputations are made and broken.</p>
-          <p><strong>Best for:</strong> Executive women, professional services firms, board governance forums, family business gatherings.</p>
-          <p><strong>Takeaway:</strong> A reputation audit framework and the five reputation traps that derail careers.</p>
-        </div>
-
-        <div class="epk-card">
-          <div class="label">Talk 03 · Family business core</div>
-          <h4>Family Leadership &amp; Legacy</h4>
-          <p>Most family businesses die at the transition between generations, not because of business problems but because of family decisions made under business pressure. Jocelyn shares the playbook from 200 family business transitions: how to design governance that holds, how to have the conversations no one wants to have, and how to build a legacy that survives the founder.</p>
-          <p><strong>Best for:</strong> Family business conferences, wealth manager forums, multi-generational ownership groups.</p>
-          <p><strong>Takeaway:</strong> The 9-document Family Business Playbook framework, free to attendees.</p>
-        </div>
-
-        <div class="epk-card">
-          <div class="label">Talk 04 · Cross-generational</div>
-          <h4>Generational Fluency</h4>
-          <p>Four working generations now sit in the same boardrooms, mastermind rooms, and family business kitchens. The leaders who thrive are not the ones who pick a side. They are the ones who become fluent across all four. Jocelyn unpacks what each generation actually wants, what they are misreading about each other, and how a leader builds a culture that lands across all of them.</p>
-          <p><strong>Best for:</strong> HR conferences, leadership development summits, family business succession events.</p>
-          <p><strong>Takeaway:</strong> Generational fluency map plus three communication rules per generation.</p>
-        </div>
-
-        <div class="epk-card">
-          <div class="label">Talk 05 · Practical edge</div>
-          <h4>Office Politics for Honest People</h4>
-          <p>You can be honest and effective inside a political organization. You just need a framework. This talk gives the audience a working strategy for being taken seriously without playing dirty, drawn from four decades of executive coaching inside Hachette, Wenner Media, Colin Cowie Lifestyle, and dozens of family-owned businesses.</p>
-          <p><strong>Best for:</strong> Women's leadership conferences, professional women's groups, mid-career executive audiences.</p>
-          <p><strong>Takeaway:</strong> The five political archetypes you will meet and the one move that disarms each.</p>
-        </div>
-
-        <div class="epk-card dark">
-          <div class="label">Custom + workshop options</div>
-          <h4>Bespoke programs</h4>
-          <p>For events that need a custom keynote (e.g. a family business summit, a private partner offsite, a wealth-manager retreat for HNW clients), Jocelyn co-designs the talk with the organizer in a 30-minute prep call. She also offers half-day and full-day workshop versions of any signature talk, plus mastermind facilitation for board retreats and partner gatherings.</p>
-        </div>
-
-      </div>
-
-      <h2 style="border-top: 2px solid var(--sienna); padding-top: 48px;">Speaker reel</h2>
-      <div class="placeholder">
-        <strong>Placeholder · 60-90 second sizzle reel</strong>
-        Embed YouTube/Vimeo unlisted player here. Reel work sits outside the $750 Foundation Sprint scope. Build path: source footage in shared Google Drive folder (Jocelyn assembles past webinars/keynotes/panels), edit pass in week 2 of Date Project scope OR as a flat add-on. Replace this placeholder with iframe once URL exists.
-      </div>
-
-      <h2>Bio · three lengths</h2>
-      <p>Three versions, cleared for press kits, intro slides, and bureau profiles. Long bio used for keynote programs, short for chairperson intros, micro for social.</p>
-
-      <div class="epk-grid">
-
-        <div class="epk-card">
-          <div class="label">Short · 50 words</div>
-          <p>Jocelyn Greenky Underwood, MBA, is the founder of Sider Road. A Business Transformation Strategist and Interim CEO, she has guided more than 200 family businesses through critical transitions. Co-author of <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). Adjunct Professor, Queens College CUNY.</p>
-        </div>
-
-        <div class="epk-card">
-          <div class="label">Mid · 150 words</div>
-          <p>Jocelyn Greenky Underwood has spent four decades inside the rooms where leadership transitions happen. As founder of Sider Road, a family-run advisory practice she operates alongside her daughter Jade Herz, Jocelyn has guided more than 200 family-owned organizations through governance, succession, reputation, and charisma. Her path is unusually broad: CEO at Colin Cowie Lifestyle and Ortho Marketing, Digital Global Editorial Director at Hachette Filipacchi, branded TV producer at Rolling Stone's parent company. Today she advises family businesses, runs four mastermind tracks, teaches at Queens College CUNY, and is finishing her second book, <em>Reputation by Design</em>. Her work has been featured in CNBC, Fox News, the Wall Street Journal, and Fast Company. She lives in Greenwich, Connecticut.</p>
-        </div>
-
-        <div class="epk-card dark">
-          <div class="label">Long · 250 words · keynote intro</div>
-          <p>Jocelyn Greenky Underwood, MBA, has spent more than 40 years guiding family-owned organizations through the leadership transitions that determine whether a business survives a generation. She has personally walked more than 200 owners and successors through governance, succession, reputation, and transition decisions across industries from manufacturing to media to professional services.</p>
-          <p style="margin-top: 14px;">Jocelyn is also her own case study. Sider Road, the advisory practice she founded, is itself a family business, run alongside her daughter Jade Herz. Few advisors in the field can say they live the model they teach. Jocelyn can.</p>
-          <p style="margin-top: 14px;">Her path is unusually broad. She has served as CEO at Colin Cowie Lifestyle and Ortho Marketing, Digital Global Editorial Director at Hachette Filipacchi, and branded television producer at the parent company of Rolling Stone. That operator experience is the spine of her work today.</p>
-          <p style="margin-top: 14px;">Jocelyn is the co-author of <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster) and is finishing <em>Reputation by Design</em>. She holds an MBA in Organizational Leadership from Mercy University and serves as Adjunct Professor of Business Administration at Queens College CUNY. Her commentary has appeared in CNBC, Fox News, the Wall Street Journal, Fast Company, and HuffPost. She speaks regularly to YPO and EO chapters, family business institutes, executive women's networks, and CEO peer groups across the country.</p>
-        </div>
-
-      </div>
-
-      <h2 style="border-top: 2px solid var(--sienna); padding-top: 48px;">Topic areas</h2>
-      <div class="topic-pills">
-        <span>Family Business + Succession</span>
-        <span>Leadership Development</span>
-        <span>Women in Leadership</span>
-        <span>Personal Branding + Reputation</span>
-        <span>Charisma + Executive Presence</span>
-        <span>Generational Workplace Dynamics</span>
-        <span>Office Politics + Power</span>
-        <span>Negotiation</span>
-        <span>Interim CEO + Crisis Leadership</span>
-        <span>Mastermind Facilitation</span>
-        <span>Board Governance</span>
-        <span>Emotional Intelligence</span>
-      </div>
-
-      <h2>Past speaking + client work</h2>
-
-      <h4>Selected past engagements</h4>
-      <ul>
-        <li><strong>Exit Planning Institute Webinar</strong> · 2025 · Charisma talk</li>
-        <li><strong>Grow &amp; Launch Your Business Summit</strong> · 2025</li>
-        <li><strong>Family Business Mastermind Jam Session</strong> · December 2025</li>
-        <li><strong>NYU, Syracuse, Drexel, Villanova, Columbia</strong> · adjunct + guest lectures</li>
-        <li><strong>Queens College CUNY</strong> · current adjunct, Business Administration</li>
-        <li><strong>Fall 2026 HR Leadership keynote</strong> · confirmed (organizer to be added once details land)</li>
+      <div class="epk-label" style="margin-top: 40px;">B E S T   A U D I E N C E S</div>
+      <ul class="epk-audiences">
+        <li>Family Business Conferences &amp; Institutes</li>
+        <li>Women's Leadership Conferences &amp; ERGs</li>
+        <li>CEO Forums &amp; Executive Roundtables</li>
+        <li>MBA Programs &amp; Business Schools</li>
+        <li>PE / Exit Planning Audiences</li>
+        <li>Corporate L&amp;D &amp; Annual Meetings</li>
+        <li>Multi-Generational Leadership Events</li>
+        <li>Industry Associations</li>
       </ul>
+    </div>
+  </section>
 
-      <h4>Clients (selected)</h4>
-      <p>Viacom · Kraft · General Foods · HBO · Material Bank · EY · Wall Street Journal · Hachette Filipacchi · NYU · Syracuse · Drexel · Villanova · Columbia</p>
+  <!-- TESTIMONIALS -->
+  <section class="epk-testimonials">
+    <div class="container-epk">
+      <div class="epk-label">W H A T   C L I E N T S   S A Y</div>
 
-      <h4>Press</h4>
-      <p>CNBC · Fox News · Wall Street Journal · Fast Company · HuffPost (10 contributor articles)</p>
+      <div class="epk-testimonial">
+        <blockquote>"Some presentations can be banal. Yours was informative and exciting. Your excellence has inspired me."</blockquote>
+        <cite>Thomas Dean, Founder, Relentless Value · EPI Conference</cite>
+      </div>
 
-      <h2 style="border-top: 2px solid var(--sienna); padding-top: 48px;">Fee structure</h2>
-      <table class="fee-table">
-        <tr><td>Virtual keynote (up to 60 min)</td><td>$7,500 to $10,000</td></tr>
-        <tr><td>In-person keynote (US continental)</td><td>$12,500 to $20,000</td></tr>
-        <tr><td>Half-day workshop</td><td>$8,500 to $12,500</td></tr>
-        <tr><td>Full-day workshop</td><td>$15,000 to $25,000</td></tr>
-        <tr><td>Interim CEO engagement</td><td>$15,000 per month + $2,500 per day</td></tr>
-        <tr><td>Mastermind facilitation (per cohort)</td><td>Inquire</td></tr>
-        <tr><td>International keynote</td><td>Inquire (travel + accommodation arranged by organizer)</td></tr>
-      </table>
-      <p><em>Note:</em> Fee ranges are starting points. Final fee depends on audience size, prep time, and exclusivity. All fees include a 30-minute prep call with the organizer, the talk itself, and 15 minutes of audience Q&amp;A. Custom content development beyond signature talks billed separately.</p>
+      <div class="epk-testimonial">
+        <blockquote>"After hearing Jocelyn speak at Villanova, I knew that students, faculty, and staff at Drexel would love her. Her insight is laserpoint accurate to the realities of being successful in the work environment."</blockquote>
+        <cite>Ann Wilson, Booking Client · Drexel University</cite>
+      </div>
 
-      <h2>Booking + media kit</h2>
-      <div class="epk-grid three">
-        <div class="epk-card">
-          <h4>Book Jocelyn</h4>
-          <p style="margin-bottom: 14px;">Speaking inquiries route through a dedicated Calendly that captures event date, audience size, format, and budget on the booking form.</p>
-          <div class="placeholder"><strong>Placeholder</strong> Calendly link for speaking inquiries (create separate from advisory Calendly so source attribution is clean).</div>
-        </div>
-        <div class="epk-card">
-          <h4>Press inquiries</h4>
-          <p style="margin-bottom: 14px;">Journalists, podcast hosts, and editorial leads.</p>
-          <p><strong>Email:</strong> jocelyn@siderroad.com</p>
-          <p style="margin-top: 8px;"><strong>LinkedIn:</strong> linkedin.com/in/jocelyngreenkyunderwood</p>
-        </div>
-        <div class="epk-card">
-          <h4>Downloads</h4>
-          <p style="margin-bottom: 14px;">Cleared assets for use in promotional materials.</p>
-          <ul style="margin-left: 18px;">
-            <li>One-sheet PDF</li>
-            <li>Headshot (hi-res 1200×1200)</li>
-            <li>Sider Road logo (vector)</li>
-            <li>Bio (all 3 lengths)</li>
-            <li>Sample interview questions</li>
-          </ul>
+      <div class="epk-testimonial">
+        <blockquote>"She brings structure and objectivity to complex family business dynamics. Invaluable when the stakes are real."</blockquote>
+        <cite>Dr. Robert Rioseco, Family Business Leader</cite>
+      </div>
+
+      <div class="epk-testimonial">
+        <blockquote>"Jocelyn Greenky is an outstanding guest speaker. She engages students with equal parts humor, candor, and insight, and always delivers a thoughtful presentation on generational challenges in the workplace."</blockquote>
+        <cite>Andrew Goldman, Adjunct Professor · NYU</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE TOPICS -->
+  <section class="epk-topics">
+    <div class="container-epk">
+      <div class="epk-label">S I G N A T U R E   T O P I C S</div>
+      <h2>Seven talks. Every one battle-tested.</h2>
+      <p class="topics-intro">Available as keynote (45–90 min), half-day masterclass, or full-day masterclass. Every presentation customized to your audience and goals.</p>
+
+      <div class="epk-topic">
+        <div class="epk-topic-num">01</div>
+        <div>
+          <div class="epk-topic-cat">F A M I L Y   E N T E R P R I S E</div>
+          <div class="epk-topic-title">The Family Dynamic Advantage: Turning Conflict Into Collaboration</div>
+          <div class="epk-topic-out"><strong>Outcome:</strong> Transform generational friction and power struggles into stronger business performance and family bonds.</div>
         </div>
       </div>
 
-      <h2 style="border-top: 2px solid var(--sienna); padding-top: 48px;">Sample interview questions</h2>
-      <p>For podcast hosts and event MCs. Pick any three or co-create with Jocelyn in the prep call.</p>
-      <ol>
-        <li>What is a family business actually fighting about when the conversation is supposedly about money?</li>
-        <li>If you had to bet on which family businesses survive the next generation, what is your tell?</li>
-        <li>What is the single most underrated skill in executive leadership?</li>
-        <li>Why is charisma a skill and not a personality trait?</li>
-        <li>What is the worst piece of leadership advice currently in circulation?</li>
-        <li>You are running Sider Road with your daughter Jade. What do most parent-child working partnerships get wrong?</li>
-        <li>You have worked across publishing, lifestyle brands, marketing agencies, and family businesses. What is the through-line?</li>
-        <li>What is one specific story from your 200+ family business transitions that listeners will remember?</li>
-        <li>If you were giving a 60-second commencement speech tomorrow, what would you say?</li>
-        <li>What is a question every event organizer should ask their keynote speaker but rarely does?</li>
+      <div class="epk-topic">
+        <div class="epk-topic-num">02</div>
+        <div>
+          <div class="epk-topic-cat">F A M I L Y   E N T E R P R I S E   ·   W O M E N ' S   L E A D E R S H I P</div>
+          <div class="epk-topic-title">Women Behind the Business</div>
+          <div class="epk-topic-out"><strong>Outcome:</strong> Strengthen executive presence inside the family system. Also books for women's leadership conferences and ERGs.</div>
+        </div>
+      </div>
+
+      <div class="epk-topic">
+        <div class="epk-topic-num">03</div>
+        <div>
+          <div class="epk-topic-cat">C U L T U R E   &amp;   W O R K F O R C E</div>
+          <div class="epk-topic-title">Generational Dynamics Boot Camp: Generation Clash or Collaboration? Mastering the 5-Gen Workplace (6 including the military)</div>
+          <div class="epk-topic-out"><strong>Outcome:</strong> Boost productivity and alignment across a multi-generational workforce — including military veterans.</div>
+        </div>
+      </div>
+
+      <div class="epk-topic">
+        <div class="epk-topic-num">04</div>
+        <div>
+          <div class="epk-topic-cat">L E A D E R S H I P   &amp;   E X E C U T I V E   P R E S E N C E</div>
+          <div class="epk-topic-title">Charisma Isn't Magic — It's Strategy: How to Own the Room and Win Trust Fast</div>
+          <div class="epk-topic-out"><strong>Outcome:</strong> Project confidence, warmth, and credibility in any setting. Walk away with a strategy, not just inspiration.</div>
+        </div>
+      </div>
+
+      <div class="epk-topic">
+        <div class="epk-topic-num">05</div>
+        <div>
+          <div class="epk-topic-cat">N E G O T I A T I O N   &amp;   I N F L U E N C E</div>
+          <div class="epk-topic-title">Beyond Compromise: Influence with Precision</div>
+          <div class="epk-topic-out"><strong>Outcome:</strong> Close deals faster, influence outcomes, and preserve long-term trust at the table.</div>
+        </div>
+      </div>
+
+      <div class="epk-topic">
+        <div class="epk-topic-num">06</div>
+        <div>
+          <div class="epk-topic-cat">C U L T U R E   &amp;   C H A N G E</div>
+          <div class="epk-topic-title">Change Without Chaos: Stop Managing the Plan — Start Managing the Conversation</div>
+          <div class="epk-topic-out"><strong>Outcome:</strong> Build trust and credibility during periods of disruption. Leaders who communicate through change retain more talent and move faster.</div>
+        </div>
+      </div>
+
+      <div class="epk-topic">
+        <div class="epk-topic-num">07</div>
+        <div>
+          <div class="epk-topic-cat">L E A D E R S H I P   &amp;   R E P U T A T I O N</div>
+          <div class="epk-topic-title">Design Your Reputation: Your Most Valuable — and Most Neglected — Asset</div>
+          <div class="epk-topic-out"><strong>Outcome:</strong> Build a deliberate reputation strategy that compounds over time. Leaders who design their reputation are 3× more likely to be approached for leadership roles.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BOOK -->
+  <section class="epk-book">
+    <div class="container-epk">
+      <div class="epk-label">T H E   B O O K</div>
+      <h2>The Big Sister's Guide to the World of Work</h2>
+      <p class="meta"><strong>Simon &amp; Schuster</strong> · Sold in 13 Countries · Starred Review, Publishers Weekly · Featured in 30+ Outlets</p>
+      <p>We spend 90,000 hours of our lives at work. Yet our education system never arms us with the tools of effective communication, performance, and political savvy needed to thrive. The Big Sister's Guide became the book people press into the hands of everyone they care about — a three-book deal with Simon &amp; Schuster, bought in the first week the proposal hit the market.</p>
+
+      <div class="forthcoming-label">F O R T H C O M I N G</div>
+      <h2>Design Your Reputation</h2>
+      <p>Your reputation is your most consequential — and most neglected — professional asset. In her forthcoming book, Jocelyn makes the case that reputation isn't what happens to you. It's what you build, decision by decision, conversation by conversation.</p>
+      <p class="stat">Leaders who design their reputation deliberately are 3× more likely to be approached for leadership roles, earn 10–20% more, and generate 50% more business referrals than those who leave it to chance.</p>
+    </div>
+  </section>
+
+  <!-- PAST STAGES -->
+  <section class="epk-stages">
+    <div class="container-epk">
+      <div class="epk-label">S A M P L E   P A S T   S T A G E S</div>
+      <div class="epk-stages-grid">
+        <div>
+          <h3>Corporate</h3>
+          <p>Viacom · EY · Bloomberg · KPMG · PwC</p>
+          <p>Avon · Kraft · BoFA</p>
+          <p>Material Bank · HBO · iNDEMAND · WSJ</p>
+          <p>General Foods · Hachette Filipacchi</p>
+          <h3 class="ongoing" style="margin-top: 24px;">Ongoing</h3>
+          <p>EPI — Regular Keynote, 3+ Years</p>
+        </div>
+        <div>
+          <h3>Universities &amp; Conferences</h3>
+          <p>NYU — MBA Program</p>
+          <p>Columbia University — MBA Program</p>
+          <p>Drexel University</p>
+          <p>Villanova University</p>
+          <p>Syracuse University</p>
+          <p>Queens College CUNY — Adjunct Professor</p>
+          <p>United Nations</p>
+          <p>ProMAXBDA — Industry Conference</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="epk-booking">
+    <div class="container-epk">
+      <div class="epk-label">B O O K I N G   &amp;   F O R M A T S</div>
+      <h2>Ready to book Jocelyn?</h2>
+
+      <div class="epk-formats">
+        <div class="epk-format">
+          <h4>Keynote</h4>
+          <p>45–90 minutes. Customized to your audience and theme. Ideal for conferences, corporate all-hands, and annual meetings.</p>
+        </div>
+        <div class="epk-format">
+          <h4>Half-Day Workshop</h4>
+          <p>3–4 hours. Deeper dive with group exercises, Q&amp;A, and working sessions. Ideal for leadership off-sites and executive retreats.</p>
+        </div>
+        <div class="epk-format">
+          <h4>Full-Day Masterclass</h4>
+          <p>6–7 hours. Comprehensive program with frameworks, application, and live coaching. For teams who want lasting change.</p>
+        </div>
+        <div class="epk-format">
+          <h4>Multi-Session Program</h4>
+          <p>Custom series over weeks or months. For corporate L&amp;D programs, MBA cohorts, and executive leadership tracks.</p>
+        </div>
+      </div>
+
+      <dl class="epk-contact-grid">
+        <dt>Inquiries</dt><dd><a href="mailto:info@siderroad.com">info@SiderRoad.com</a></dd>
+        <dt>Schedule a Call</dt><dd><a href="https://calendly.com/jocelyngreenky" target="_blank" rel="noopener">calendly.com/jocelyngreenky</a></dd>
+        <dt>Website</dt><dd><a href="https://siderroad.com" target="_blank" rel="noopener">SiderRoad.com</a></dd>
+        <dt>Availability</dt><dd>Typically books 6–12 weeks out. Nationwide &amp; International travel available.</dd>
+        <dt>Speaking Fees</dt><dd>Tailored to format, audience size, and engagement scope.</dd>
+        <dt>Custom Programs</dt><dd>Every keynote co-designed with the organizer in a 30-minute prep call. No template talks.</dd>
+        <dt>Standard AV</dt><dd>Wireless lavalier mic, presenter clicker, 16:9 slide output. No special tech required.</dd>
+        <dt>Languages</dt><dd>English. Available virtually for any timezone.</dd>
+        <dt>Headshots &amp; Bio</dt><dd><a href="https://siderroad.com/speaking/" target="_blank" rel="noopener">siderroad.com/speaking/</a></dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- PRESS KIT DOWNLOADS -->
+  <section class="epk-stages">
+    <div class="container-epk">
+      <div class="epk-label">P R E S S   K I T   ·   D O W N L O A D S</div>
+      <h3 style="font-family: 'Crimson Pro', serif; font-weight: 700; font-size: 22px; color: var(--jg-ink); margin-bottom: 16px;">For organizers, assistants, and event marketing teams.</h3>
+      <p style="font-size: 14.5px; color: var(--jg-ink-soft); line-height: 1.7; margin-bottom: 18px;">All assets cleared for use in promotional materials, social, and event programs. Email <a href="mailto:info@siderroad.com" style="color: var(--jg-red); text-decoration: none;">info@siderroad.com</a> for direct file links or alternative formats.</p>
+      <ul style="list-style: none; padding: 0; column-count: 2; column-gap: 48px;">
+        <li style="padding: 8px 0; border-bottom: 1px solid var(--jg-line); font-size: 14.5px;">→ One-sheet PDF (print-ready)</li>
+        <li style="padding: 8px 0; border-bottom: 1px solid var(--jg-line); font-size: 14.5px;">→ Hi-res headshot (1200 × 1500, color)</li>
+        <li style="padding: 8px 0; border-bottom: 1px solid var(--jg-line); font-size: 14.5px;">→ Hi-res headshot (B&amp;W alternative)</li>
+        <li style="padding: 8px 0; border-bottom: 1px solid var(--jg-line); font-size: 14.5px;">→ Sider Road logo (vector + PNG)</li>
+        <li style="padding: 8px 0; border-bottom: 1px solid var(--jg-line); font-size: 14.5px;">→ Bio · short (50 words)</li>
+        <li style="padding: 8px 0; border-bottom: 1px solid var(--jg-line); font-size: 14.5px;">→ Bio · mid (150 words)</li>
+        <li style="padding: 8px 0; border-bottom: 1px solid var(--jg-line); font-size: 14.5px;">→ Bio · long (250 words, intro)</li>
+        <li style="padding: 8px 0; border-bottom: 1px solid var(--jg-line); font-size: 14.5px;">→ Speaker reel (60-90 sec) — coming Q3 2026</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SAMPLE INTERVIEW QUESTIONS -->
+  <section class="epk-topics">
+    <div class="container-epk">
+      <div class="epk-label">S A M P L E   I N T E R V I E W   Q U E S T I O N S</div>
+      <h2>For podcast hosts, MCs, and journalists.</h2>
+      <p class="topics-intro">Pick any three, or co-create with Jocelyn in the prep call. These spark her best material.</p>
+
+      <ol style="padding-left: 24px; margin-top: 8px;">
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">What is a family business actually fighting about when the conversation is supposedly about money?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">If you had to bet on which family businesses survive the next generation, what is your tell?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">Why is charisma a skill and not a personality trait?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">What is the worst piece of leadership advice currently in circulation?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">You are running Sider Road with your daughter Jade. What do most parent-child working partnerships get wrong?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">You have worked across publishing, lifestyle brands, marketing agencies, and family businesses. What is the through-line?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">What is one specific story from your 200+ family business transitions that listeners will remember?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">If you were giving a 60-second commencement speech tomorrow, what would you say?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">What is a question every event organizer should ask their keynote speaker but rarely does?</li>
+        <li style="font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.5; margin-bottom: 14px; color: var(--jg-ink);">What is the single most underrated skill in executive leadership today?</li>
       </ol>
-
-      <h2>What you need from Jocelyn to ship the PDF + live page</h2>
-      <ul>
-        <li>1200×1200 headshot (recent, warm-but-professional energy)</li>
-        <li>Sider Road logo (vector preferred, hi-res PNG fallback)</li>
-        <li>3 to 5 named client testimonials (with title + organization, cleared for public)</li>
-        <li>Final approved fee structure (current draft starting points only)</li>
-        <li>Fall 2026 HR Leadership event name + date (to add to past engagements)</li>
-        <li>Sizzle reel URL (when reel work is scoped + delivered separately)</li>
-        <li>Speaking-inquiry Calendly link (separate from advisory)</li>
-      </ul>
-
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="epk-foot">
+    <div class="container-epk">
+      J O C E L Y N   G R E E N K Y   ·   S I D E R R O A D . C O M   ·   I N F O @ S I D E R R O A D . C O M
+    </div>
+  </footer>
+
+  <!-- INTERNAL NOTES (not shown in print) -->
+  <section class="epk-placeholder" style="margin: 40px auto; max-width: 940px;">
+    <strong>Internal notes · not shown when printed</strong>
+    Placeholders to fill before final PDF export · (1) headshot (drop existing stage photo from current EPK or commission new), (2) Sider Road logo on cover if used, (3) speaker reel URL (when reel work is scoped + delivered separately), (4) confirm Queens College CUNY full title vs generic Adjunct Professor framing.
+  </section>
+
+</div>
 
 <section class="checklist">
   <div class="container-narrow">
     <div class="checklist-eyebrow">Checklist · for Jocelyn + assistant</div>
     <h2>EPK · <em>close-out checklist</em>.</h2>
-    <p class="checklist-lede">Most of this is sending us assets. The design work is fast once the assets land.</p>
+    <p class="checklist-lede">This page is print-ready · Cmd+P or File · Print · Save as PDF. Or hand to a designer for one final polish pass in Canva/InDesign.</p>
 
     <div class="check-progress" id="check-progress-epk">0 of 0 complete</div>
 
     <ul class="checks" id="checklist-epk">
-      <li data-id="headshot">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Send headshot 1200×1200</span>
-          <span class="check-detail">Recent, warm, not stiff "executive headshot" energy.</span>
-        </div>
-      </li>
-      <li data-id="logo">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Send Sider Road logo (vector)</span>
-          <span class="check-detail">PNG hi-res fallback OK if no vector.</span>
-        </div>
-      </li>
-      <li data-id="testimonials">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Confirm 3-5 named testimonials</span>
-          <span class="check-detail">Name + title + organization, cleared for public.</span>
-        </div>
-      </li>
-      <li data-id="fee-confirm">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Confirm fee ranges</span>
-          <span class="check-detail">Current draft starting points · adjust if her ceiling is different.</span>
-        </div>
-      </li>
-      <li data-id="fall-gig">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Fall HR gig event details</span>
-          <span class="check-detail">Name + date + audience size for past engagements section.</span>
-        </div>
-      </li>
-      <li data-id="reel">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Speaker reel URL (when ready)</span>
-          <span class="check-detail">Reel work sits outside Sprint 1 scope. Drop in when built.</span>
-        </div>
-      </li>
-      <li data-id="calendly-speaking">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Dedicated speaking Calendly link</span>
-          <span class="check-detail">Separate from advisory Calendly · captures event date, audience, format, budget on booking form.</span>
-        </div>
-      </li>
-      <li data-id="bio-approve">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Approve all 3 bios (short, mid, long)</span>
-          <span class="check-detail">Voice pass · should sound like Jocelyn out loud.</span>
-        </div>
-      </li>
-      <li data-id="talks-approve">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Approve 5 signature talk descriptions</span>
-          <span class="check-detail">Voice pass on each abstract.</span>
-        </div>
-      </li>
-      <li data-id="design-canva">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Design EPK PDF in Canva (Alex)</span>
-          <span class="check-detail">2-3 hrs once headshot + logo land. 1-2 pages, print-ready.</span>
-        </div>
-      </li>
-      <li data-id="page-live">
-        <input type="checkbox" />
-        <div>
-          <span class="check-title">Push /epk page live on siderroad.com</span>
-          <span class="check-detail">Blocked on WordPress access OR dev handoff.</span>
-        </div>
-      </li>
+      <li data-id="headshot"><input type="checkbox" /><div><span class="check-title">Drop existing stage headshot into hero placeholder</span><span class="check-detail">Use the headshot from her current EPK (the stage shot, navy background). Higher res preferred.</span></div></li>
+      <li data-id="approve-talks"><input type="checkbox" /><div><span class="check-title">Jocelyn approves 7 signature talk titles + outcomes</span><span class="check-detail">Lifted directly from her current EPK · should already match her voice.</span></div></li>
+      <li data-id="approve-bio"><input type="checkbox" /><div><span class="check-title">Approve "professional business fixer" framing</span><span class="check-detail">Voice pass · she uses this in her current EPK so should hold.</span></div></li>
+      <li data-id="add-jade"><input type="checkbox" /><div><span class="check-title">Approve added Sider Road family-business paragraph</span><span class="check-detail">New paragraph we added · "Jocelyn is also her own case study..." This is our differentiator on top of her existing EPK.</span></div></li>
+      <li data-id="confirm-queens"><input type="checkbox" /><div><span class="check-title">Confirm Queens College CUNY naming</span><span class="check-detail">Her existing EPK left it generic. We named it · she may want to keep it generic for the printed version.</span></div></li>
+      <li data-id="testimonials"><input type="checkbox" /><div><span class="check-title">Add 1-2 more testimonials if available</span><span class="check-detail">Currently 4 named · adding 2 more (corporate + executive) would round out the spread.</span></div></li>
+      <li data-id="speaker-reel"><input type="checkbox" /><div><span class="check-title">Speaker reel embed (when scoped + built)</span><span class="check-detail">Reel work sits outside Sprint 1 scope. Add iframe to hero or after-Why-Book section when ready.</span></div></li>
+      <li data-id="print-pdf"><input type="checkbox" /><div><span class="check-title">Print to PDF · check page breaks</span><span class="check-detail">Cmd+P · Save as PDF · review page breaks on talks, testimonials. Tweak if any single talk splits across pages.</span></div></li>
+      <li data-id="canva-polish"><input type="checkbox" /><div><span class="check-title">Optional · final Canva polish pass</span><span class="check-detail">If she wants a more "designed" version, hand the PDF + Inter/Crimson font choice + navy/red palette to a Canva designer for one tightening pass.</span></div></li>
+      <li data-id="push-live"><input type="checkbox" /><div><span class="check-title">Push to siderroad.com/epk</span><span class="check-detail">Once everything approved, deploy as the live EPK page on her site.</span></div></li>
     </ul>
     <button class="check-clear" id="check-clear-epk">Reset checklist</button>
   </div>
@@ -412,7 +858,7 @@
 
 <footer class="foot">
   <div class="container">
-    <div>Sider Road · Foundation Sprint · 07 of 09</div>
+    <div>Sider Road · Foundation Sprint · 07 of 08</div>
     <div>Prepared by Alex Lamb</div>
   </div>
 </footer>
