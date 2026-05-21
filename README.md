@@ -55,7 +55,7 @@ Total trackable checklist items across deliverables: **~137**.
 - Actually pushing the site edits live (depends on dev access)
 - Sending the 30 plus pitches (that is the $2,450 Date Project)
 - Building the speaker reel (Week 2)
-- GHL list reactivation (Phase 3 / Fractional CMO retainer)
+- GHL list reactivation (Sprint 3 / Fractional CMO retainer)
 - LinkedIn / TikTok content engine
 - Outreach email tone-pass workflow at scale
 

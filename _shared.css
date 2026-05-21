@@ -1,4 +1,4 @@
-/* Sider Road Foundation Sprint — shared editorial stylesheet
+/* Sider Road Foundation Sprint · shared editorial stylesheet
    Loaded by every page in this folder. Self-contained CSS so any page is sendable on its own. */
 
 /* TBD · items pending Jocelyn's decision · red highlight */
@@ -290,7 +290,7 @@ blockquote.pullquote {
 .prompt-list .prompt-listen { font-size: 14px; color: var(--ink-soft); }
 .prompt-list .prompt-listen strong { color: var(--ink); font-weight: 600; }
 
-/* CHECKLIST — the working tool at the bottom of every page */
+/* CHECKLIST · the working tool at the bottom of every page */
 section.checklist {
   padding: 80px 0;
   background: var(--ink);
