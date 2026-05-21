@@ -34,7 +34,7 @@
 1. *Charisma is a Skill* · A 6-session framework on the science of professional presence
 2. *Reputation by Design* · How leaders consciously build the reputation that opens doors before they walk through them
 3. *Generational Fluency* · Leading teams across four working generations
-4. *Office Politics for Honest People* · The strategy of being taken seriously without playing dirty
+4. *Office Politics for People Who Hate Office Politics* · The strategy of being taken seriously without playing dirty
 5. *Family Leadership & Legacy* · The decisions that determine whether a family business survives the founder
 
 **Fee Range Dropdown:** $7,500 – $15,000 (suggested floor; bureau standard for first listings)
