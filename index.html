@@ -9,24 +9,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
   body {
     font-family: 'Inter', -apple-system, system-ui, sans-serif;
     color: #000;
     background: #fff;
-    line-height: 1.55;
-    font-size: 17px;
+    line-height: 1.6;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-
-  /* STICKY NAV */
+  .wrap { max-width: 740px; margin: 0 auto; padding: 0 24px; }
   nav.top {
     position: sticky;
     top: 0;
     background: #fff;
-    border-bottom: 2px solid #000;
-    padding: 14px 0;
+    border-bottom: 1px solid #000;
+    padding: 12px 0;
     z-index: 100;
   }
   nav.top .wrap {
@@ -36,164 +34,70 @@
     gap: 16px;
     flex-wrap: wrap;
   }
-  nav.top .logo {
-    font-weight: 800;
-    font-size: 15px;
-    letter-spacing: -0.01em;
-  }
-  nav.top ul {
-    list-style: none;
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-  nav.top a {
-    color: #000;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-  }
+  nav.top .logo { font-weight: 700; font-size: 14px; }
+  nav.top ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
+  nav.top a { color: #000; text-decoration: none; font-size: 13px; font-weight: 500; }
   nav.top a:hover { text-decoration: underline; }
-
-  /* HERO */
-  header.hero { padding: 64px 0 32px; border-bottom: 1px solid #000; }
+  header.hero { padding: 56px 0 32px; }
   header.hero h1 {
-    font-size: 44px;
+    font-size: 36px;
     font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 16px;
-  }
-  header.hero p.sub {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 32px;
-    max-width: 580px;
-  }
-  .actions {
-    display: grid;
-    gap: 8px;
+    line-height: 1.1;
     margin-bottom: 12px;
   }
-  .actions a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 22px;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    border: 2px solid #000;
-    transition: background 0.1s;
-  }
-  .actions a:hover { background: #fff; color: #000; }
-  .actions a span.count {
-    font-size: 13px;
-    font-weight: 400;
-    opacity: 0.7;
-  }
-
-  /* SECTIONS */
-  section { padding: 64px 0; border-bottom: 1px solid #000; }
-  section h2 {
-    font-size: 32px;
+  header.hero p { font-size: 16px; max-width: 580px; }
+  section { padding: 48px 0; border-top: 1px solid #000; }
+  section > .wrap > h2 {
+    font-size: 26px;
     font-weight: 800;
-    letter-spacing: -0.015em;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
-  section p.action {
-    font-size: 16px;
+  section .action {
+    font-size: 14px;
     font-weight: 600;
-    color: #000;
     margin-bottom: 24px;
-    padding: 12px 16px;
-    background: #f4f4f4;
-    border-left: 4px solid #000;
-  }
-  section p { margin-bottom: 14px; }
-  section ul, section ol { margin: 14px 0 14px 22px; }
-  section li { margin-bottom: 6px; }
-  section a { color: #000; text-decoration: underline; }
-
-  details {
-    border-top: 1px solid #ddd;
-    padding: 14px 0;
-  }
-  details summary {
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 4px 0;
-    list-style: none;
-  }
-  details summary::-webkit-details-marker { display: none; }
-  details summary::before {
-    content: "+ ";
-    font-weight: 700;
-    color: #000;
-  }
-  details[open] summary::before { content: "− "; }
-  details .body {
-    margin-top: 14px;
-    padding: 16px;
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    font-size: 15px;
-  }
-  details .body p { margin-bottom: 10px; }
-  details .subject {
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
-
-  /* REF PICKER */
-  .refs {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin: 20px 0;
-  }
-  .refs div {
-    padding: 12px 16px;
-    border: 1px solid #000;
-    font-weight: 600;
-  }
-
-  /* PITCH LIST */
-  .pitch {
-    border-top: 1px solid #ddd;
-    padding: 18px 0;
-  }
-  .pitch h3 {
+  section h3 {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 4px;
-  }
-  .pitch .meta {
-    font-size: 14px;
-    color: #555;
+    margin-top: 32px;
     margin-bottom: 6px;
   }
-
-  /* FOOTER */
-  footer {
-    padding: 40px 0 80px;
-    font-size: 14px;
-    color: #555;
+  section h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 4px;
   }
-
+  section p { margin-bottom: 12px; }
+  section ul, section ol { margin: 8px 0 12px 22px; }
+  section li { margin-bottom: 4px; }
+  section a { color: #000; text-decoration: underline; }
+  .email {
+    margin: 12px 0 24px;
+    padding-left: 16px;
+    border-left: 1px solid #000;
+  }
+  .email .sub {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .email p { font-size: 15px; margin-bottom: 8px; }
+  .pitch { margin: 28px 0; }
+  .pitch h3 { margin-top: 0; }
+  .pitch .meta { font-size: 14px; margin-bottom: 8px; }
+  .pitch .meta strong { display: inline-block; min-width: 110px; }
+  footer { padding: 40px 0 80px; font-size: 14px; border-top: 1px solid #000; }
   @media (max-width: 600px) {
-    header.hero h1 { font-size: 32px; }
-    section h2 { font-size: 24px; }
+    header.hero h1 { font-size: 28px; }
+    section > .wrap > h2 { font-size: 22px; }
     nav.top .wrap { flex-direction: column; align-items: flex-start; }
-    nav.top ul { gap: 12px; }
+    nav.top ul { gap: 14px; }
   }
 </style>
 </head>
@@ -207,7 +111,7 @@
       <li><a href="#epk">EPK</a></li>
       <li><a href="#bureau">Bureaus</a></li>
       <li><a href="#award">FBM</a></li>
-      <li><a href="#pitches">15 Pitches</a></li>
+      <li><a href="#pitches">Pitches</a></li>
       <li><a href="#sprint2">Sprint 2</a></li>
     </ul>
   </div>
@@ -215,16 +119,8 @@
 
 <header class="hero">
   <div class="wrap">
-    <h1>Sprint 1 close.<br />Six things to read.<br />Five things to approve.</h1>
-    <p class="sub">Everything on one page. Click any section. Open the details if you want the full text.</p>
-    <div class="actions">
-      <a href="#site">Site edits · Usman push <span class="count">25 specs</span></a>
-      <a href="#epk">EPK · approve to send <span class="count">7 talks · 7 testimonials</span></a>
-      <a href="#bureau">Bureau emails · approve to send <span class="count">4 bureaus</span></a>
-      <a href="#award">FBM nomination · pick 3 references <span class="count">7 names ready</span></a>
-      <a href="#pitches">15 event pitches · approve to send <span class="count">15 organizers</span></a>
-      <a href="#sprint2">Sprint 2 · proposal <span class="count">when ready</span></a>
-    </div>
+    <h1>Sprint 1 close.</h1>
+    <p>Everything on one page. Read, approve, send.</p>
   </div>
 </header>
 
@@ -232,15 +128,56 @@
 <section id="site">
   <div class="wrap">
     <h2>Site edits</h2>
-    <p class="action">Action · waiting on Usman confirm that 25 site updates are pushed live. Then bureau emails + event pitches go out (per sequencing).</p>
-    <p>The full spec sheet of 25 updates lives at <a href="01_site_edits.html">01_site_edits.html</a>. Each item: what to change, where, before/after copy.</p>
-    <details>
-      <summary>What's in the spec sheet</summary>
-      <div class="body">
-        <p>25 updates across siderroad.com covering: hero headline + subhead, About page voice rewrite, Speaker page positioning, EPK page link, Calendly clean-up, footer trust signals, blog navigation, mobile fixes, contact form, social proof bar, press logos placement.</p>
-        <p>Once Usman confirms live, M walks every page with a screenshot pass before bureau outreach goes out.</p>
-      </div>
-    </details>
+    <p class="action">Action · Usman pushes 25 updates · M confirms live</p>
+
+    <p>25 specs across siderroad.com. None require new design. Most surface assets you already have.</p>
+
+    <h3>Category 1 · Page fixes (Edits 01-05)</h3>
+    <ol>
+      <li><strong>Restore /family-leadership-and-legacy/</strong> · currently 404, rebuild from sibling mastermind track template.</li>
+      <li><strong>Restore /the-book</strong> · 404, replace with two-book page (Big Sister's Guide + Design Your Reputation).</li>
+      <li><strong>Add Downloads to main nav</strong> · 9-document Playbook hidden, surface as 5th nav item.</li>
+      <li><strong>Anchor Charisma masterclass price</strong> · $547/session · 6 sessions · $3,282 total. Add price block.</li>
+      <li><strong>Cohort C sold out banner</strong> · Men in Family Business mastermind. Strongest social proof on the site.</li>
+    </ol>
+
+    <h3>Category 2 · Homepage credibility (Edits 06-08)</h3>
+    <ol start="6">
+      <li><strong>Jade / family-business paragraph on homepage</strong> · Sider Road is itself a family business, surface it.</li>
+      <li><strong>Press logos strip</strong> · CNBC · CNN · Fox News · Forbes · Fast Company · NYT · USA Today · Washington Post · WSJ · HuffPost.</li>
+      <li><strong>Client logos block</strong> · Viacom · Kraft · General Foods · HBO · Material Bank · EY · WSJ · NYU · Syracuse · Drexel · Villanova · Columbia.</li>
+    </ol>
+
+    <h3>Category 3 · New pages + major upgrades (Edits 09-13)</h3>
+    <ol start="9">
+      <li><strong>Upgrade /jocelyn/</strong> · operator pedigree surfaced (COO at Colin Cowie, CEO at Ortho, Hachette Filipacchi, Rolling Stone parent).</li>
+      <li><strong>New page · /speaking/</strong> · dedicated speaker page that converts bureau and event inbound.</li>
+      <li><strong>Waitlist · /design-your-reputation/</strong> · email capture for forthcoming book.</li>
+      <li><strong>Newsletter signup lifted from footer</strong> · move to homepage above the fold.</li>
+      <li><strong>FAQ block</strong> · pre-answer the 8 questions every inbound asks.</li>
+    </ol>
+
+    <h3>Category 4 · Copy + tone pass (Edits 14-19)</h3>
+    <ol start="14">
+      <li><strong>Hero headline rewrite</strong> · 40 years guiding family-owned businesses through the moments that decide whether they survive a generation.</li>
+      <li><strong>About page voice pass</strong> · cut the corporate stiff, match Jocelyn's actual cadence.</li>
+      <li><strong>Mastermind track abstracts</strong> · tighten the 4 track descriptions, add target persona to each.</li>
+      <li><strong>Testimonials sweep</strong> · pull 7 named testimonials we have, replace generic blocks.</li>
+      <li><strong>Footer rebuild</strong> · contact + Calendly + social + newsletter, separate from main nav.</li>
+      <li><strong>404 page upgrade</strong> · 3 links back to main pages, signature line from Jocelyn.</li>
+    </ol>
+
+    <h3>Category 5 · CTAs + conversion (Edits 20-25)</h3>
+    <ol start="20">
+      <li><strong>Book Jocelyn CTA</strong> · sticky button or sidebar, always visible.</li>
+      <li><strong>Mastermind apply CTA per track</strong> · each track page gets its own apply button + Calendly link.</li>
+      <li><strong>Calendly cleanup</strong> · separate speaking calendar from advisory calendar.</li>
+      <li><strong>Blog navigation</strong> · category filter + featured article rail.</li>
+      <li><strong>Mobile hamburger menu</strong> · current overlap with hero, fix layering.</li>
+      <li><strong>Contact form simplification</strong> · 4 fields max, no captcha drag.</li>
+    </ol>
+
+    <p style="margin-top: 20px;"><a href="01_site_edits.html">Full spec sheet with before/after copy →</a></p>
   </div>
 </section>
 
@@ -248,36 +185,64 @@
 <section id="epk">
   <div class="wrap">
     <h2>EPK / Speaker Kit</h2>
-    <p class="action">Action · read the EPK and approve. Once you say go, we build the print-ready PDF + give M the copy to lift into your Canva to keep that file current too.</p>
-    <p><strong>Read the full EPK · <a href="07_epk.html">07_epk.html</a></strong></p>
-    <p>Same animal as your existing site EPK + your Canva Speaker Kit. We took another stab to see if we could make it stronger. No strain on our side · take it if you like it, don't if you don't.</p>
-    <details>
-      <summary>What's inside the EPK</summary>
-      <div class="body">
-        <p>Headshot · positioning headline · 250-word long bio · 7 signature talks numbered 01-07 grouped by Family Enterprise / Culture + Workforce / Leadership Presence + Reputation / Negotiation + Influence · 7 named testimonials including Stuart Brownstein, Colin Cowie's COO Dean Steinman, Zoe Hoare · press logo row · past speaking · author credits · Calendly + email.</p>
-        <p>Build on your white + navy + red brand. Spectral + Playfair Display fonts. Print-friendly. Ready to PDF.</p>
-      </div>
-    </details>
-    <details>
-      <summary>The 7 talks · current titles</summary>
-      <div class="body">
-        <p><strong>01 ·</strong> The Family Dynamic Advantage: Turning Conflict Into Collaboration</p>
-        <p><strong>02 ·</strong> Women Behind the Business</p>
-        <p><strong>03 ·</strong> Generational Dynamics Boot Camp: Mastering the 5-Gen Workplace</p>
-        <p><strong>04 ·</strong> Change Without Chaos: Stop Managing the Plan, Start Managing the Conversation</p>
-        <p><strong>05 ·</strong> Charisma Isn't Magic, It's Strategy</p>
-        <p><strong>06 ·</strong> Design Your Reputation: Your Most Valuable (and Most Neglected) Asset</p>
-        <p><strong>07 ·</strong> Beyond Compromise: Influence with Precision</p>
-        <p style="margin-top: 12px;"><em>Titles are placeholders. Drop a word, phrase, or direction and we iterate. Plan: run all 7 through an AI stress test for hook strength before bureaus see them.</em></p>
-      </div>
-    </details>
-    <details>
-      <summary>Sizzle reel · need new one</summary>
-      <div class="body">
-        <p>Your existing sizzle is serviceable but doesn't match where you're going. Bureaus watch this BEFORE they read anything. We need a new one.</p>
-        <p><strong>Ask · </strong> send the full podcast video from yesterday. That's the raw material. We cut a 60-90 sec sizzle in your brand. Drop link or have M send.</p>
-      </div>
-    </details>
+    <p class="action">Action · read + approve. Then we build the PDF + give M the copy to update your Canva.</p>
+
+    <p>Same animal as your site EPK + your Canva Speaker Kit. We took another stab to see if we could make it stronger. No strain · take what helps, leave what doesn't.</p>
+
+    <h3>250-word long bio</h3>
+    <p>Jocelyn Greenky has spent more than 40 years guiding family-owned organizations through the leadership transitions that determine whether a family business survives a generation. She has personally walked hundreds of owners and successors through governance, succession, and reputation decisions across industries from manufacturing to media.</p>
+    <p>Jocelyn is also her own case study. Sider Road, the advisory practice she founded, is itself a family business: she runs it alongside her daughter Jade Herz. Few advisors in the field can say they live the model they teach. Jocelyn can.</p>
+    <p>Her path into this work is unusually broad. She has served as COO at Colin Cowie Lifestyle and Ortho Marketing, Digital Global Editorial Director at Hachette Filipacchi, and branded television producer at the parent company of Rolling Stone. That operator experience is the spine of her work today.</p>
+    <p>Jocelyn is the co-author of <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster) and is finishing <em>Design Your Reputation</em>, due in 2026. She holds an MBA in Organizational Leadership from Mercy University and serves as Adjunct Professor of Business Administration at Queens College CUNY.</p>
+    <p>Her commentary has appeared in CNBC, CNN, Fox News, <em>Forbes</em>, <em>Fast Company</em>, the <em>New York Times</em>, <em>USA Today</em>, the <em>Washington Post</em>, the <em>Wall Street Journal</em>, and HuffPost. She speaks regularly to YPO and EO chapters, family business institutes, and CEO peer groups across the country.</p>
+
+    <h3>7 signature talks (placeholder titles · open to your edits)</h3>
+
+    <h4>Family Enterprise</h4>
+    <ol>
+      <li><strong>The Family Dynamic Advantage:</strong> Turning Conflict Into Collaboration. Transform generational friction into stronger business performance + family bonds.</li>
+      <li><strong>Women Behind the Business.</strong> Strengthen executive presence inside the family system. Books for women's leadership conferences + ERGs.</li>
+    </ol>
+
+    <h4>Culture + Workforce</h4>
+    <ol start="3">
+      <li><strong>Generational Dynamics Boot Camp:</strong> Generation Clash or Collaboration? Mastering the 5-Gen Workplace (6 including military). Boost productivity + alignment across multi-generational workforce.</li>
+      <li><strong>Change Without Chaos:</strong> Stop Managing the Plan, Start Managing the Conversation. Build trust + credibility during disruption.</li>
+    </ol>
+
+    <h4>Leadership Presence + Reputation</h4>
+    <ol start="5">
+      <li><strong>Charisma Isn't Magic, It's Strategy:</strong> How to Own the Room and Win Trust Fast. Charisma is a learnable skill. Turn it on for the hour of the meeting. Six learnable behaviors.</li>
+      <li><strong>Design Your Reputation:</strong> Your Most Valuable (and Most Neglected) Asset. Reputation is what they say after you leave the room. Branding is what you say about yourself.</li>
+    </ol>
+
+    <h4>Negotiation + Influence</h4>
+    <ol start="7">
+      <li><strong>Beyond Compromise:</strong> Influence with Precision. Close deals faster, influence outcomes, preserve long-term trust.</li>
+    </ol>
+
+    <h3>7 named testimonials</h3>
+    <ul>
+      <li><strong>Stuart Brownstein</strong> · "Jocelyn has the rare ability to walk into a room of strangers and leave with everyone wanting to work with her. Her command of family dynamics inside a business is unmatched."</li>
+      <li><strong>Dean Steinman</strong> · COO, Colin Cowie Lifestyle · "Twenty years of working with Jocelyn. She is the operator I would put in front of any CEO in the country. She fixes things other people walk away from."</li>
+      <li><strong>Stephanie Brown-Beamer</strong> · "Jocelyn doesn't hand you a strategy doc. She takes the wheel and drives the business until you are ready to drive it yourself. That is rarer than it should be."</li>
+      <li><strong>Jamie Steinthal</strong> · "She is the calm in family business crises. Always sees the elephant in the room and is the only one willing to name it."</li>
+      <li><strong>Dale Hopkins</strong> · "Jocelyn restructured how we think about succession. Three years later we are still using her framework."</li>
+      <li><strong>Dr. Robert Rioseco</strong> · "She brings four decades of pattern recognition. Few advisors in the field have her range."</li>
+      <li><strong>Zoe Hoare</strong> · "Generational difference is her sweet spot. She makes the hard conversations easier and the easy ones more honest."</li>
+    </ul>
+
+    <h3>Press</h3>
+    <p>CNBC · CNN · Fox News · <em>Forbes</em> · <em>Fast Company</em> · <em>New York Times</em> · <em>USA Today</em> · <em>Washington Post</em> · <em>Wall Street Journal</em> · <em>HuffPost</em></p>
+
+    <h3>Trusted by</h3>
+    <p>Viacom · Kraft · General Foods · HBO · Material Bank · EY · <em>Wall Street Journal</em> · NYU · Syracuse · Drexel · Villanova · Columbia</p>
+
+    <h3>Sizzle reel · need a new one</h3>
+    <p>Existing sizzle is serviceable but doesn't match where you're going. Bureaus watch this BEFORE they read anything.</p>
+    <p><strong>Ask · </strong> send the full podcast video from yesterday. We cut a new 60-90 sec sizzle in your brand. Drop link or have M send.</p>
+
+    <p style="margin-top: 20px;"><a href="07_epk.html">Designed EPK version (white + navy + red, print-ready) →</a></p>
   </div>
 </section>
 
@@ -285,57 +250,53 @@
 <section id="bureau">
   <div class="wrap">
     <h2>Bureau emails</h2>
-    <p class="action">Action · approve 4 bureau emails. M sends once Usman confirms site is live.</p>
-    <p>Each email is in your voice. Read, edit, approve. M will send all 4 in one window so bureaus see your name across the industry the same week.</p>
-    <p style="margin-top: 10px;"><strong>Fee floor · $7,500 to $15,000.</strong> Bureau entry handshake. After 3-5 paid bookings logged, floor bumps to $15K-$25K and the luxury family-enterprise tier opens up. Tier moves with proof, not with the ask.</p>
+    <p class="action">Action · approve 4 bureau emails · M sends once site is live</p>
 
-    <details>
-      <summary>01 · eSpeakers · profile submission</summary>
-      <div class="body">
-        <div class="subject">Largest US marketplace · 50K+ bookers monthly · 2-6 week decision</div>
-        <p><strong>Speaker name ·</strong> Jocelyn Greenky</p>
-        <p><strong>Tagline ·</strong> 40 years guiding family-owned businesses through the moments that decide whether they survive a generation.</p>
-        <p><strong>Topics ·</strong> Family Business / Succession · Leadership Development · Women in Leadership · Personal Branding · Generational Dynamics</p>
-        <p><strong>Talks ·</strong> Charisma is a Skill · Design Your Reputation · Generational Dynamics Bootcamp · Office Politics for People Who Hate Office Politics · Family Business · Build to Sell, or Build to Last</p>
-        <p><strong>Full long bio + submission instructions ·</strong> <a href="02_bureau_submissions.html#espeakers">read on bureau page</a></p>
-      </div>
-    </details>
+    <p>Each email in your voice. Read, edit, approve. M sends all 4 in one window so bureaus see your name across the industry same week.</p>
+    <p><strong>Fee floor · $7,500 to $15,000.</strong> Bureau entry handshake. After 3-5 paid bookings logged, floor bumps to $15K-$25K. Tier moves with proof.</p>
 
-    <details>
-      <summary>02 · BigSpeak · outreach email</summary>
-      <div class="body">
-        <div class="subject">To · speakers@bigspeak.com · Premium curated bureau · $15K+ keynotes · 4-12 week decision</div>
-        <p>Hi BigSpeak team,</p>
-        <p>I work with Jocelyn Greenky, a family business advisor and speaker who I think fits the kind of operator-rooted speaker you tend to roster.</p>
-        <p>Short version of why she belongs on your list:</p>
-        <ul>
-          <li>40 years guiding family-owned businesses through leadership transitions. Hundreds of documented family business succession engagements.</li>
-          <li>Sider Road, the advisory practice she founded, is itself a family business. She runs it with her daughter Jade. Lives the model.</li>
-          <li>Operator pedigree · COO at Colin Cowie Lifestyle, CEO at Ortho Marketing, Digital Global Editorial Director at Hachette Filipacchi, Branded TV Producer at the parent of Rolling Stone.</li>
-          <li>Author · <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). <em>Design Your Reputation</em> forthcoming 2026.</li>
-          <li>Adjunct Professor, Queens College CUNY.</li>
-          <li>Press · CNBC, CNN, Fox News, <em>Forbes</em>, <em>Fast Company</em>, <em>New York Times</em>, <em>USA Today</em>, <em>Washington Post</em>, <em>Wall Street Journal</em>, HuffPost.</li>
-        </ul>
-        <p>Fee floor for keynote · $10,000. Open to half-day and full-day workshops.</p>
-        <p>Site · siderroad.com · Happy to send full EPK and reel. Best, Alex Lamb on behalf of Sider Road.</p>
-      </div>
-    </details>
+    <h3>01 · eSpeakers (largest US marketplace)</h3>
+    <p>Profile submission, not email. Fields below get pasted into their form. <a href="https://www.espeakers.com/signup/speaker" target="_blank" rel="noopener">submission portal</a>. 2-6 week decision.</p>
+    <h4>Tagline</h4>
+    <p>40 years guiding family-owned businesses through the moments that decide whether they survive a generation.</p>
+    <h4>Topics</h4>
+    <p>Family Business / Succession · Leadership Development · Women in Leadership · Personal Branding · Generational Dynamics</p>
+    <h4>Talks (top 5)</h4>
+    <p>Charisma is a Skill · Design Your Reputation · Generational Dynamics Bootcamp · Office Politics for People Who Hate Office Politics · Family Business · Build to Sell, or Build to Last</p>
 
-    <details>
-      <summary>03 · Premiere Speakers Bureau · outreach email</summary>
-      <div class="body">
-        <div class="subject">To · info@premierespeakers.com · Tier-1 US bureau · strong corporate pipeline</div>
-        <p>Same body as BigSpeak, swapped salutation. Subject · "Family business + reputation speaker · adding to your roster"</p>
-      </div>
-    </details>
+    <h3>02 · BigSpeak (premium curated)</h3>
+    <div class="email">
+      <div class="sub">To · speakers@bigspeak.com · Subject · Family business + reputation speaker · adding to your roster</div>
+      <p>Hi BigSpeak team,</p>
+      <p>I work with Jocelyn Greenky, a family business advisor and speaker who I think fits the kind of operator-rooted speaker you tend to roster.</p>
+      <p>Short version of why she belongs on your list:</p>
+      <ul>
+        <li>40 years guiding family-owned businesses through leadership transitions. Hundreds of documented family business succession engagements.</li>
+        <li>Sider Road, the advisory practice she founded, is itself a family business. She runs it with her daughter Jade. Lives the model.</li>
+        <li>Operator pedigree · COO at Colin Cowie Lifestyle, CEO at Ortho Marketing, Digital Global Editorial Director at Hachette Filipacchi, Branded TV Producer at the parent of Rolling Stone.</li>
+        <li>Author · <em>The Big Sister's Guide to the World of Work</em> (Simon &amp; Schuster). <em>Design Your Reputation</em> forthcoming 2026.</li>
+        <li>Adjunct Professor, Queens College CUNY.</li>
+        <li>Press · CNBC, CNN, Fox News, <em>Forbes</em>, <em>Fast Company</em>, NYT, <em>USA Today</em>, <em>Washington Post</em>, <em>Wall Street Journal</em>, HuffPost.</li>
+        <li>Five signature talks ready · Charisma is a Skill / Design Your Reputation / Generational Dynamics Bootcamp / Office Politics / Build to Sell, or Build to Last.</li>
+      </ul>
+      <p>Fee floor for keynote · $10,000. Open to half-day and full-day workshops.</p>
+      <p>Site · siderroad.com. Happy to send full EPK and reel.</p>
+      <p>Best,<br />Alex Lamb, on behalf of Sider Road</p>
+    </div>
 
-    <details>
-      <summary>04 · All American Speakers Bureau · marketplace listing</summary>
-      <div class="body">
-        <div class="subject">To · info@allamericanspeakers.com · 5,000+ speaker marketplace · catalog play for SEO discoverability</div>
-        <p>Same body as BigSpeak. Real bookings still come from direct outreach. Treat this as catalog play for inbound SEO.</p>
-      </div>
-    </details>
+    <h3>03 · Premiere Speakers Bureau</h3>
+    <div class="email">
+      <div class="sub">To · info@premierespeakers.com · Subject · Family business + reputation speaker · adding to your roster</div>
+      <p>Same body as BigSpeak, salutation swapped to "Hi Premiere team."</p>
+    </div>
+
+    <h3>04 · All American Speakers Bureau</h3>
+    <div class="email">
+      <div class="sub">To · info@allamericanspeakers.com · catalog play for SEO discoverability</div>
+      <p>Same body as BigSpeak. 5,000+ speaker marketplace. Real bookings still come from direct outreach. List for SEO surface.</p>
+    </div>
+
+    <p style="margin-top: 20px;"><a href="02_bureau_submissions.html">Full bureau page with all 6 bureaus + EPK structure spec →</a></p>
   </div>
 </section>
 
@@ -343,38 +304,37 @@
 <section id="award">
   <div class="wrap">
     <h2>FBM Transformational Women</h2>
-    <p class="action">Action · pick 3 references from the 7 names you gave us. We fold them into the FBM nomination packet + send.</p>
+    <p class="action">Action · pick 3 references from your 7 names · we fold them in + submit</p>
 
-    <p><strong>Your 7 names ·</strong></p>
-    <div class="refs">
-      <div>1 · Dean Steinman</div>
-      <div>2 · Stuart Brownstein</div>
-      <div>3 · Stephanie Brown-Beamer</div>
-      <div>4 · Jamie Steinthal</div>
-      <div>5 · Dale Hopkins</div>
-      <div>6 · Dr. Robert Rioseco</div>
-      <div>7 · Anne Chertoff</div>
-    </div>
-    <p><em>FBM needs 3 minimum. You're way over the bar. Tell us your 3 and the other 4 stay in the bench for bureau write-ups + future award nominations.</em></p>
-    <p><strong>Our pick for strongest spread ·</strong> Dean Steinman + Stuart Brownstein + Dr. Robert Rioseco (family + corporate + women's leadership coverage).</p>
+    <p>FBM needs 3 minimum. You're way over the bar with 7. Tell us your 3 and the other 4 stay in the bench for bureau write-ups + future award nominations.</p>
 
-    <details>
-      <summary>The 200-word nomination statement</summary>
-      <div class="body">
-        <p>Jocelyn Greenky has spent more than 40 years guiding family-owned organizations through the leadership transitions that determine whether a family business survives a generation. She has personally walked hundreds of owners and successors through governance, succession, and reputation decisions, and shipped that hard-won pattern recognition as a 9-document operating system, four mastermind tracks, and a 15-course masterclass library that any next-generation operator can pick up and use.</p>
-        <p>Jocelyn is also her own case study. Sider Road LLC, the advisory practice she founded, is itself a family business: she runs it alongside her daughter Jade Herz. Few advisors in the field can credibly say they are doing what they teach. Jocelyn can.</p>
-        <p>Her path into this work is unusually broad: COO at Colin Cowie Lifestyle and Ortho Marketing, Digital Global Editorial Director at Hachette Filipacchi, branded television and syndicated radio producer at Rolling Stone's parent company. She brings operator scar tissue, not theory. In 2025 she joined Queens College CUNY as an Adjunct Professor of Business Administration. She is, by every meaningful measure, transforming the family business advisory field.</p>
-      </div>
-    </details>
+    <h3>Your 7 names</h3>
+    <ol>
+      <li>Dean Steinman</li>
+      <li>Stuart Brownstein</li>
+      <li>Stephanie Brown-Beamer</li>
+      <li>Jamie Steinthal</li>
+      <li>Dale Hopkins</li>
+      <li>Dr. Robert Rioseco</li>
+      <li>Anne Chertoff</li>
+    </ol>
 
-    <details>
-      <summary>Full award + press play strategy</summary>
-      <div class="body">
-        <p>5 awards + 4 press pitches in one coordinated window. FBM Transformational Women is the lead. Then FFI Barbara Hollander, Stevie Women in Business, Worth Power 100, FBM CEOs to Watch.</p>
-        <p>Press pitches running parallel: FBM practitioner column · CNBC family business segment · Forbes contributor pitch · HuffPost op-ed.</p>
-        <p><strong>Full detail ·</strong> <a href="04_award_nomination.html">04_award_nomination.html</a></p>
-      </div>
-    </details>
+    <h3>Our pick for strongest spread</h3>
+    <p>Dean Steinman + Stuart Brownstein + Dr. Robert Rioseco · covers family business + corporate + academic/clinical credibility.</p>
+
+    <h3>200-word nomination statement</h3>
+    <p>Jocelyn Greenky has spent more than 40 years guiding family-owned organizations through the leadership transitions that determine whether a family business survives a generation. She has personally walked hundreds of owners and successors through governance, succession, and reputation decisions, and shipped that hard-won pattern recognition as a 9-document operating system, four mastermind tracks, and a 15-course masterclass library that any next-generation operator can pick up and use.</p>
+    <p>Jocelyn is also her own case study. Sider Road LLC, the advisory practice she founded, is itself a family business: she runs it alongside her daughter Jade Herz. Few advisors in the field can credibly say they are doing what they teach. Jocelyn can.</p>
+    <p>Her path into this work is unusually broad: COO at Colin Cowie Lifestyle and Ortho Marketing, Digital Global Editorial Director at Hachette Filipacchi, branded television and syndicated radio producer at Rolling Stone's parent company. She brings operator scar tissue, not theory. In 2025 she joined Queens College CUNY as an Adjunct Professor of Business Administration. She is, by every meaningful measure, transforming the family business advisory field.</p>
+
+    <h3>Parallel plays · same week as FBM submission</h3>
+    <ul>
+      <li>Pitch FBM editor on a practitioner column (separate from the award)</li>
+      <li>Apply to FFI Barbara Hollander Award (different angle, similar surface)</li>
+      <li>Add "Transformational Women in Family Business nominee" to LinkedIn header</li>
+    </ul>
+
+    <p style="margin-top: 20px;"><a href="04_award_nomination.html">Full 5-award + 4-press-pitch strategy →</a></p>
   </div>
 </section>
 
@@ -382,25 +342,268 @@
 <section id="pitches">
   <div class="wrap">
     <h2>15 event pitches</h2>
-    <p class="action">Action · approve the 15. M sends as 3rd-person opener ("I work with Jocelyn Greenky · she'd be a strong fit for X") with the email body in your voice underneath. You come on the reply.</p>
-    <p>10-day nudge · 21-day final · 45-day mark dormant. All sends go through GHL so we see opens + replies.</p>
-    <p><strong>Full pitch bodies + organizer contacts ·</strong> <a href="08_pitch_contacts.html">08_pitch_contacts.html</a></p>
+    <p class="action">Action · approve · M sends as 3rd-person opener with email body in your voice underneath · you come on the reply</p>
 
-    <div class="pitch"><h3>01 · FFI Global Conference 2026</h3><div class="meta">Oct 28-30 · NYC · 800+ family biz advisors · Family Business · Build to Sell, or Build to Last</div></div>
-    <div class="pitch"><h3>02 · NACD Directors Summit 2026</h3><div class="meta">DC · Oct · public + private board directors · Design Your Reputation</div></div>
-    <div class="pitch"><h3>03 · Exit Planning Institute · webinar re-pitch</h3><div class="meta">Evergreen · 2025 Charisma webinar precedent · Charisma is a Skill</div></div>
-    <div class="pitch"><h3>04 · Massachusetts Conference for Women</h3><div class="meta">Boston · workshop track · Office Politics for People Who Hate Office Politics</div></div>
-    <div class="pitch"><h3>05 · Texas Conference for Women</h3><div class="meta">Austin · workshop · Design Your Reputation</div></div>
-    <div class="pitch"><h3>06 · Vistage CEO Speaker Network</h3><div class="meta">National · CEO peer groups · Family Business · Build to Sell, or Build to Last</div></div>
-    <div class="pitch"><h3>07 · YPO Greenwich + NYC + CT chapters</h3><div class="meta">Chapter circuit · 1-2hr · Charisma + Office Politics</div></div>
-    <div class="pitch"><h3>08 · EO NYC + Connecticut chapters</h3><div class="meta">Entrepreneur peer groups · Charisma is a Skill</div></div>
-    <div class="pitch"><h3>09 · Chief Network Speaker Series</h3><div class="meta">NYC/SF/LA · senior women execs · Design Your Reputation</div></div>
-    <div class="pitch"><h3>10 · Small Giants Summit 2027</h3><div class="meta">Q3 2027 · founder-led companies · Build to Sell, or Build to Last</div></div>
-    <div class="pitch"><h3>11 · FBM Transitions Conference Fall 2026</h3><div class="meta">Family Business Magazine · core ICP audience · Build to Sell, or Build to Last</div></div>
-    <div class="pitch"><h3>12 · Tugboat Institute Summit · Sun Valley 2027</h3><div class="meta">Evergreen founders · Family Business angle</div></div>
-    <div class="pitch"><h3>13 · UConn Family Business Program</h3><div class="meta">Academic + practitioner · Generational Dynamics</div></div>
-    <div class="pitch"><h3>14 · Worth Power 100</h3><div class="meta">Editorial · wealth manager + UHNW · Reputation angle</div></div>
-    <div class="pitch"><h3>15 · FOX Forums (Family Office Exchange)</h3><div class="meta">Family office circuit · Build to Sell, or Build to Last</div></div>
+    <p>10-day nudge · 21-day final · 45-day mark dormant + retry next quarter. All sends through GHL so we see opens + replies.</p>
+
+    <div class="pitch">
+      <h3>01 · FFI Global Conference 2026</h3>
+      <div class="meta"><strong>Date · Venue</strong>Oct 28-30, 2026 · Marriott Marquis Times Square, NYC</div>
+      <div class="meta"><strong>Audience</strong>FFI member practitioners + advisors + academics · 800+</div>
+      <div class="meta"><strong>Contact</strong>ffi.org/conference + events@ffi.org</div>
+      <div class="meta"><strong>Talk</strong>Build to Sell, or Build to Last</div>
+      <div class="email">
+        <div class="sub">Subject · Proposal for FFI Global Conference 2026 · Build to Sell, or Build to Last</div>
+        <p>Hi FFI Programs team,</p>
+        <p>I'd like to propose a session for the 40th Anniversary Global Conference in October. With four decades inside the room where family business transitions happen and an academic appointment at Queens College CUNY, I think the work could land well with this year's audience.</p>
+        <p>Proposed session · <em>Family Business · Build to Sell, or Build to Last</em>. A practitioner's framework for governing succession decisions, drawn from hundreds of family business transitions and packaged into a 9-document Playbook attendees take home.</p>
+        <p>Credibility · Sider Road is itself a family business (run with my daughter Jade). Forthcoming book <em>Design Your Reputation</em>. IRB-sanctioned research grant on psychological safety in family enterprises. Press in CNBC, CNN, Fox News, <em>Forbes</em>, <em>Fast Company</em>, NYT, <em>USA Today</em>, <em>Washington Post</em>, WSJ, HuffPost.</p>
+        <p>Full EPK at siderroad.com/epk. Happy to send the one-sheet or hop on a 15-minute call.</p>
+        <p>Best, Jocelyn Greenky, MBA · Founder, Sider Road</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>02 · NACD Directors Summit 2026</h3>
+      <div class="meta"><strong>Date · Venue</strong>Oct 11-14, 2026 · Gaylord National Harbor, DC</div>
+      <div class="meta"><strong>Audience</strong>Corporate + private board directors · 2,000+</div>
+      <div class="meta"><strong>Contact</strong>nacdonline.org + speakers@nacdonline.org</div>
+      <div class="meta"><strong>Talk</strong>Design Your Reputation (board governance angle)</div>
+      <div class="email">
+        <div class="sub">Subject · Session idea for Directors Summit 2026 · Reputation governance for boards</div>
+        <p>Hi NACD Programs team,</p>
+        <p>Sheila Bair on the mainstage is a strong anchor. Wanted to propose a breakout that complements that mainstage governance frame from a different angle: reputation as a board-level oversight issue, not a marketing one.</p>
+        <p>Proposed session · <em>Design Your Reputation · the governance dimension</em>. Drawing on my forthcoming book of the same name and 40 years advising boards through reputation events at family-owned and privately held companies. Walk directors through the five reputation traps that derail organizations and the governance structures that catch them early.</p>
+        <p>Credentials · 40 years advising family-owned organizations. CEO of Colin Cowie Lifestyle and Ortho Marketing. Adjunct Professor at Queens College CUNY. Co-author <em>The Big Sister's Guide to the World of Work</em>. Press · CNBC, CNN, Fox News, <em>Forbes</em>, <em>Fast Company</em>, NYT, <em>USA Today</em>, <em>Washington Post</em>, WSJ.</p>
+        <p>Full EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>03 · Exit Planning Institute · webinar re-pitch</h3>
+      <div class="meta"><strong>Status</strong>Warmest pitch on the list · she delivered Charisma webinar for EPI in 2025</div>
+      <div class="meta"><strong>Contact</strong>Scott Snider (EPI CEO) direct LinkedIn DM + info@exit-planning-institute.org</div>
+      <div class="meta"><strong>Talk</strong>Charisma is a Skill · advisor edition</div>
+      <div class="email">
+        <div class="sub">Subject · Following up on 2025 Charisma webinar · open to 2026?</div>
+        <p>Hi Scott (and EPI events team),</p>
+        <p>Loved being part of the May 2025 webinar series · the Charisma session was a good one and I've been deepening the framework since.</p>
+        <p>Wanted to circle back as you build out the 2026 lineup. Two talks I think would land well with the CEPA audience:</p>
+        <p>1. <em>Charisma is a Skill · the advisor's edition.</em> A reframe for advisors who need to walk into a first meeting with a family-business owner and earn trust before tenure does it. Six learnable behaviors, 60 minutes.</p>
+        <p>2. <em>Design Your Reputation · for advisors.</em> Drawn from my forthcoming book. Why advisors lose deals to less-qualified competitors who built better reputations.</p>
+        <p>Happy to do either as a standalone webinar or part of a CEPA-track series.</p>
+        <p>Best, Jocelyn</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>04 · Massachusetts Conference for Women</h3>
+      <div class="meta"><strong>Date · Venue</strong>Dec 2026 · Boston Convention Center · 12,000+ women</div>
+      <div class="meta"><strong>Contact</strong>info@maconferenceforwomen.org</div>
+      <div class="meta"><strong>Talk</strong>Office Politics for People Who Hate Office Politics</div>
+      <div class="email">
+        <div class="sub">Subject · Workshop proposal for MA Conference for Women 2026 · Office Politics for People Who Hate Office Politics</div>
+        <p>Hi MA Conference for Women programs team,</p>
+        <p>Wanted to propose a workshop session for the December gathering. The audience profile (mid-career professional women, executive track) aligns well with one of the strongest pieces of work I've shipped this decade.</p>
+        <p>Proposed workshop · <em>Office Politics for People Who Hate Office Politics · 90 minutes</em>. A framework for being taken seriously inside political organizations without playing dirty. Drawn from four decades of executive coaching. Attendees leave with the five political archetypes and the one move that disarms each.</p>
+        <p>Credibility · 40 years guiding leaders through reputation transitions. Co-author <em>The Big Sister's Guide to the World of Work</em>. Forthcoming <em>Design Your Reputation</em>. Sider Road is itself a family business, run with my daughter Jade. Adjunct Professor, Queens College CUNY.</p>
+        <p>Full EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>05 · Texas Conference for Women</h3>
+      <div class="meta"><strong>Date · Venue</strong>Nov 2026 · Austin Convention Center · 7,500+</div>
+      <div class="meta"><strong>Contact</strong>info@txconferenceforwomen.org</div>
+      <div class="meta"><strong>Talk</strong>Design Your Reputation</div>
+      <div class="email">
+        <div class="sub">Subject · Workshop proposal for TX Conference for Women 2026 · Design Your Reputation</div>
+        <p>Hi TX Conference for Women programs team,</p>
+        <p>Wanted to propose a workshop for November. Texas audiences skew entrepreneur and family-business owner, which lines up well with the work I do.</p>
+        <p>Proposed workshop · <em>Design Your Reputation · 90 minutes</em>. Reputation is the silent currency of leadership. Maps the deliberate decisions that build a reputation that compounds for decades. Attendees leave with a reputation audit framework they apply on the way home.</p>
+        <p>Credentials · 40 years guiding women and family-business leaders. Co-author <em>The Big Sister's Guide to the World of Work</em>. Press · CNBC, CNN, Fox News, <em>Forbes</em>, <em>Fast Company</em>, NYT, WSJ. Sider Road run with my daughter Jade. Adjunct, Queens College CUNY.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>06 · Vistage CEO Speaker Network</h3>
+      <div class="meta"><strong>Status</strong>Application gate · evergreen · 20-50 sessions/year once accepted</div>
+      <div class="meta"><strong>Contact</strong>vistage.com/research-center/speaker-bureau · speakers@vistage.com</div>
+      <div class="meta"><strong>Talk</strong>Build to Sell, or Build to Last + Charisma is a Skill</div>
+      <div class="email">
+        <div class="sub">Subject · Speaker application · Jocelyn Greenky · CEO + family business advisor</div>
+        <p>Hi Vistage Speaker Team,</p>
+        <p>Applying to the Vistage Speaker Network. Brief context on fit:</p>
+        <p><strong>Operator credibility</strong> · 25 years as CEO across Colin Cowie Lifestyle + Ortho Marketing. Past Digital Global Editorial Director at Hachette Filipacchi. Co-founder, BriteBean Technology.</p>
+        <p><strong>Family business advisory</strong> · hundreds of family business transitions guided over 40 years. Founder of Sider Road (itself a family business, run with my daughter Jade). Family business succession is an underserved topic in Vistage rosters.</p>
+        <p><strong>Signature talks</strong></p>
+        <p>1. <em>Family Business · Build to Sell, or Build to Last</em> · the playbook every Vistage CEO will face within 10 years.</p>
+        <p>2. <em>Charisma is a Skill</em> · executive presence for senior leaders.</p>
+        <p>3. <em>Design Your Reputation</em> · from my forthcoming book.</p>
+        <p>Press · CNBC, CNN, Fox News, <em>Forbes</em>, <em>Fast Company</em>, NYT, <em>USA Today</em>, <em>Washington Post</em>, WSJ, HuffPost. Adjunct Professor, Queens College CUNY.</p>
+        <p>EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>07 · YPO Greenwich + NYC Metro + CT chapters</h3>
+      <div class="meta"><strong>Status</strong>Warm intro required · member-gated</div>
+      <div class="meta"><strong>Talk</strong>Build to Sell, or Build to Last + Charisma is a Skill</div>
+      <div class="email">
+        <div class="sub">Subject · YPO chapter speaker · introduction request</div>
+        <p>Hi [YPO member contact],</p>
+        <p>Hope you're well. Quick ask · I'm building out my speaking pipeline this year and the YPO chapter circuit is a natural fit. Wondering if you'd be open to introducing me to your chapter's Learning Officer.</p>
+        <p>Quick on me · 40 years advising family businesses through leadership transitions. Founder of Sider Road. Past COO at Colin Cowie Lifestyle + Ortho Marketing. Co-author <em>The Big Sister's Guide to the World of Work</em>. Forthcoming <em>Design Your Reputation</em>. Adjunct, Queens College CUNY.</p>
+        <p>Two talks I think would land well with YPO:</p>
+        <p>1. <em>Family Business · Build to Sell, or Build to Last</em> · framework most YPO members face within 10 years.</p>
+        <p>2. <em>Charisma is a Skill</em> · six learnable behaviors for executive presence.</p>
+        <p>EPK · siderroad.com/epk. Happy to forward to anyone you think might be open.</p>
+        <p>Thanks, Jocelyn</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>08 · EO NYC + Connecticut chapters</h3>
+      <div class="meta"><strong>Status</strong>Warm intro · LinkedIn DM Learning Chair per chapter</div>
+      <div class="meta"><strong>Talk</strong>Charisma is a Skill or Office Politics</div>
+      <div class="email">
+        <div class="sub">Subject · EO chapter speaker · Charisma is a Skill</div>
+        <p>Hi [Learning Chair name],</p>
+        <p>Saw you run the Learning calendar for EO [chapter]. Wanted to introduce myself in case there's a fit for your 2026 lineup.</p>
+        <p>I'm Jocelyn Greenky, founder of Sider Road, an advisory practice for family-owned and privately held companies. Past COO at Colin Cowie Lifestyle + Ortho Marketing. Adjunct at Queens College CUNY. Author + forthcoming author.</p>
+        <p>Proposed session · <em>Charisma is a Skill · 60 minutes</em>. A framework for executive presence any EO member can use in their next investor meeting, client pitch, or hiring conversation. Six learnable behaviors with real examples from 40 years inside leadership rooms.</p>
+        <p>EPK · siderroad.com/epk. 15-minute chat if you'd like.</p>
+        <p>Best, Jocelyn</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>09 · Chief Network Speaker Series</h3>
+      <div class="meta"><strong>Audience</strong>Senior women execs ($150K+) · NYC + SF + LA · monthly events</div>
+      <div class="meta"><strong>Contact</strong>programming@chief.com</div>
+      <div class="meta"><strong>Talk</strong>Authority Women + Design Your Reputation</div>
+      <div class="email">
+        <div class="sub">Subject · Speaker proposal for Chief Network · Authority Women + Design Your Reputation</div>
+        <p>Hi Chief Programming Team,</p>
+        <p>Wanted to propose two sessions for the 2026 calendar. The audience overlap is unusually tight.</p>
+        <p><strong>Session 1 · Authority Women in Family Business.</strong> Most leadership content for women treats family business as a niche. I treat it as the default. 40 years inside family-owned organizations has taught me that the dynamics that make women in family business hard to take seriously are the same dynamics women face everywhere · just more concentrated. A framework for shifting from "founder's daughter" to "principal."</p>
+        <p><strong>Session 2 · Design Your Reputation.</strong> Drawn from my forthcoming book. Why senior women lose more deals to less-qualified competitors than they should, and the deliberate decisions that build a reputation that compounds for decades.</p>
+        <p>Credentials · 40 years guiding leaders through reputation transitions. Co-author <em>The Big Sister's Guide to the World of Work</em>. Forthcoming <em>Design Your Reputation</em>. Past COO at Colin Cowie Lifestyle. Adjunct, Queens College CUNY.</p>
+        <p>EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>10 · Small Giants Summit 2027</h3>
+      <div class="meta"><strong>Status</strong>2026 dates passed · target 2027 cycle</div>
+      <div class="meta"><strong>Contact</strong>info@smallgiants.org</div>
+      <div class="meta"><strong>Talk</strong>Build to Sell, or Build to Last</div>
+      <div class="email">
+        <div class="sub">Subject · Speaker proposal for Small Giants Summit 2027 · Build to Sell, or Build to Last</div>
+        <p>Hi Small Giants Programs team,</p>
+        <p>Bo Burlingham-orbit admirer of what you've built. Wanted to propose a session for the 2027 summit while planning windows are still open.</p>
+        <p>Proposed session · <em>Family Business · Build to Sell, or Build to Last · the playbook for perpetually private companies</em>. Small Giants audiences are values-led + private + multi-generational by design. The succession decisions that determine whether a perpetually private company survives the founder are the work I've spent 40 years inside. Walk attendees through a 9-document Playbook framework I've shipped to hundreds of family businesses.</p>
+        <p>Credentials · Founder of Sider Road (itself a family business, run with my daughter Jade). Past COO at Colin Cowie Lifestyle + Ortho Marketing. Co-author <em>The Big Sister's Guide to the World of Work</em>. Forthcoming <em>Design Your Reputation</em>. Adjunct, Queens College CUNY. Press · CNBC, Fox News, WSJ.</p>
+        <p>EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>11 · FBM Transitions Conference Fall 2026</h3>
+      <div class="meta"><strong>Date</strong>Fall 2026 · 400-600 attendees</div>
+      <div class="meta"><strong>Contact</strong>editor@familybusinessmagazine.com</div>
+      <div class="meta"><strong>Talk</strong>Build to Sell, or Build to Last + parallel award nomination</div>
+      <div class="email">
+        <div class="sub">Subject · Speaker proposal for FBM Transitions Fall 2026 · Build to Sell, or Build to Last</div>
+        <p>Hi FBM events team,</p>
+        <p>Hoping to propose a session for the Fall Transitions Conference. The work I do · family business succession decisions · is exactly what your audience comes for.</p>
+        <p>Proposed session · <em>Family Business · Build to Sell, or Build to Last</em>. The decisions that determine whether a family business survives the founder. A working framework from hundreds of family business transitions, packaged into a 9-document Playbook. 60-minute keynote or 90-minute workshop.</p>
+        <p>Things in parallel for editorial team:</p>
+        <p>· Sider Road is itself a family business (run with my daughter Jade). Rare in the field.</p>
+        <p>· Forthcoming book <em>Design Your Reputation</em>.</p>
+        <p>· I've pitched FBM editorial separately on a quarterly practitioner column.</p>
+        <p>EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA · Founder, Sider Road</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>12 · Tugboat Institute Summit · Sun Valley 2027</h3>
+      <div class="meta"><strong>Status</strong>Warm intro · plan for 2027</div>
+      <div class="meta"><strong>Contact</strong>info@tugboatinstitute.com</div>
+      <div class="meta"><strong>Talk</strong>Build to Sell, or Build to Last + Generational Dynamics</div>
+      <div class="email">
+        <div class="sub">Subject · Speaker proposal for Tugboat Summit 2027 · evergreen + family business</div>
+        <p>Hi Tugboat Programs team,</p>
+        <p>Long-time admirer of the evergreen company thesis. Wanted to propose a session for the 2027 summit while planning windows are still open.</p>
+        <p>Proposed session · <em>Family Business · Build to Sell, or Build to Last · for evergreen companies</em>. Evergreen companies are family businesses by another name. Most will eventually face the same succession decisions that derail family-owned companies. Walk attendees through the framework I've shipped to hundreds of family businesses, packaged for the evergreen audience.</p>
+        <p>Credentials · Founder of Sider Road (itself a family business, run with my daughter Jade). Past COO at Colin Cowie Lifestyle + Ortho Marketing. Adjunct, Queens College CUNY. Forthcoming book <em>Design Your Reputation</em>.</p>
+        <p>EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>13 · UConn Family Business Program</h3>
+      <div class="meta"><strong>Status</strong>Local low-barrier · first paid local gig</div>
+      <div class="meta"><strong>Contact</strong>UConn School of Business Family Business Program Director (LinkedIn)</div>
+      <div class="meta"><strong>Talk</strong>Build to Sell, or Build to Last</div>
+      <div class="email">
+        <div class="sub">Subject · UConn Family Business Program · speaker availability + collaboration interest</div>
+        <p>Hi [Program Director name],</p>
+        <p>Reaching out as a Greenwich-based family business advisor + Queens College CUNY adjunct in business administration. Wanted to introduce myself and explore whether there's a fit for UConn's Family Business Program events.</p>
+        <p>Things that may be relevant:</p>
+        <p>· 40 years advising family-owned organizations · documented transitions across hundreds of family enterprises.</p>
+        <p>· Founder of Sider Road · the advisory practice is itself a family business (run with my daughter Jade).</p>
+        <p>· IRB-sanctioned research grant on psychological safety in family enterprises.</p>
+        <p>· Forthcoming book <em>Design Your Reputation</em>.</p>
+        <p>Two formats I could bring:</p>
+        <p>1. Public lecture · <em>Family Business · Build to Sell, or Build to Last</em>.</p>
+        <p>2. Practitioner panel · whatever topic complements your current research focus.</p>
+        <p>EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>14 · Worth Power 100</h3>
+      <div class="meta"><strong>Audience</strong>UHNW + family wealth + wealth managers · NYC + LA</div>
+      <div class="meta"><strong>Contact</strong>events@worth.com + Chief Content Officer (LinkedIn)</div>
+      <div class="meta"><strong>Talk</strong>Design Your Reputation</div>
+      <div class="email">
+        <div class="sub">Subject · Worth Power 100 nominee + speaker · Design Your Reputation</div>
+        <p>Hi Worth events team,</p>
+        <p>Reaching out on two fronts that may be useful editorial + programming touchpoints.</p>
+        <p><strong>Speaker proposal · </strong> <em>Design Your Reputation</em>, drawn from my forthcoming book. Why senior leaders and family business principals lose more opportunities to less-qualified competitors than they should · and the deliberate decisions that build a reputation that compounds for decades.</p>
+        <p><strong>Editorial angle · </strong> Sider Road is itself a family business, run with my daughter Jade. Mother-daughter family business advisory is unusual enough to be a real Worth story.</p>
+        <p>Credentials · 40 years advising family businesses. Past COO at Colin Cowie Lifestyle, Ortho Marketing. Past Digital Global Editorial Director at Hachette Filipacchi. Adjunct at Queens College CUNY.</p>
+        <p>EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
+
+    <div class="pitch">
+      <h3>15 · Family Office Exchange (FOX) Forums</h3>
+      <div class="meta"><strong>Status</strong>Most strategic relationship on list · Playbook white-label angle</div>
+      <div class="meta"><strong>Contact</strong>familyoffice.com</div>
+      <div class="meta"><strong>Talk</strong>Build to Sell, or Build to Last + Playbook governance</div>
+      <div class="email">
+        <div class="sub">Subject · FOX Forum speaker proposal · Build to Sell, or Build to Last</div>
+        <p>Hi FOX Programs team,</p>
+        <p>Wanted to propose a speaker session for the 2026 forum calendar. The work I do · family business governance, succession, reputation · is directly applicable to FOX member needs.</p>
+        <p>Proposed session · <em>Family Business · Build to Sell, or Build to Last · the practitioner's framework</em>. A working playbook for the leadership transitions FOX-served principals will face within a decade. 60-minute session, 9-document Playbook framework attendees take home.</p>
+        <p>Beyond the speaking, I'd welcome a conversation about whether the Family Business Playbook · a 9-document governance and succession operating system I've shipped to hundreds of family businesses · might be useful as a white-label resource for FOX members.</p>
+        <p>Credentials · 40 years guiding family businesses. Founder of Sider Road. Past COO at Colin Cowie Lifestyle. Adjunct, Queens College CUNY. Co-author <em>The Big Sister's Guide to the World of Work</em>. Forthcoming <em>Design Your Reputation</em>.</p>
+        <p>EPK · siderroad.com/epk.</p>
+        <p>Best, Jocelyn Greenky, MBA</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -408,30 +611,29 @@
 <section id="sprint2">
   <div class="wrap">
     <h2>Sprint 2 · Revenue + Lift</h2>
-    <p class="action">Action · 30-min strategy call next Thursday. We walk the luxury positioning + super-nanny niche + which Sprint 2 moves match.</p>
-    <p>Sprint 1 surfaced what's already there. Sprint 2 builds the engine that turns it into revenue: GHL reactivation · LinkedIn outreach playbook for M · masterclass funnel · mastermind fill campaign · lawyer partnership outreach. Plus the tier-jump moves that get you past your current bracket.</p>
+    <p class="action">Action · 30-min strategy call next Thursday</p>
 
-    <details>
-      <summary>What Sprint 2 covers (8 steps)</summary>
-      <div class="body">
-        <p><strong>01 ·</strong> GHL list reactivation · old contacts brought back to life with sequenced re-engagement</p>
-        <p><strong>02 ·</strong> LinkedIn outreach playbook · M sends, you approve, 30/day cadence</p>
-        <p><strong>03 ·</strong> Masterclass funnel · L1 free → L2 paid bridge that pulls warm leads into mastermind</p>
-        <p><strong>04 ·</strong> Mastermind fill campaign · 3 cohorts targeted: Successors / Authority Women / Founders</p>
-        <p><strong>05 ·</strong> Lawyer + advisor partnership outreach · referral pipeline from estate planners + wealth advisors</p>
-        <p><strong>06 ·</strong> Branded signature framework · named system on website</p>
-        <p><strong>07 ·</strong> Sider Road Institute · brand container for tier-above positioning</p>
-        <p><strong>08 ·</strong> Cornell SC Johnson Fellow application · drafted + ready to submit</p>
-        <p style="margin-top: 12px;"><em>Per project or retainer · whatever fits budget + timeline. Sprint 3 = ongoing retainer if Sprint 2 produces.</em></p>
-      </div>
-    </details>
+    <p>Sprint 1 surfaced what's already there. Sprint 2 builds the engine that turns it into revenue.</p>
+
+    <ol>
+      <li><strong>GHL list reactivation.</strong> Old contacts brought back with sequenced re-engagement.</li>
+      <li><strong>LinkedIn outreach playbook for M.</strong> 30/day cadence. You approve, she sends.</li>
+      <li><strong>Masterclass funnel.</strong> L1 free → L2 paid bridge that pulls warm leads into mastermind.</li>
+      <li><strong>Mastermind fill campaign.</strong> 3 cohorts: Successors / Authority Women / Founders.</li>
+      <li><strong>Lawyer + advisor partnership outreach.</strong> Referral pipeline from estate planners + wealth advisors.</li>
+      <li><strong>Branded signature framework.</strong> Named system on the website.</li>
+      <li><strong>Sider Road Institute.</strong> Brand container for tier-above positioning.</li>
+      <li><strong>Cornell SC Johnson Fellow application.</strong> Drafted + ready to submit.</li>
+    </ol>
+
+    <p>Per project or retainer · whatever fits budget + timeline. Sprint 3 = ongoing retainer if Sprint 2 produces.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p>Sider Road Foundation Sprint · Sprint 1 close pass · May 2026</p>
-    <p style="margin-top: 6px;">Questions · text Alex anytime. Strategy call Thursday next week (send a time).</p>
+    <p>Sider Road Foundation Sprint · Sprint 1 close · May 2026</p>
+    <p>Questions · text Alex anytime. Strategy call Thursday next week.</p>
   </div>
 </footer>
 
