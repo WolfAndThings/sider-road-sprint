@@ -94,6 +94,83 @@
   section a { color: #0a4dd9; text-decoration: underline; }
   section a:hover { color: #062f8a; }
   mark { background: #fff3a3; padding: 2px 6px; font-weight: 700; }
+
+  /* TL;DR block · the first thing after hero */
+  .topitems {
+    background: #000;
+    color: #fff;
+    padding: 64px 0 56px;
+    border-top: none;
+  }
+  .topitems .label {
+    color: #fff;
+    opacity: 0.6;
+  }
+  .topitems h2 {
+    color: #fff;
+    margin-bottom: 32px;
+  }
+  .topitems ol.approvals {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: appcount;
+  }
+  .topitems ol.approvals li {
+    counter-increment: appcount;
+    padding: 22px 0;
+    border-top: 1px solid #333;
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    gap: 18px;
+    align-items: baseline;
+  }
+  .topitems ol.approvals li::before {
+    content: counter(appcount, decimal-leading-zero);
+    font-size: 22px;
+    font-weight: 800;
+    opacity: 0.5;
+    letter-spacing: -0.02em;
+  }
+  .topitems ol.approvals li:last-child { border-bottom: 1px solid #333; }
+  .topitems ol.approvals strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .topitems ol.approvals span {
+    display: block;
+    font-size: 15px;
+    opacity: 0.75;
+    line-height: 1.5;
+  }
+  .topitems ol.approvals a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .topitems .status-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 28px;
+    font-size: 13px;
+    opacity: 0.7;
+  }
+  @media (max-width: 600px) {
+    .topitems ol.approvals li {
+      grid-template-columns: 36px 1fr;
+    }
+    .topitems ol.approvals li a {
+      grid-column: 2;
+      margin-top: 8px;
+    }
+    .topitems .status-row { grid-template-columns: 1fr; }
+  }
   footer a { color: #0a4dd9; text-decoration: underline; }
   .email {
     margin: 12px 0 24px;
@@ -143,6 +220,44 @@
     <p>Everything on one page. Read, approve, send.</p>
   </div>
 </header>
+
+<!-- TL;DR · TOP ITEMS -->
+<section id="topitems" class="topitems">
+  <div class="wrap">
+    <div class="label">What you need to approve</div>
+    <h2>5 decisions.<br />Everything else handled.</h2>
+    <ol class="approvals">
+      <li>
+        <strong>Approve the EPK.</strong>
+        <span>Read it once. Once you say go, we build the print-ready PDF + give M the copy to lift into your Canva.</span>
+        <a href="#epk">Jump to EPK →</a>
+      </li>
+      <li>
+        <strong>Approve the 4 bureau emails.</strong>
+        <span>eSpeakers, BigSpeak, Premiere, All American. Written in your voice. Read, edit, approve.</span>
+        <a href="#bureau">Jump to bureaus →</a>
+      </li>
+      <li>
+        <strong>Approve the 3 FBM references.</strong>
+        <span>Dean Steinman + Stuart Brownstein + Dr. Robert Rioseco. Tell us if you'd rather swap one in.</span>
+        <a href="#award">Jump to FBM →</a>
+      </li>
+      <li>
+        <strong>Approve the 15 event pitches.</strong>
+        <span>13 are addressed by name and send-ready. 2 (YPO + EO) need M to fill 2 placeholders each.</span>
+        <a href="#pitches">Jump to pitches →</a>
+      </li>
+      <li>
+        <strong>Send your podcast video.</strong>
+        <span>Raw + edited. Source material for cutting a new sizzle reel in your brand inside a week.</span>
+      </li>
+    </ol>
+    <div class="status-row">
+      <div><strong>Not blocking you ·</strong> Usman pushing site updates · live tomorrow.</div>
+      <div><strong>Send timing ·</strong> Tuesday May 26 (post-Memorial Day) or Thursday May 28 (when M back).</div>
+    </div>
+  </div>
+</section>
 
 <!-- SITE -->
 <section id="site">
