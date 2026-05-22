@@ -38,38 +38,55 @@
   nav.top ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
   nav.top a { color: #000; text-decoration: none; font-size: 13px; font-weight: 500; }
   nav.top a:hover { text-decoration: underline; }
-  header.hero { padding: 56px 0 32px; }
+  header.hero { padding: 72px 0 48px; }
   header.hero h1 {
-    font-size: 36px;
+    font-size: 56px;
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 12px;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
   }
-  header.hero p { font-size: 16px; max-width: 580px; }
-  section { padding: 48px 0; border-top: 1px solid #000; }
+  header.hero p { font-size: 18px; max-width: 580px; }
+  section { padding: 88px 0 64px; border-top: 4px solid #000; }
+  section .label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
   section > .wrap > h2 {
-    font-size: 26px;
+    font-size: 64px;
     font-weight: 800;
-    margin-bottom: 6px;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
   }
   section .action {
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    padding-top: 12px;
+    border-top: 1px solid #000;
+    display: inline-block;
   }
   section h3 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
-    margin-top: 32px;
-    margin-bottom: 6px;
+    line-height: 1.2;
+    margin-top: 40px;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
   }
   section h4 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    margin-top: 16px;
+    margin-top: 18px;
     margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
   section p { margin-bottom: 12px; }
   section ul, section ol { margin: 8px 0 12px 22px; }
@@ -94,8 +111,9 @@
   .pitch .meta strong { display: inline-block; min-width: 110px; }
   footer { padding: 40px 0 80px; font-size: 14px; border-top: 1px solid #000; }
   @media (max-width: 600px) {
-    header.hero h1 { font-size: 28px; }
-    section > .wrap > h2 { font-size: 22px; }
+    header.hero h1 { font-size: 38px; }
+    section > .wrap > h2 { font-size: 40px; }
+    section { padding: 64px 0 48px; }
     nav.top .wrap { flex-direction: column; align-items: flex-start; }
     nav.top ul { gap: 14px; }
   }
@@ -127,6 +145,7 @@
 <!-- SITE -->
 <section id="site">
   <div class="wrap">
+    <div class="label">Section 01</div>
     <h2>Site edits</h2>
     <p class="action">Action · Usman pushes 25 updates · M confirms live</p>
 
@@ -184,10 +203,16 @@
 <!-- EPK -->
 <section id="epk">
   <div class="wrap">
+    <div class="label">Section 02</div>
     <h2>EPK / Speaker Kit</h2>
     <p class="action">Action · read + approve. Then we build the PDF + give M the copy to update your Canva.</p>
 
-    <p>Same animal as your site EPK + your Canva Speaker Kit. We took another stab to see if we could make it stronger. No strain · take what helps, leave what doesn't.</p>
+    <h3>What this is + why it matters</h3>
+    <p>An EPK (Electronic Press Kit) and a Speaker Kit are the same thing · the document a bureau, event organizer, or podcast booker opens BEFORE they decide whether to talk to you. They both want the same five answers in the same five minutes: who is she, what does she talk about, who has she spoken for, what does she charge, can I see her on stage.</p>
+    <p>You already have two versions · the one on siderroad.com/epk and the Canva Speaker Kit you sent us. We took another stab at it to see if we could make it land harder. No strain on our side · take what helps, leave what doesn't. Once you give the green light, we build the print-ready PDF and give M the copy in a format she can paste straight into your Canva to keep that file current too. One source, two formats.</p>
+
+    <h3>What's inside</h3>
+    <p>Your 250-word bio · 7 signature talks organized into 4 categories (Family Enterprise, Culture + Workforce, Leadership Presence + Reputation, Negotiation + Influence) · 7 named testimonials with role + company · press logo row (CNBC, WSJ, etc) · trusted-by logo row (Viacom, Kraft, HBO, etc) · fee structure · contact + Calendly. Print-friendly so it works as a PDF for cold pitches and as a web page for warm review.</p>
 
     <h3>250-word long bio</h3>
     <p>Jocelyn Greenky has spent more than 40 years guiding family-owned organizations through the leadership transitions that determine whether a family business survives a generation. She has personally walked hundreds of owners and successors through governance, succession, and reputation decisions across industries from manufacturing to media.</p>
@@ -249,10 +274,14 @@
 <!-- BUREAU -->
 <section id="bureau">
   <div class="wrap">
+    <div class="label">Section 03</div>
     <h2>Bureau emails</h2>
     <p class="action">Action · approve 4 bureau emails · M sends once site is live</p>
 
-    <p>Each email in your voice. Read, edit, approve. M sends all 4 in one window so bureaus see your name across the industry same week.</p>
+    <h3>What this is + why it matters</h3>
+    <p>A speaker bureau is a middleman that books speakers for paid events. Bureaus have rosters of speakers they trust + a Rolodex of corporate buyers looking to fill conference slots. When a buyer needs "a family business expert for our October summit," the bureau pitches names from its roster. Getting on a bureau roster = a steady inbound stream of paid speaking opportunities you don't have to chase. It's a long game · 3-12 weeks per bureau to be evaluated and added.</p>
+    <p>We're targeting 4 bureaus at once so your name lands across the industry the same week. eSpeakers is the volume play (largest US marketplace, 50,000+ bookers search it monthly). BigSpeak + Premiere are premium curated rosters (higher fees, harder to get on, lower volume). All American is a SEO catalog play. Each email is in your voice. M sends all 4 once Usman confirms the site is live (so when bureau staff click your site, they see the new positioning).</p>
+
     <h3>Fee structure</h3>
     <ul>
       <li>Virtual keynote · starting at $7,500</li>
@@ -310,10 +339,20 @@
 <!-- AWARD -->
 <section id="award">
   <div class="wrap">
+    <div class="label">Section 04</div>
     <h2>FBM Transformational Women</h2>
     <p class="action">Action · pick 3 references from your 7 names · we fold them in + submit</p>
 
-    <p>FBM needs 3 minimum. You're way over the bar with 7. Tell us your 3 and the other 4 stay in the bench for bureau write-ups + future award nominations.</p>
+    <h3>What this is + why it matters</h3>
+    <p>Family Business Magazine (FBM) runs an annual award called "Transformational Women in Family Business." It honors women who have meaningfully shaped the family business field through advisory work, frameworks, or operator experience. Being nominated (let alone shortlisted or named) puts your name in the magazine + their editorial coverage, which is the most-read trade publication in your category. Even nominee status is a credibility line you can put on LinkedIn, in your bio, and on bureau submissions immediately.</p>
+    <p>The nomination form needs three things from us: a 200-word case for why you qualify (drafted below) · supporting credentials (already in the EPK) · three named references who will vouch for you if FBM contacts them. We need your 3 references picked so we can submit.</p>
+
+    <h3>Why you qualify (FBM's three criteria)</h3>
+    <ul>
+      <li><strong>Advisory work</strong> · hundreds of family business transitions across 40 years.</li>
+      <li><strong>Original frameworks</strong> · 9-document Playbook, 4 mastermind tracks, 15-course masterclass library.</li>
+      <li><strong>Operator experience</strong> · COO at Colin Cowie + Ortho, Digital Global Editorial Director at Hachette, Rolling Stone parent producer. Plus Sider Road itself is a family business.</li>
+    </ul>
 
     <h3>Your 7 names</h3>
     <ol>
@@ -348,10 +387,16 @@
 <!-- PITCHES -->
 <section id="pitches">
   <div class="wrap">
+    <div class="label">Section 05</div>
     <h2>15 event pitches</h2>
     <p class="action">Action · approve · M sends as 3rd-person opener with email body in your voice underneath · you come on the reply</p>
 
-    <p>10-day nudge · 21-day final · 45-day mark dormant + retry next quarter. All sends through GHL so we see opens + replies.</p>
+    <h3>What this is + why it matters</h3>
+    <p>While we wait for bureau decisions (3-12 weeks each), we go direct to the organizers running specific events. Each of these 15 is a real event with a real audience that maps to one of your signature talks. The reason this works alongside the bureau push: bureaus are a "wait and see" pipeline. Direct event pitches are a "fill your calendar now" pipeline. Both running parallel = no dead weeks.</p>
+    <p>The 15 break into three groups: <strong>Apply now (5)</strong> · open submission windows for 2026 events · FFI · NACD · MA Conference for Women · TX Conference for Women · FBM Transitions. <strong>Evergreen (6)</strong> · rolling submission, send anytime · EPI re-pitch · Vistage · EO · Chief · UConn · FOX. <strong>Plan for 2027 (4)</strong> · 2026 dates already passed, queue for next cycle · YPO chapters · Small Giants · Tugboat · Worth Power 100.</p>
+
+    <h3>How the send works</h3>
+    <p>M sends each email as a 3rd-person introduction ("I work with Jocelyn Greenky · she'd be a strong fit for your audience") with your voice in the body underneath. This gets past the gatekeeper-flag of "self-promoting speaker email." Once the organizer replies, you take over the thread as Jocelyn. M handles cadence · 10-day soft nudge · 21-day final follow-up · 45-day mark dormant + retry next quarter. All sends route through GHL so we see open rates + reply rates in one dashboard.</p>
 
     <div class="pitch">
       <h3>01 · FFI Global Conference 2026</h3>
@@ -617,23 +662,27 @@
 <!-- SPRINT 2 -->
 <section id="sprint2">
   <div class="wrap">
+    <div class="label">Section 06</div>
     <h2>Sprint 2 · Revenue + Lift</h2>
     <p class="action">Action · 30-min strategy call next Thursday</p>
 
-    <p>Sprint 1 surfaced what's already there. Sprint 2 builds the engine that turns it into revenue.</p>
+    <h3>What this is + why it matters</h3>
+    <p>Sprint 1 packaged what you already have · EPK, bureau outreach, awards, event pitches, site fixes. Surface work. Sprint 2 is the engine that converts the surface into paid bookings, mastermind seats, and inbound revenue. Sprint 1 makes you bookable. Sprint 2 makes you booked.</p>
 
+    <h3>The 8 moves</h3>
     <ol>
-      <li><strong>GHL list reactivation.</strong> Old contacts brought back with sequenced re-engagement.</li>
-      <li><strong>LinkedIn outreach playbook for M.</strong> 30/day cadence. You approve, she sends.</li>
-      <li><strong>Masterclass funnel.</strong> L1 free → L2 paid bridge that pulls warm leads into mastermind.</li>
-      <li><strong>Mastermind fill campaign.</strong> 3 cohorts: Successors / Authority Women / Founders.</li>
-      <li><strong>Lawyer + advisor partnership outreach.</strong> Referral pipeline from estate planners + wealth advisors.</li>
-      <li><strong>Branded signature framework.</strong> Named system on the website.</li>
-      <li><strong>Sider Road Institute.</strong> Brand container for tier-above positioning.</li>
-      <li><strong>Cornell SC Johnson Fellow application.</strong> Drafted + ready to submit.</li>
+      <li><strong>GHL list reactivation.</strong> You have years of email contacts sitting cold in GHL. We build a 5-email sequenced re-engagement campaign that brings them back with a warm hook (new book, new mastermind cohort, new framework). Expect 3-8% of a dormant list to re-engage. On a list your size, that's real money.</li>
+      <li><strong>LinkedIn outreach playbook for M.</strong> M sends 30 LinkedIn connection + DM touches per day to a curated list of ideal prospects (family business owners, estate planning attorneys, wealth advisors). You approve every message before it goes. Steady drip, no spam, fills your calendar.</li>
+      <li><strong>Masterclass funnel.</strong> Right now your free + paid offerings sit on the site but there's no bridge between them. We build a funnel: free download → email nurture sequence → low-ticket course offer ($547 Charisma) → mastermind application. Each step warms the prospect for the next.</li>
+      <li><strong>Mastermind fill campaign.</strong> Three of your four masterminds aren't full. We run targeted ad + outreach campaigns per cohort: Successors (next-gen family biz leaders) · Authority Women (senior women execs) · Founders (private-company CEOs). Each campaign tuned to where its ICP hangs out.</li>
+      <li><strong>Lawyer + advisor partnership outreach.</strong> Estate planning attorneys and wealth advisors all have clients who need family business succession help · and most don't have a name to refer to. We build a referral pipeline by reaching out to 50-100 of them with a partnership offer (you handle their family-biz cases, they get continuing-relationship credit). One good referral partner = 2-3 engagements per year.</li>
+      <li><strong>Branded signature framework.</strong> Right now you have great talks but no named "Jocelyn Greenky method." Tier-above family business speakers all have one (the Davis Three-Circle Model, etc). We name your framework and put it on the site so journalists, bureaus, and event organizers have a single phrase to attach to your work.</li>
+      <li><strong>Sider Road Institute.</strong> Add an "Institute" container to your brand (Sider Road Institute for Family Business). This is the move that signals you're an institution, not a sole proprietor · and it's how speakers get to the $25K+ tier. Costs nothing structurally · just framing + a section on the site.</li>
+      <li><strong>Cornell SC Johnson Fellow application.</strong> Cornell runs a Family Business Fellow program. Being a Fellow adds an Ivy-league affiliation to your bio and opens speaking + research doors. We draft the application packet so it's submission-ready.</li>
     </ol>
 
-    <p>Per project or retainer · whatever fits budget + timeline. Sprint 3 = ongoing retainer if Sprint 2 produces.</p>
+    <h3>How we'd run it</h3>
+    <p>Per project or retainer · whatever fits your budget + timeline. We can scope each of the 8 as standalone or bundle them as a 4-week build. Sprint 3 = ongoing fractional CMO retainer if Sprint 2 produces. We'll walk through which moves to prioritize on Thursday's call.</p>
   </div>
 </section>
 
