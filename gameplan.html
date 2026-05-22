@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sider Road · Master Gameplan · How It All Works Together</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    color: #000;
+    background: #fff;
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+  .wide { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+  nav.top {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #000;
+    padding: 12px 0;
+    z-index: 100;
+  }
+  nav.top .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  nav.top .logo { font-weight: 700; font-size: 14px; }
+  nav.top ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
+  nav.top a { color: #000; text-decoration: none; font-size: 13px; font-weight: 500; }
+  nav.top a:hover { text-decoration: underline; }
+
+  header.hero { padding: 72px 0 32px; }
+  header.hero h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 18px;
+  }
+  header.hero p {
+    font-size: 18px;
+    max-width: 640px;
+    color: #333;
+  }
+
+  section { padding: 64px 0; border-top: 4px solid #000; }
+  section .label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  section h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+  }
+  section p.intro {
+    font-size: 17px;
+    max-width: 700px;
+    margin-bottom: 36px;
+    color: #333;
+  }
+
+  /* THE BIG PICTURE · 3-stage horizontal flow */
+  .bigpicture {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr 60px 1fr;
+    gap: 0;
+    align-items: stretch;
+    margin: 40px 0;
+  }
+  .stage {
+    padding: 28px 24px;
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+  }
+  .stage .stage-num {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .stage h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+  }
+  .stage .verb {
+    font-size: 15px;
+    margin-bottom: 16px;
+    opacity: 0.85;
+    font-weight: 600;
+  }
+  .stage ul {
+    list-style: none;
+    padding: 0;
+  }
+  .stage ul li {
+    font-size: 13px;
+    padding: 6px 0;
+    opacity: 0.85;
+    border-top: 1px solid #333;
+  }
+  .stage ul li:first-child { border-top: none; }
+  .arrow-h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #000;
+    font-weight: 900;
+  }
+  @media (max-width: 900px) {
+    .bigpicture { grid-template-columns: 1fr; gap: 8px; }
+    .arrow-h { transform: rotate(90deg); padding: 8px 0; }
+  }
+
+  /* REVENUE CHANNELS */
+  .channels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .channel {
+    border: 2px solid #000;
+    padding: 22px 20px;
+    background: #fff;
+  }
+  .channel .num {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    opacity: 0.25;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+  .channel h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .channel .source {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #555;
+  }
+  .channel ul {
+    list-style: none;
+    padding: 0;
+    font-size: 13px;
+  }
+  .channel ul li {
+    padding: 5px 0;
+    border-top: 1px solid #eee;
+  }
+  .channel ul li:first-child { border-top: none; }
+  .channel .feeds {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #000;
+    font-size: 12px;
+    font-style: italic;
+    color: #444;
+  }
+  @media (max-width: 900px) {
+    .channels { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 540px) {
+    .channels { grid-template-columns: 1fr; }
+  }
+
+  /* THE FUNNEL · vertical */
+  .funnel {
+    margin: 40px auto 0;
+    max-width: 640px;
+  }
+  .funnel-step {
+    background: #fff;
+    border: 2px solid #000;
+    padding: 22px 28px;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .funnel-step + .funnel-step { border-top: none; }
+  .funnel-step .step-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 6px;
+  }
+  .funnel-step h4 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .funnel-step p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 0;
+  }
+  .funnel-arrow {
+    text-align: center;
+    font-size: 32px;
+    color: #000;
+    margin: 4px 0;
+    line-height: 1;
+  }
+  .funnel-step.top { background: #fff3a3; }
+  .funnel-step.mid { background: #ffd966; }
+  .funnel-step.bottom { background: #000; color: #fff; }
+  .funnel-step.bottom .step-label { color: #fff3a3; }
+  .funnel-step.bottom p { color: rgba(255,255,255,0.85); }
+
+  /* WHO DOES WHAT */
+  .roles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .role {
+    padding: 24px;
+    background: #f4f4f4;
+    border-left: 6px solid #000;
+  }
+  .role h4 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .role ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+  }
+  .role ul li {
+    padding: 6px 0;
+    border-top: 1px solid #ddd;
+  }
+  .role ul li:first-child { border-top: none; }
+  @media (max-width: 760px) {
+    .roles { grid-template-columns: 1fr; }
+  }
+
+  /* WHERE TO START */
+  .startbox {
+    background: #000;
+    color: #fff;
+    padding: 40px 32px;
+    margin-top: 32px;
+  }
+  .startbox h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.015em;
+  }
+  .startbox p { font-size: 16px; line-height: 1.55; opacity: 0.9; margin-bottom: 12px; }
+  .startbox a {
+    color: #fff3a3;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  .startbox .next-steps {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #333;
+    font-size: 15px;
+  }
+  .startbox .next-steps strong {
+    color: #fff3a3;
+    margin-right: 8px;
+  }
+
+  footer { padding: 40px 0 80px; font-size: 14px; border-top: 1px solid #000; }
+  footer a { color: #0a4dd9; text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    header.hero h1 { font-size: 38px; }
+    section h2 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <div class="logo">Sider Road · Master Gameplan</div>
+    <ul>
+      <li><a href="#bigpic">The Machine</a></li>
+      <li><a href="#channels">Revenue Channels</a></li>
+      <li><a href="#funnel">The Funnel</a></li>
+      <li><a href="#who">Who Does What</a></li>
+      <li><a href="#start">Where to Start</a></li>
+      <li><a href="index.html">Sprint 1 →</a></li>
+      <li><a href="sprint2.html">Sprint 2 →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>The Master Gameplan.</h1>
+    <p>How Sprint 1, Sprint 2, your talks, your masterminds, your bureau pipeline, and your advisory work all feed each other. One machine. Five revenue channels. Where you, M, and I each fit.</p>
+  </div>
+</header>
+
+<!-- THE MACHINE · 3-stage flow -->
+<section id="bigpic">
+  <div class="wide">
+    <div class="label">The Machine · One View</div>
+    <h2>Package. Convert. Sustain.</h2>
+    <p class="intro">Three stages that compound. Sprint 1 builds the surface so the world can find you. Sprint 2 builds the engine that converts attention into bookings. Sprint 3 keeps the engine running so you stop chasing and start choosing.</p>
+
+    <div class="bigpicture">
+      <div class="stage">
+        <div class="stage-num">Stage 01 · DONE-ing</div>
+        <h3>Package</h3>
+        <div class="verb">Sprint 1 · $750 · in flight</div>
+        <ul>
+          <li>EPK / Speaker Kit</li>
+          <li>4 bureau submissions</li>
+          <li>15 event pitches</li>
+          <li>FBM award nomination</li>
+          <li>25 site fixes</li>
+          <li>Voice locked across all assets</li>
+        </ul>
+      </div>
+      <div class="arrow-h">→</div>
+      <div class="stage">
+        <div class="stage-num">Stage 02 · Proposed</div>
+        <h3>Convert</h3>
+        <div class="verb">Sprint 2 · $1.5K-$7.5K · per move or bundle</div>
+        <ul>
+          <li>Branded framework (the Jocelyn method)</li>
+          <li>GHL list reactivation (dormant → revenue)</li>
+          <li>LinkedIn playbook for M (30/day)</li>
+          <li>Lawyer + advisor referral pipeline</li>
+          <li>Each move turns Sprint 1 surface into money</li>
+        </ul>
+      </div>
+      <div class="arrow-h">→</div>
+      <div class="stage">
+        <div class="stage-num">Stage 03 · Earned trigger</div>
+        <h3>Sustain</h3>
+        <div class="verb">Sprint 3 · $3,500/mo · cancel anytime</div>
+        <ul>
+          <li>Ongoing LinkedIn outreach for M</li>
+          <li>Monthly GHL email campaigns</li>
+          <li>2 new bureau / event pitches monthly</li>
+          <li>1 strategic content piece monthly</li>
+          <li>Triggered after Sprint 2 produces</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 REVENUE CHANNELS -->
+<section id="channels">
+  <div class="wide">
+    <div class="label">The 5 Revenue Channels</div>
+    <h2>Where the money actually comes from.</h2>
+    <p class="intro">Five separate channels feeding your revenue. Each gets fed by a different part of the machine. Sprint 1 + Sprint 2 + Sprint 3 are designed to fill ALL five at once.</p>
+
+    <div class="channels">
+      <div class="channel">
+        <div class="num">01</div>
+        <h4>Paid Speaking</h4>
+        <div class="source">via Bureaus + Events</div>
+        <ul>
+          <li>Virtual keynote · $7,500+</li>
+          <li>In-person keynote · $15,000+</li>
+          <li>Half-day workshop · $12,500+</li>
+          <li>Full-day masterclass · $20,000+</li>
+        </ul>
+        <div class="feeds">Fed by: EPK + sizzle reel + bureau submissions + 15 event pitches + branded framework + FBM award</div>
+      </div>
+
+      <div class="channel">
+        <div class="num">02</div>
+        <h4>Mastermind Seats</h4>
+        <div class="source">4 cohort tracks</div>
+        <ul>
+          <li>Men in Family Business (Cohort C sold out)</li>
+          <li>Authority Women</li>
+          <li>Successors</li>
+          <li>Family Leadership</li>
+        </ul>
+        <div class="feeds">Fed by: GHL list reactivation + LinkedIn outreach + mastermind fill campaigns + site CTA fixes</div>
+      </div>
+
+      <div class="channel">
+        <div class="num">03</div>
+        <h4>Masterclass + Courses</h4>
+        <div class="source">Stan Store / web shop</div>
+        <ul>
+          <li>Charisma masterclass · $547/session · $3,282 total</li>
+          <li>15-course library (existing IP)</li>
+          <li>Free downloads (Playbook etc) as lead magnets</li>
+        </ul>
+        <div class="feeds">Fed by: masterclass funnel (Sprint 2 bench) + LinkedIn + GHL list + site nav fix to surface downloads</div>
+      </div>
+
+      <div class="channel">
+        <div class="num">04</div>
+        <h4>1-on-1 Advisory</h4>
+        <div class="source">Sider Road family-biz engagements</div>
+        <ul>
+          <li>Family business intervention engagements</li>
+          <li>Interim CEO / fractional work</li>
+          <li>Governance + succession projects</li>
+        </ul>
+        <div class="feeds">Fed by: lawyer + advisor referral pipeline + speaking-room conversations + LinkedIn DM replies</div>
+      </div>
+
+      <div class="channel">
+        <div class="num">05</div>
+        <h4>Book + IP Royalties</h4>
+        <div class="source">Author income + licensing</div>
+        <ul>
+          <li>Big Sister's Guide ongoing (Simon & Schuster)</li>
+          <li>Design Your Reputation · launching 2026</li>
+          <li>9-document Playbook (white-label opportunities)</li>
+        </ul>
+        <div class="feeds">Fed by: book launch sequence + bureau pitches (book-launch year angle) + FOX/wealth-advisor white-label deal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FUNNEL -->
+<section id="funnel">
+  <div class="wrap">
+    <div class="label">The Funnel · How Strangers Become Clients</div>
+    <h2>From "Who is she?" to "When can she start?"</h2>
+    <p class="intro">Every prospect goes through the same three stages. We build content + outreach to move them down. Same funnel works for speaking, masterminds, advisory, and the book launch.</p>
+
+    <div class="funnel">
+      <div class="funnel-step top">
+        <div class="step-label">Top · Awareness</div>
+        <h4>"I've heard of Jocelyn Greenky"</h4>
+        <p>LinkedIn posts · podcast appearances · press logos on the site · FBM nominee status · branded framework named on the site · event speaking · word of mouth from lawyer/advisor partners</p>
+      </div>
+      <div class="funnel-arrow">↓</div>
+      <div class="funnel-step mid">
+        <div class="step-label">Middle · Interest</div>
+        <h4>"Let me check her out"</h4>
+        <p>They land on your site · read the EPK · download a Playbook PDF · join your email list · watch the sizzle reel · book a 15-min call · attend a webinar · register for a free download</p>
+      </div>
+      <div class="funnel-arrow">↓</div>
+      <div class="funnel-step bottom">
+        <div class="step-label">Bottom · Booking</div>
+        <h4>"How do I work with her?"</h4>
+        <p>Bureau books a paid keynote · organizer confirms an event slot · applicant joins a mastermind cohort · family business signs an advisory engagement · individual buys the Charisma masterclass · reader pre-orders Design Your Reputation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO DOES WHAT -->
+<section id="who">
+  <div class="wide">
+    <div class="label">Who Does What</div>
+    <h2>Three roles. Clear lanes.</h2>
+    <p class="intro">Nobody steps on anyone. Each role plays to its strength. You stay in the work that only YOU can do · the speaking, the advisory, the relationships. M executes the daily machine. I design the strategy and build the systems.</p>
+
+    <div class="roles">
+      <div class="role">
+        <h4>Jocelyn</h4>
+        <ul>
+          <li>Speak on stage + on camera</li>
+          <li>Approve voice + final copy before send</li>
+          <li>Take the reply call (once M's outreach lands a warm response)</li>
+          <li>Deliver the advisory work (1-on-1 engagements)</li>
+          <li>Decide strategic direction (which masterminds to scale, which talks to lead with)</li>
+          <li>Show up at the bureau + event when booked</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h4>M (Mechle)</h4>
+        <ul>
+          <li>Send all outreach (bureau emails, event pitches, LinkedIn DMs)</li>
+          <li>Manage follow-up cadence (10/21/45 day rule)</li>
+          <li>Log everything in GHL</li>
+          <li>Forward replies to Jocelyn promptly</li>
+          <li>Coordinate calendars (Calendly + Zoom)</li>
+          <li>Schedule the speaking gigs once booked</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h4>Alex (Loopworker)</h4>
+        <ul>
+          <li>Build the assets (EPK, sizzle reel, frameworks, funnels)</li>
+          <li>Write copy in Jocelyn's voice for everything M sends</li>
+          <li>Set up the systems (GHL workflows, LinkedIn templates, tracking)</li>
+          <li>Strategy + analytics (what's working, what's not, what to bump)</li>
+          <li>Hand off ready-to-execute machines to M</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE TO START -->
+<section id="start">
+  <div class="wide">
+    <div class="label">Where to Start</div>
+    <h2>The 90-day path.</h2>
+    <p class="intro">If we did nothing else for the next 90 days, this is the order that produces the most revenue with the least overhead.</p>
+
+    <div class="startbox">
+      <h3>The 90-day priority order</h3>
+      <p><strong style="color: #fff3a3;">Days 1-7 ·</strong> Close Sprint 1. Site live (Usman). M back Thursday. Bureau emails + 15 event pitches go out same week. FBM nomination submitted.</p>
+      <p><strong style="color: #fff3a3;">Days 8-21 ·</strong> Sprint 2 Move 01 · Branded signature framework named + launched. This is the keystone · every other move hits harder once your method has a name.</p>
+      <p><strong style="color: #fff3a3;">Days 22-35 ·</strong> Sprint 2 Move 02 · GHL list reactivation. Fastest cash. Dormant list back to life with the framework launch as the warm hook.</p>
+      <p><strong style="color: #fff3a3;">Days 36-65 ·</strong> Sprint 2 Move 03 · LinkedIn playbook for M kicks in. 30 touches/day = 900/month of qualified pipeline.</p>
+      <p><strong style="color: #fff3a3;">Days 66-90 ·</strong> Sprint 2 Move 04 · Lawyer + advisor partnership outreach. By now framework is live + LinkedIn is producing replies · partners come in warm, not cold.</p>
+      <div class="next-steps">
+        <strong>Result by Day 90:</strong>
+        Branded method named + on your site · dormant list re-engaged · daily LinkedIn pipeline running · referral partners introduced · 2-3 booked engagements + 5-10 warm conversations in motion.
+      </div>
+      <div class="next-steps">
+        <strong>Then Sprint 3 starts ·</strong>
+        Earned trigger met · $3,500/mo retainer keeps everything running so you never re-enter the cold-start phase again.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Sider Road · Master Gameplan · May 2026</p>
+    <p>Drill into: <a href="index.html">Sprint 1 close</a> · <a href="sprint2.html">Sprint 2 proposal</a></p>
+    <p>Questions · text Alex anytime.</p>
+  </div>
+</footer>
+
+</body>
+</html>
