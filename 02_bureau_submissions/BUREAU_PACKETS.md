@@ -37,7 +37,12 @@
 4. *Office Politics for People Who Hate Office Politics* · The strategy of being taken seriously without playing dirty
 5. *Family Leadership & Legacy* · The decisions that determine whether a family business survives the founder
 
-**Fee Range Dropdown:** $7,500 – $15,000 (suggested floor; bureau standard for first listings)
+**Fee structure:**
+- Virtual keynote · starting at $7,500
+- In-person keynote · starting at $15,000
+- Half-day workshop · starting at $12,500
+- Full-day masterclass · starting at $20,000
+
 (Adjust upward after 3+ bookings; bureaus discount you if you list too low or too high.)
 
 **Travel Availability:** Continental US + select international
@@ -104,7 +109,7 @@
 >
 > Speaking audiences: corporate leadership, YPO/EO chapters, women's leadership conferences, family business institutes, wealth manager / advisor groups.
 >
-> Fee floor for keynote: $10,000. Open to half-day / full-day workshop formats.
+> Fees: Virtual keynote starting at $7,500. In-person keynote starting at $15,000. Half-day workshop $12,500. Full-day masterclass $20,000.
 >
 > Site: https://siderroad.com
 > LinkedIn: https://www.linkedin.com/in/jocelyngreenkyunderwood
