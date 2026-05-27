@@ -19,6 +19,7 @@
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .wrap-narrow { max-width: 740px; margin: 0 auto; padding: 0 24px; }
 
   nav.top {
     position: sticky;
@@ -36,8 +37,8 @@
     flex-wrap: wrap;
   }
   nav.top .logo { font-weight: 700; font-size: 14px; }
-  nav.top ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
-  nav.top a { color: #000; text-decoration: none; font-size: 13px; font-weight: 500; }
+  nav.top ul { list-style: none; display: flex; gap: 16px; flex-wrap: wrap; }
+  nav.top a { color: #000; text-decoration: none; font-size: 12px; font-weight: 500; }
   nav.top a:hover { text-decoration: underline; }
 
   header.hero { padding: 80px 0 40px; text-align: left; }
@@ -73,15 +74,52 @@
   section p.intro {
     font-size: 18px;
     max-width: 680px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     color: #333;
     line-height: 1.5;
   }
+  section h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 28px 0 10px;
+    letter-spacing: -0.01em;
+  }
+  section p { margin-bottom: 12px; font-size: 16px; line-height: 1.55; }
+  section ul { list-style: none; padding: 0; margin: 12px 0; }
+  section ul li {
+    padding: 8px 0;
+    border-top: 1px solid #ddd;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  section ul li:first-child { border-top: none; padding-top: 4px; }
+  section ul li strong { font-weight: 700; }
+
+  /* WHO · WHAT · TOOLS sections */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 24px 0;
+  }
+  @media (max-width: 800px) {
+    .two-col { grid-template-columns: 1fr; gap: 20px; }
+  }
+
+  /* CALLOUT box */
+  .callout {
+    background: #fff3a3;
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-left: 6px solid #000;
+  }
+  .callout strong { font-weight: 700; }
+  .callout p { margin-bottom: 0; font-size: 16px; }
 
   /* THE ARC · 3 sprints side by side */
   .arc {
     display: grid;
-    grid-template-columns: 1fr 50px 1fr 50px 1fr;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
     gap: 0;
     align-items: stretch;
     margin: 32px 0;
@@ -92,7 +130,7 @@
     background: #fff;
     display: flex;
     flex-direction: column;
-    min-height: 360px;
+    min-height: 320px;
   }
   .sprint.done { background: #000; color: #fff; }
   .sprint.now { background: #fff3a3; }
@@ -101,10 +139,10 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     opacity: 0.7;
   }
-  .sprint h3 {
+  .sprint h4 {
     font-size: 36px;
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -123,7 +161,7 @@
     margin-bottom: auto;
   }
   .sprint .price {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     padding-top: 20px;
     margin-top: 20px;
@@ -134,13 +172,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 42px;
+    font-size: 36px;
     color: #000;
     font-weight: 900;
   }
   @media (max-width: 900px) {
-    .arc { grid-template-columns: 1fr; gap: 16px; }
-    .arrow-h { transform: rotate(90deg); padding: 4px 0; font-size: 32px; }
+    .arc { grid-template-columns: 1fr; gap: 14px; }
+    .arrow-h { transform: rotate(90deg); padding: 4px 0; font-size: 28px; }
     .sprint { min-height: auto; }
   }
 
@@ -152,117 +190,141 @@
     margin: 32px 0;
   }
   .door {
-    padding: 36px 32px;
+    padding: 32px 28px;
     border: 3px solid #000;
-    position: relative;
   }
   .door .door-num {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 8px;
   }
-  .door h3 {
-    font-size: 30px;
+  .door h4 {
+    font-size: 28px;
     font-weight: 800;
     letter-spacing: -0.015em;
     line-height: 1.05;
     margin-bottom: 8px;
   }
   .door .tagline {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 16px;
     color: #444;
     font-style: italic;
   }
   .door p {
     font-size: 15px;
     line-height: 1.55;
-    margin-bottom: 16px;
-  }
-  .door .price-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid #000;
-  }
-  .door .price {
-    font-size: 36px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
-  .door .time {
-    font-size: 14px;
-    color: #444;
+    margin-bottom: 14px;
   }
   .door .stat {
     background: #f4f4f4;
     padding: 12px 16px;
     margin: 12px 0;
     border-left: 4px solid #000;
-    font-size: 14px;
+    font-size: 13px;
+  }
+  .door .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #000;
+  }
+  .door .price {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .door .time {
+    font-size: 13px;
+    color: #444;
   }
   @media (max-width: 800px) {
     .doors { grid-template-columns: 1fr; }
   }
-
-  /* BUNDLE BAR */
   .bundle-bar {
     background: #000;
     color: #fff;
-    padding: 24px 32px;
+    padding: 24px 28px;
     margin: 24px 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
   }
   .bundle-bar h3 {
     font-size: 22px;
     font-weight: 800;
     letter-spacing: -0.01em;
-    margin: 0;
+    margin: 0 0 4px;
   }
-  .bundle-bar p { font-size: 14px; opacity: 0.8; margin: 4px 0 0; }
+  .bundle-bar p { font-size: 13px; opacity: 0.8; margin: 0; }
   .bundle-bar .price-total {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 800;
     letter-spacing: -0.02em;
     color: #fff3a3;
   }
 
   /* TIMELINE · 6 months */
-  .timeline {
-    margin: 32px 0;
-  }
   .month {
     display: grid;
     grid-template-columns: 100px 1fr;
-    gap: 32px;
+    gap: 28px;
     align-items: baseline;
-    padding: 20px 0;
+    padding: 18px 0;
     border-top: 1px solid #ddd;
   }
   .month:first-child { border-top: 2px solid #000; }
   .month .label-m {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
   .month .what {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.45;
   }
-  .month .what strong {
-    font-weight: 700;
-  }
+  .month .what strong { font-weight: 700; }
   @media (max-width: 600px) {
     .month { grid-template-columns: 1fr; gap: 4px; }
+  }
+
+  /* WHY THIS ORDER · stepped list */
+  .why {
+    margin: 20px 0;
+  }
+  .why-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    padding: 16px 0;
+    border-top: 1px solid #ddd;
+    align-items: baseline;
+  }
+  .why-item:first-child { border-top: none; }
+  .why-item .num {
+    font-size: 28px;
+    font-weight: 800;
+    opacity: 0.35;
+    letter-spacing: -0.02em;
+  }
+  .why-item .reason h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .why-item .reason p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    color: #333;
   }
 
   footer { padding: 40px 0 80px; font-size: 14px; border-top: 1px solid #000; }
@@ -280,8 +342,12 @@
   <div class="wrap">
     <div class="logo">Sider Road · Master Plan</div>
     <ul>
-      <li><a href="#arc">The Arc</a></li>
-      <li><a href="#doors">Sprint 2 Doors</a></li>
+      <li><a href="#who">Who</a></li>
+      <li><a href="#want">Want</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#arc">Sprints</a></li>
+      <li><a href="#doors">Doors</a></li>
+      <li><a href="#order">Order</a></li>
       <li><a href="#timeline">Timeline</a></li>
       <li><a href="index.html">Sprint 1 →</a></li>
     </ul>
@@ -291,61 +357,165 @@
 <header class="hero">
   <div class="wrap">
     <h1>The whole<br />picture.<br />One page.</h1>
-    <p>Three sprints. One direction. Revenue drives everything · positioning comes after the money lands.</p>
+    <p>Who you are. What you want. What you already have. How we get you there. In what order.</p>
   </div>
 </header>
+
+<!-- WHO -->
+<section id="who">
+  <div class="wrap">
+    <div class="label">01 · Who You Are</div>
+    <h2>What we know.</h2>
+    <p class="intro">The facts of you · the credibility surface every part of this plan stands on.</p>
+
+    <div class="two-col">
+      <div>
+        <h3>The story</h3>
+        <ul>
+          <li><strong>40 years</strong> guiding family-owned businesses through the leadership transitions that decide whether they survive a generation.</li>
+          <li><strong>Sider Road is itself a family business</strong> · you run it with your daughter Jade. You live the model you teach.</li>
+          <li><strong>Adjunct Professor</strong>, Queens College CUNY · Business Administration.</li>
+          <li><strong>2 books</strong> · <em>The Big Sister's Guide to the World of Work</em> (Simon & Schuster) · <em>Design Your Reputation</em> forthcoming 2026.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The operator pedigree</h3>
+        <ul>
+          <li><strong>COO</strong> · Colin Cowie Lifestyle · Ortho Marketing</li>
+          <li><strong>Digital Global Editorial Director</strong> · Hachette Filipacchi</li>
+          <li><strong>Branded TV producer</strong> · Rolling Stone's parent (Wenner Media)</li>
+          <li><strong>Event manager</strong> · Philip Morris</li>
+          <li><strong>Co-founder</strong> · BriteBean Technology</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>The voice</h3>
+    <p>Blunt. Witty. Operator scar tissue, not theory. Loves clever, hates corporate. Direct in conversation, sharper on stage. Already pulled from meeting recordings · baked into all the bureau + pitch emails so they sound like you, not a consultant.</p>
+  </div>
+</section>
+
+<!-- WANT -->
+<section id="want">
+  <div class="wrap">
+    <div class="label">02 · What You Want</div>
+    <h2>The outcomes.</h2>
+    <p class="intro">Every move below points at one of these. If it doesn't · we cut it.</p>
+
+    <ul>
+      <li><strong>Luxury family-business advisory tier.</strong> Not corporate keynote tier. Real wirehouse + UHNW + family-office stages. $15K-$25K in-person keynote range, not $5K.</li>
+      <li><strong>Fill 3 mastermind cohorts.</strong> Successors · Authority Women · Founders. Men Behind Family Business stays live as interest list for Cohort D Q3 2026.</li>
+      <li><strong>Inbound advisory engagements.</strong> Pipeline from referral partners (estate planners + wealth advisors) → you stop chasing, start choosing.</li>
+      <li><strong>Author authority for the new book.</strong> <em>Design Your Reputation</em> launches with bureau + speaking + press lined up. Not a vanity drop.</li>
+      <li><strong>"Super-nanny for family-run businesses."</strong> The position no one else has named or owns. This is the longer-arc claim.</li>
+      <li><strong>Curated social presence, not noisy.</strong> Quality over volume. McKinsey Insights cadence, not Gary Vee.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="wrap">
+    <div class="label">03 · Tools You Already Have</div>
+    <h2>What's in the toolkit.</h2>
+    <p class="intro">Most consultants would start by building these from scratch. You have them already · the master plan is about USING them in the right order.</p>
+
+    <div class="two-col">
+      <div>
+        <h3>Audiences (warm)</h3>
+        <ul>
+          <li><strong>11,584 contacts in your GHL.</strong> Open rate 23.78% (good delivery). Reply rate 0% (engagement layer broken). Door A of Sprint 2 fixes this.</li>
+          <li><strong>4,255 LinkedIn followers.</strong> Already-warm professional audience. Door B grows this to 10K+.</li>
+          <li><strong>20K Facebook PR group.</strong> Real distribution surface you've barely tapped. Surfaces in Sprint 3.</li>
+        </ul>
+
+        <h3>IP + content</h3>
+        <ul>
+          <li><strong>9-document Family Business Playbook</strong> · best free download you own, currently hidden in nav (Sprint 1 fixes that).</li>
+          <li><strong>4 mastermind tracks</strong> live · Men Behind / Authority Women / Successors / Family Leadership.</li>
+          <li><strong>15-course masterclass library</strong> · Charisma at $547/session is the priced anchor.</li>
+          <li><strong>~10 HuffPost articles</strong> archived (you were a columnist). Press page being built around them.</li>
+          <li><strong>Recent podcast video</strong> · raw + edited. Sizzle reel cut coming from this.</li>
+          <li><strong>2 books</strong> · Big Sister's Guide (Simon & Schuster) + Design Your Reputation (forthcoming 2026).</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Credibility surface (Sprint 1)</h3>
+        <ul>
+          <li><strong>EPK + Speaker Kit</strong> · live on site, redesigned, print-ready.</li>
+          <li><strong>4 bureau emails ready to send</strong> · eSpeakers · BigSpeak · Premiere · All American.</li>
+          <li><strong>15 event pitches ready to send</strong> · FFI · NACD · MA/TX Conference for Women · Vistage · YPO · EO · Chief · Small Giants · FBM · Tugboat · UConn · Worth · FOX · EPI re-pitch.</li>
+          <li><strong>FBM nomination</strong> · 200-word case + 3 references picked.</li>
+          <li><strong>25 site updates</strong> · Usman live-pushing.</li>
+        </ul>
+
+        <h3>Past clients + stages</h3>
+        <ul>
+          <li><strong>Corporate</strong> · Viacom · Kraft · General Foods · HBO · EY · PwC · Avon · Cartier · Engel & Völkers · Hearst · Condé Nast.</li>
+          <li><strong>Universities</strong> · Columbia · NYU · Syracuse · Drexel · Villanova · Queens CUNY · Mercy.</li>
+          <li><strong>Top Wall Street wirehouses</strong> (NDA · referenced generically).</li>
+          <li><strong>Press</strong> · CNBC · CNN · Fox News · Dr. Phil · NYT · WSJ · Washington Post · USA Today · Forbes · Fortune · Fast Company · HuffPost.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>This is the unlock ·</strong> we don't have to manufacture credibility. You already have it. Sprint 1 surfaces what's there. Sprint 2 monetizes it.</p>
+    </div>
+  </div>
+</section>
 
 <!-- THE ARC -->
 <section id="arc">
   <div class="wrap">
-    <div class="label">The 3-Sprint Arc</div>
-    <h2>Surface. Engine. Retainer.</h2>
-    <p class="intro">Each Sprint compounds on the last. Sprint 1 makes you findable. Sprint 2 makes the phone ring. Sprint 3 keeps it ringing so you stop chasing and start choosing.</p>
+    <div class="label">04 · How We Get You There</div>
+    <h2>Three sprints. One arc.</h2>
+    <p class="intro">Sprint 1 surfaces what you already have. Sprint 2 converts it into revenue. Sprint 3 keeps the engine running. Revenue drives every decision · positioning gets added later, after cash is flowing.</p>
 
     <div class="arc">
       <div class="sprint done">
         <div class="stage">Sprint 1 · Done</div>
-        <h3>01</h3>
+        <h4>01</h4>
         <div class="verb">Surface.</div>
-        <div class="outcome">People can FIND you. EPK live. 4 bureau emails ready. 15 event pitches ready. FBM award submitted. 25 site updates pushed.</div>
+        <div class="outcome">People can FIND you. EPK + bureau emails + event pitches + FBM nomination + 25 site fixes. Packaging + outreach surface.</div>
         <div class="price">$750 · paid · in flight</div>
       </div>
       <div class="arrow-h">→</div>
       <div class="sprint now">
         <div class="stage">Sprint 2 · Now</div>
-        <h3>02</h3>
+        <h4>02</h4>
         <div class="verb">Engine.</div>
-        <div class="outcome">People PAY you. Pick 1 of 2 doors (or both). Door A mines your existing 11,584 GHL contacts. Door B grows a new LinkedIn audience.</div>
+        <div class="outcome">People PAY you. Pick 1 of 2 doors · Door A mines your existing 11,584 GHL contacts · Door B grows a new LinkedIn audience.</div>
         <div class="price">$3K - $6.5K · pick your door</div>
       </div>
       <div class="arrow-h">→</div>
       <div class="sprint">
         <div class="stage">Sprint 3 · Later</div>
-        <h3>03</h3>
+        <h4>03</h4>
         <div class="verb">Retainer.</div>
-        <div class="outcome">Stays running without you. M executes daily, I run strategy, you stay in the work that only you can do. Trigger-based · starts after Sprint 2 produces.</div>
+        <div class="outcome">Stays running without you. M executes daily, I run strategy, you stay in the work only you can do. Earned trigger.</div>
         <div class="price">$3,500/mo · cancel anytime</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SPRINT 2 · 2 DOORS -->
+<!-- 2 DOORS -->
 <section id="doors">
   <div class="wrap">
-    <div class="label">Sprint 2 · Pick Your Door</div>
-    <h2>Two ways revenue comes in.</h2>
-    <p class="intro">Sprint 2 is one decision · how do you want money to start arriving? Door A produces cash fast from people who already know you. Door B builds a new audience that compounds over time. Both work · they just work differently.</p>
+    <div class="label">05 · Sprint 2 · Pick Your Door</div>
+    <h2>Two ways revenue arrives.</h2>
+    <p class="intro">Sprint 2 is one decision · which way do you want money to start coming in? Door A produces cash fast from people who already know you. Door B grows a new audience that compounds. Both work, just differently.</p>
 
     <div class="doors">
       <div class="door">
         <div class="door-num">Door A · Fast Cash</div>
-        <h3>Mine your existing list.</h3>
-        <div class="tagline">Your warmest audience already paid for itself.</div>
-        <p>You have <strong>11,584 contacts</strong> in your GHL already. They open your emails (23.78%, industry-average) but never reply (0%, broken engagement layer).</p>
-        <p>We rewrite the content + CTAs in your voice, segment by tag (BNI / advisor / mastermind lanes), and turn the open rate into actual replies.</p>
+        <h4>Mine your existing list.</h4>
+        <div class="tagline">The audience you already paid for.</div>
+        <p><strong>11,584 contacts</strong> in your GHL right now. Opens are healthy (23.78%, industry-average). Replies are zero (broken engagement layer, not a broken list).</p>
+        <p>We rewrite content + CTAs in your voice, segment by tag (BNI lane, advisor lane, mastermind lane), and turn opens into actual replies. Plumbing exists · we just push different water through.</p>
         <div class="stat">
-          <strong>The math ·</strong> 2% reply lift = 230+ warm replies per quarter → 20-30 qualified advisory or speaking leads.
+          <strong>The math ·</strong> 2% reply lift on 11,584 contacts = 230+ warm replies per quarter → 20-30 qualified advisory or speaking leads.
         </div>
         <div class="price-row">
           <div>
@@ -357,12 +527,12 @@
 
       <div class="door">
         <div class="door-num">Door B · Long Game</div>
-        <h3>Grow a new audience.</h3>
+        <h4>Grow a new audience.</h4>
         <div class="tagline">A pipeline that compounds while you sleep.</div>
-        <p>Right now you have <strong>4,255 LinkedIn followers</strong>. We grow that to 10K+ over 6 months. 2 posts per week in your voice (luxury · McKinsey, not Gary Vee) + 1 longer article per month.</p>
-        <p>M sends 30 LinkedIn connection + DM touches per day to curated ICP (family business owners, estate planners, wealth advisors). You approve every message before send.</p>
+        <p><strong>4,255 LinkedIn followers</strong> now. Target 10K+ in 6 months. 2 posts/week in your voice (luxury · McKinsey, not Gary Vee) + 1 longer article/month.</p>
+        <p>M sends 30 LinkedIn connection + DM touches/day to a curated ICP list (family business owners · estate planners · wealth advisors). You approve every message before send.</p>
         <div class="stat">
-          <strong>The math ·</strong> 900 monthly touches × 30% acceptance = 270 new connections/month. 1% conversion to lead = 30+ qualified per month at full scale.
+          <strong>The math ·</strong> 900 monthly touches × 30% acceptance = 270 new connections/month. 1% conversion = 30+ qualified leads/month at full scale.
         </div>
         <div class="price-row">
           <div>
@@ -376,9 +546,56 @@
     <div class="bundle-bar">
       <div>
         <h3>Both doors open · $6,500</h3>
-        <p>Door A produces cash in 3 weeks while Door B builds the long game in the background. Saves $500 vs picking them individually.</p>
+        <p>Door A produces cash in 3 weeks · Door B builds the long game in parallel. Saves $500 vs picking them individually.</p>
       </div>
       <div class="price-total">$6,500</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY THIS ORDER -->
+<section id="order">
+  <div class="wrap">
+    <div class="label">06 · Why This Order</div>
+    <h2>Sequencing logic.</h2>
+    <p class="intro">Each move comes before the next for a specific reason. Skip the order, you skip the leverage.</p>
+
+    <div class="why">
+      <div class="why-item">
+        <div class="num">01</div>
+        <div class="reason">
+          <h4>Sprint 1 (Surface) BEFORE outreach lands</h4>
+          <p>Bureaus, event organizers, and journalists ALL check your site within 90 seconds of getting an email from you. If the EPK isn't ready, the press logos aren't surfaced, the talks aren't titled, they say no. Sprint 1 is the gate.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="num">02</div>
+        <div class="reason">
+          <h4>Door A (GHL) BEFORE Door B (Social)</h4>
+          <p>Fastest cash · plumbing exists, list is warm, 1-3 weeks to first replies. Door B compounds over months. If you can only afford one, start where the money is closest.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="num">03</div>
+        <div class="reason">
+          <h4>Revenue moves BEFORE positioning moves</h4>
+          <p>Branded framework, Sider Road Institute, Cornell Fellow application · these are tier-jump moves that work BEST once you have paid bookings on the board to leverage them against. Doing them first is positioning theater. Doing them after Sprint 2 produces is leverage.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="num">04</div>
+        <div class="reason">
+          <h4>Sprint 3 retainer ONLY after Sprint 2 produces</h4>
+          <p>Earned trigger · 2+ booked engagements OR 5+ qualified inbound replies. You don't pay a monthly retainer for nothing. Retainer kicks in once there's an engine TO maintain.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="num">05</div>
+        <div class="reason">
+          <h4>Book launch + Institute brand container = Month 5+</h4>
+          <p>By Month 5 you'll have bureau wins, GHL replies, LinkedIn inbound, AND a forthcoming book. That's the moment to launch "Sider Road Institute" + the named method · maximum credibility surface, real distribution.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -386,34 +603,34 @@
 <!-- TIMELINE -->
 <section id="timeline">
   <div class="wrap">
-    <div class="label">The 6-Month Timeline</div>
+    <div class="label">07 · The Timeline</div>
     <h2>Where the money lands.</h2>
-    <p class="intro">Everything points at revenue. Branding, framework, institute · those moves come AFTER cash is flowing, not before.</p>
+    <p class="intro">Six months · every month points at revenue. Branding moves come after cash is flowing, not before.</p>
 
-    <div class="timeline">
+    <div>
       <div class="month">
         <div class="label-m">Month 1</div>
         <div class="what"><strong>Sprint 1 wraps.</strong> Bureau emails + 15 event pitches in motion. FBM nomination submitted. Site updates live.</div>
       </div>
       <div class="month">
         <div class="label-m">Month 2</div>
-        <div class="what"><strong>Sprint 2 Door A produces.</strong> GHL reactivation replies start landing. First advisory + mastermind leads come in.</div>
+        <div class="what"><strong>Door A produces.</strong> GHL reactivation replies start landing. First advisory + mastermind leads come in.</div>
       </div>
       <div class="month">
         <div class="label-m">Month 3</div>
-        <div class="what"><strong>Sprint 2 Door B compounds.</strong> LinkedIn audience growing. First inbound from posts. Bureau decisions starting to land.</div>
+        <div class="what"><strong>Door B compounds.</strong> LinkedIn audience growing. First inbound from posts. Bureau decisions starting to land.</div>
       </div>
       <div class="month">
         <div class="label-m">Month 4</div>
-        <div class="what"><strong>Sprint 3 retainer kicks in.</strong> Earned trigger met (2+ booked engagements or 5+ qualified inbound). Engine on auto.</div>
+        <div class="what"><strong>Sprint 3 retainer kicks in.</strong> Earned trigger met (2+ booked engagements or 5+ qualified inbound). Engine on auto-pilot.</div>
       </div>
       <div class="month">
         <div class="label-m">Month 5</div>
-        <div class="what"><strong>Positioning moves get added.</strong> Branded framework named. Sider Road Institute container live. You start commanding $25K+ keynote tier.</div>
+        <div class="what"><strong>Positioning added.</strong> Branded framework named. Sider Road Institute container live. You start commanding $25K+ keynote tier.</div>
       </div>
       <div class="month">
         <div class="label-m">Month 6</div>
-        <div class="what"><strong>Scale what's working.</strong> Whichever lane produces best gets bigger budget. Whichever underperforms gets cut. You're booked through Q1 2027 by now.</div>
+        <div class="what"><strong>Scale what's working.</strong> Whichever lane produces best gets bigger budget. Underperformers get cut. You're booked through Q1 2027 by now.</div>
       </div>
     </div>
   </div>
